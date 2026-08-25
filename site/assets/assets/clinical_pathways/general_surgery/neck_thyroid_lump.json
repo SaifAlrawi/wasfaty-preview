@@ -1,0 +1,59 @@
+{
+  "id": "neck_thyroid_lump",
+  "specialty": "general_surgery",
+  "complaint": "Neck / thyroid lump",
+  "icd10_symptom": "R22.1",
+  "history": [
+    { "ask": "Duration and growth rate", "options": ["Years, barely changing", "Months, slowly growing", "Weeks, rapidly enlarging", "Sudden painful enlargement over days"] },
+    { "ask": "Position of the lump", "options": ["Midline, front of the neck", "Lateral, along the sternomastoid", "Under the jaw", "Multiple lumps on both sides"] },
+    { "ask": "Movement with swallowing or tongue protrusion (patient noticed)", "options": ["Moves when swallowing", "Rises when sticking the tongue out", "Neither / unsure"] },
+    { "ask": "Thyroid symptoms", "options": ["Palpitations, heat intolerance, weight loss with good appetite, tremor", "Cold intolerance, weight gain, lethargy", "Neither"] },
+    { "ask": "Voice change", "options": ["New hoarseness", "Normal voice"] },
+    { "ask": "Pressure symptoms", "options": ["Difficulty swallowing", "Noisy breathing or breathlessness lying flat", "Neither"] },
+    { "ask": "Fever, night sweats, or weight loss", "options": ["Night sweats with weight loss", "Fever only", "None"] },
+    { "ask": "TB contact or previous TB", "options": ["Household TB contact", "Previous TB treatment", "Neither"] },
+    { "ask": "Smoking, mouth ulcer, ear pain, or swallowing pain", "options": ["Smoker with any mouth/throat symptom", "Non-smoker, no throat symptoms"] },
+    { "ask": "Recent throat, dental, or scalp infection", "options": ["Yes, within recent weeks", "No"] },
+    { "ask": "Neck irradiation or family history of thyroid cancer", "options": ["Previous neck irradiation", "Family history of thyroid cancer", "Neither"] }
+  ],
+  "red_flags": [
+    "Stridor or breathlessness lying flat — airway compression; urgent surgical referral",
+    "Rapidly growing hard fixed mass with hoarseness — anaplastic carcinoma or advanced malignancy; urgent surgical referral",
+    "Sudden painful thyroid enlargement — hemorrhage into a nodule threatening the airway",
+    "Lymph node with night sweats, fever, and weight loss — lymphoma or TB until proven",
+    "Hard lateral node in a smoker over 40 — metastasis from an occult head and neck primary until the primary is found"
+  ],
+  "exam": [
+    "Inspect from the front while the patient swallows water — a thyroid swelling rises with swallowing",
+    "Ask the patient to protrude the tongue — a midline lump that rises is a thyroglossal cyst",
+    "Palpate from behind: size, consistency (soft, firm, hard), single nodule vs multinodular, fixity to skin or deep structures",
+    "Try to get below the gland — inability plus dullness on sternal percussion means retrosternal extension",
+    "Perform Pemberton's maneuver — facial congestion on raising the arms indicates thoracic inlet obstruction",
+    "Palpate every cervical node station systematically on both sides — note matting (TB) vs rubbery (lymphoma) vs stony-hard (metastasis)",
+    "Check the trachea for deviation",
+    "Assess thyroid status: pulse rate and rhythm, fine tremor, eye signs, skin",
+    "Auscultate over the gland for a bruit — supports a toxic goiter",
+    "Examine the mouth, tongue base, tonsils, and scalp for a primary lesion when a hard lateral node is found",
+    "Listen to the voice and document any hoarseness"
+  ],
+  "investigations": [
+    { "test": "TSH (with free T4 if abnormal)", "why": "First split in the pathway: a suppressed TSH points to a toxic nodule or toxic multinodular goiter — which is rarely malignant — while a euthyroid nodule proceeds to FNAC" },
+    { "test": "Thyroid / neck ultrasound", "why": "Separates thyroid from non-thyroid lumps, grades nodules (solid, microcalcification, irregular margins favor carcinoma), shows a purely cystic thyroglossal or branchial cyst, and maps abnormal nodes" },
+    { "test": "FNAC of the dominant nodule or node", "why": "The decisive clinic test: benign colloid vs papillary carcinoma in the thyroid; caseating granulomas rule in TB, and lymphoid or metastatic cells redirect to lymphoma or an occult primary" },
+    { "test": "CBC + ESR", "why": "Very high ESR with cytopenias supports lymphoma or TB; leukocytosis supports an inflammatory/reactive node" },
+    { "test": "Chest X-ray", "why": "Tracheal deviation or retrosternal shadow from a large goiter; mediastinal widening supports lymphoma; apical changes support TB" },
+    { "test": "CT neck and thoracic inlet", "why": "Second-line — if there is retrosternal extension, tracheal compression, or a fixed mass: defines the airway and extent before referral" }
+  ],
+  "differentials": [
+    { "dx": "Multinodular goiter", "icd10": "E04.2", "supports": ["Years of slowly growing swelling that moves on swallowing", "Multiple nodules on palpation and ultrasound", "Normal TSH"] },
+    { "dx": "Solitary thyroid nodule", "icd10": "E04.1", "supports": ["Single nodule in an otherwise impalpable gland", "Euthyroid on TSH", "Benign colloid picture on FNAC"] },
+    { "dx": "Thyroid carcinoma", "icd10": "C73", "supports": ["Hard nodule, fixity, or rapid growth", "Hoarseness or hard cervical nodes", "Previous irradiation or family history", "Suspicious ultrasound features / malignant FNAC"] },
+    { "dx": "Toxic nodular goiter", "icd10": "E05.20", "supports": ["Palpitations, tremor, weight loss with goiter", "Suppressed TSH", "Bruit over the gland"] },
+    { "dx": "Reactive cervical lymphadenitis", "icd10": "I88.9", "supports": ["Tender mobile nodes after throat, dental, or scalp infection", "Settles as the source heals", "No constitutional symptoms"] },
+    { "dx": "Tuberculous cervical lymphadenitis", "icd10": "A18.2", "supports": ["Matted nodes, possibly with a cold abscess or sinus", "TB contact; night sweats", "Caseating granulomas on FNAC; high ESR"] },
+    { "dx": "Lymphoma", "icd10": "C85.90", "supports": ["Rubbery painless nodes, often multiple regions", "Night sweats, fever, weight loss", "Lymphoid population on FNAC; mediastinal widening on chest X-ray"] },
+    { "dx": "Metastatic cervical node", "icd10": "C77.0", "supports": ["Stony-hard fixed node in a smoker over 40", "Mouth ulcer, ear pain, or swallowing pain", "Malignant cells on FNAC with no thyroid lesion"] },
+    { "dx": "Thyroglossal cyst", "icd10": "Q89.2", "supports": ["Midline cyst that rises on tongue protrusion", "Young adult, smooth and cystic", "Purely cystic midline lesion on ultrasound"] },
+    { "dx": "Branchial cyst", "icd10": "Q18.0", "supports": ["Smooth swelling at the anterior border of the upper sternomastoid", "Young adult, fluctuant", "Cystic on ultrasound, separate from the thyroid"] }
+  ]
+}

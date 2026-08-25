@@ -1,0 +1,59 @@
+{
+  "id": "ruq_pain_biliary",
+  "specialty": "general_surgery",
+  "complaint": "Right upper quadrant pain",
+  "icd10_symptom": "R10.11",
+  "history": [
+    { "ask": "Pattern and duration of pain", "options": ["Attacks lasting under 6 hours then settling completely", "Constant for more than 6 hours and worsening", "Constant for days", "Recurrent over weeks"] },
+    { "ask": "Relation to fatty meals", "options": ["Triggered by fatty food", "No relation to meals", "Worse when hungry, eased by food"] },
+    { "ask": "Radiation", "options": ["Right shoulder or tip of scapula", "Straight through to the back", "None"] },
+    { "ask": "Fever or rigors", "options": ["None", "Low-grade fever", "High swinging fever with rigors"] },
+    { "ask": "Jaundice, dark urine, or pale stool", "options": ["Yellow eyes noticed", "Dark urine and/or pale stool", "Neither"] },
+    { "ask": "Dyspepsia / NSAID use", "options": ["Chronic dyspepsia or known ulcer", "Regular NSAID or aspirin", "Neither"] },
+    { "ask": "Cough, breathlessness, or pleuritic chest pain", "options": ["Yes — pain worse on deep breathing", "Productive cough with fever", "None"] },
+    { "ask": "Alcohol use", "options": ["Regular or heavy", "Occasional", "None"] },
+    { "ask": "Diarrhea, travel, or contaminated water exposure in recent weeks", "options": ["Dysentery-like illness recently", "Travel or doubtful water source", "Neither"] },
+    { "ask": "Previous similar attacks or known gallstones", "options": ["Gallstones already seen on ultrasound", "Similar attacks before, never investigated", "First episode"] }
+  ],
+  "red_flags": [
+    "Fever with rigors, jaundice, and right upper quadrant pain (Charcot's triad) — ascending cholangitis; urgent surgical referral",
+    "The above plus hypotension or confusion — suppurative cholangitis",
+    "Rigid abdomen with generalized rebound — perforation (gallbladder or ulcer); urgent surgical referral",
+    "Swinging high fever with a tender enlarged liver — liver abscess at risk of rupture",
+    "Persistent vomiting with signs of dehydration and no urine output"
+  ],
+  "exam": [
+    "Record temperature, BP, and pulse — sepsis pattern points to cholangitis or abscess",
+    "Inspect sclera in daylight for jaundice",
+    "Elicit Murphy's sign — arrest of inspiration on right subcostal pressure",
+    "Palpate for a tender gallbladder mass below the right costal margin",
+    "Palpate the liver edge — tender smooth hepatomegaly suggests hepatitis or abscess",
+    "Press over the right lower intercostal spaces — point tenderness supports liver abscess",
+    "Percuss and auscultate the right lung base — dullness or crackles point to basal pneumonia",
+    "Palpate the epigastrium separately — maximal epigastric tenderness shifts suspicion to ulcer or pancreatitis",
+    "Look for stigmata of chronic liver disease (spider nevi, palmar erythema)",
+    "Assess hydration and check for signs of shock"
+  ],
+  "investigations": [
+    { "test": "Abdominal ultrasound", "why": "First-line and decisive: stones with a thickened gallbladder wall and sonographic Murphy's rules in cholecystitis; a dilated common bile duct supports choledocholithiasis/cholangitis; a hypoechoic liver lesion rules in abscess" },
+    { "test": "CBC", "why": "Normal count fits uncomplicated biliary colic; leukocytosis supports cholecystitis, cholangitis, or liver abscess" },
+    { "test": "LFT", "why": "Obstructive pattern (raised ALP and bilirubin) supports duct stone or cholangitis; transaminases in the thousands rule in acute hepatitis over the surgical causes" },
+    { "test": "Serum amylase / lipase", "why": "Rules acute pancreatitis in or out — gallstone pancreatitis sits in the same population as biliary colic" },
+    { "test": "CRP", "why": "High values separate inflammatory disease (cholecystitis, abscess, pneumonia) from pure colic and dyspepsia" },
+    { "test": "Viral hepatitis serology (HBsAg, anti-HCV, HAV IgM)", "why": "Confirms acute viral hepatitis when LFT shows a hepatitic rather than obstructive pattern" },
+    { "test": "Stool exam for Entamoeba histolytica", "why": "Supports amebic liver abscess when ultrasound shows a liver collection with a dysentery history" },
+    { "test": "Chest X-ray", "why": "Right basal consolidation rules in pneumonia as the referred cause; free air under the diaphragm rules in perforated ulcer" },
+    { "test": "MRCP or contrast CT", "why": "Second-line — if the duct is dilated on ultrasound but no stone is seen, or a liver lesion needs characterization before referral" }
+  ],
+  "differentials": [
+    { "dx": "Biliary colic", "icd10": "K80.20", "supports": ["Attacks under 6 hours after fatty meals, settling completely", "No fever, normal white count", "Stones on ultrasound with a thin gallbladder wall"] },
+    { "dx": "Acute cholecystitis", "icd10": "K81.0", "supports": ["Constant pain beyond 6 hours with fever", "Positive Murphy's sign", "Thick-walled gallbladder with pericholecystic fluid on ultrasound"] },
+    { "dx": "Choledocholithiasis (obstructive jaundice)", "icd10": "K80.50", "supports": ["Jaundice with dark urine and pale stool", "Obstructive LFT pattern", "Dilated common bile duct on ultrasound"] },
+    { "dx": "Ascending cholangitis", "icd10": "K83.09", "supports": ["Charcot's triad — fever with rigors, jaundice, RUQ pain", "Obstructive LFT with leukocytosis", "Dilated duct on ultrasound"] },
+    { "dx": "Acute viral hepatitis", "icd10": "B19.9", "supports": ["Prodrome of malaise and anorexia before jaundice", "Tender smooth hepatomegaly", "Transaminases far above ALP; positive serology"] },
+    { "dx": "Amebic liver abscess", "icd10": "A06.4", "supports": ["Swinging fever with intercostal point tenderness", "Recent dysentery or contaminated water exposure", "Hypoechoic liver lesion on ultrasound"] },
+    { "dx": "Peptic ulcer disease", "icd10": "K27.9", "supports": ["Epigastric-predominant pain related to meals", "NSAID use or chronic dyspepsia", "Normal ultrasound and LFT"] },
+    { "dx": "Right basal pneumonia", "icd10": "J18.1", "supports": ["Cough, fever, and pleuritic component", "Crackles or dullness at the right base", "Consolidation on chest X-ray with a normal abdomen"] },
+    { "dx": "Acute pancreatitis", "icd10": "K85.90", "supports": ["Pain boring through to the back with vomiting", "Alcohol use or known gallstones", "Raised amylase/lipase"] }
+  ]
+}

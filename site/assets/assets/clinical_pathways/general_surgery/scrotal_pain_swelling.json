@@ -1,0 +1,58 @@
+{
+  "id": "scrotal_pain_swelling",
+  "specialty": "general_surgery",
+  "complaint": "Scrotal pain / swelling",
+  "icd10_symptom": "N50.81",
+  "history": [
+    { "ask": "Speed of onset of pain", "options": ["Sudden — over minutes", "Over hours with fever", "Days to weeks", "Painless swelling only"] },
+    { "ask": "Age group", "options": ["Under 25", "25–50", "Over 50"] },
+    { "ask": "Previous similar episodes that settled alone", "options": ["Yes — sudden pains that resolved", "No"] },
+    { "ask": "Urinary symptoms or urethral discharge", "options": ["Burning/frequency", "Urethral discharge", "Neither"] },
+    { "ask": "Sexual history relevant to urethritis risk", "options": ["New or multiple partners", "Stable single partner / not active", "Declined"] },
+    { "ask": "Trauma to the scrotum", "options": ["Yes, directly before the pain", "No"] },
+    { "ask": "Character of a swelling", "options": ["Painless, slowly enlarging", "Heaviness/dragging worse on standing", "Tense and painful", "Comes and goes with straining"] },
+    { "ask": "Fever or parotid swelling (mumps)", "options": ["Fever", "Recent jaw/parotid swelling", "Neither"] },
+    { "ask": "Diabetes or immunosuppression", "options": ["Diabetic", "On steroids / immunosuppressed", "Neither"] },
+    { "ask": "Perineal or scrotal skin changes", "options": ["Darkening, blistering, or foul smell", "Redness only", "Normal skin"] }
+  ],
+  "red_flags": [
+    "Sudden severe testicular pain, especially under 25 — torsion until proven otherwise; urgent surgical referral, do not wait for imaging",
+    "High-riding, transversely lying tender testis with absent cremasteric reflex — torsion",
+    "Scrotal or perineal skin necrosis, crepitus, or pain out of proportion in a diabetic — Fournier's gangrene; urgent surgical referral",
+    "Tender irreducible inguinoscrotal lump with vomiting — strangulated hernia; urgent surgical referral",
+    "New varicocele that is right-sided or does not empty on lying down — retroperitoneal or renal mass until excluded"
+  ],
+  "exam": [
+    "Compare both sides: note testicular lie and height — a high transverse testis suggests torsion",
+    "Test the cremasteric reflex on the painful side — absence supports torsion",
+    "Palpate the epididymis separately from the testis — tenderness confined to the epididymis supports epididymo-orchitis; a lump inseparable from the body of the testis is a tumor until proven otherwise",
+    "Determine whether you can get above the swelling — if not, it is inguinoscrotal (hernia)",
+    "Test for a cough impulse over the swelling",
+    "Transilluminate — brilliant transillumination supports hydrocele or epididymal cyst; a solid testis does not transilluminate",
+    "Look for the 'blue dot' of a torted appendix testis at the upper pole",
+    "Examine standing: 'bag of worms' above the testis that fills on Valsalva and empties supine — varicocele",
+    "Inspect scrotal and perineal skin for erythema, dusky patches, blisters, and crepitus",
+    "Record temperature and pulse — systemic toxicity points to epididymo-orchitis or Fournier's",
+    "Palpate the abdomen for a mass and the left renal area when a new varicocele is found"
+  ],
+  "investigations": [
+    { "test": "Urinalysis", "why": "Pyuria and nitrites support epididymo-orchitis; a clean urine in sudden pain leans toward torsion or appendix-testis torsion" },
+    { "test": "Urine culture / urethral swab", "why": "Identifies the organism behind epididymo-orchitis and separates urinary from sexually transmitted sources" },
+    { "test": "CBC", "why": "Marked leukocytosis supports epididymo-orchitis or Fournier's gangrene; usually normal in torsion's first hours and in hydrocele, cyst, or varicocele" },
+    { "test": "CRP", "why": "High values favor infective/inflammatory causes over torsion and over the painless swellings" },
+    { "test": "Scrotal Doppler ultrasound", "why": "Absent flow rules in torsion and increased flow rules in epididymo-orchitis — but when the story says torsion, referral must not wait for the scan; also separates cystic (hydrocele, epididymal cyst) from solid (tumor) swellings" },
+    { "test": "Blood glucose / HbA1c", "why": "Uncontrolled diabetes underlies Fournier's gangrene and severe epididymo-orchitis" },
+    { "test": "Tumor markers — AFP, beta-hCG, LDH", "why": "Sent when ultrasound shows a solid testicular mass; support and stage testicular tumor before referral" }
+  ],
+  "differentials": [
+    { "dx": "Testicular torsion", "icd10": "N44.00", "supports": ["Sudden severe pain in a young male, often with vomiting", "High transverse tender testis, absent cremasteric reflex", "Previous self-resolving episodes (intermittent torsion)", "Absent flow on Doppler"] },
+    { "dx": "Epididymo-orchitis", "icd10": "N45.3", "supports": ["Pain building over hours to days with fever", "Urinary symptoms or urethral discharge; pyuria", "Tenderness localized to the epididymis; increased Doppler flow"] },
+    { "dx": "Torsion of the appendix testis", "icd10": "N44.03", "supports": ["Gradual upper-pole pain in a younger patient", "Blue dot sign with a normal lie and preserved cremasteric reflex", "Normal urine"] },
+    { "dx": "Inguinoscrotal hernia", "icd10": "K40.90", "supports": ["Cannot get above the swelling", "Cough impulse; swelling varies with straining", "Bowel sounds over the swelling"] },
+    { "dx": "Hydrocele", "icd10": "N43.3", "supports": ["Painless tense swelling you can get above", "Brilliant transillumination", "Testis not separately palpable"] },
+    { "dx": "Epididymal cyst", "icd10": "N43.40", "supports": ["Painless swelling above and behind a separately palpable testis", "Transilluminates", "Cystic on ultrasound"] },
+    { "dx": "Varicocele", "icd10": "I86.1", "supports": ["Dragging heaviness worse on standing", "'Bag of worms' filling on Valsalva, emptying supine", "Mostly left-sided"] },
+    { "dx": "Testicular tumor", "icd10": "C62.90", "supports": ["Painless hard lump inseparable from the testis", "Does not transilluminate; solid on ultrasound", "Raised AFP/beta-hCG/LDH"] },
+    { "dx": "Fournier's gangrene", "icd10": "N49.3", "supports": ["Diabetic or immunosuppressed with disproportionate perineal pain", "Skin necrosis, crepitus, foul smell", "Rapid systemic toxicity"] }
+  ]
+}

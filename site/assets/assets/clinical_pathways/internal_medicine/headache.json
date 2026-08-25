@@ -1,0 +1,559 @@
+{
+  "id": "headache",
+  "specialty": "internal_medicine",
+  "complaint": "Headache",
+  "icd10_symptom": "R51.9",
+  "history": [
+    {
+      "ask": "Onset",
+      "options": [
+        "Thunderclap — maximal within 1 minute",
+        "Built over hours",
+        "Recurrent attacks over months to years",
+        "Daily and gradually worsening over weeks"
+      ],
+      "weights": {
+        "Thunderclap — maximal within 1 minute": {
+          "sah": 5
+        },
+        "Built over hours": {
+          "tension": 1,
+          "meningitis": 1,
+          "sinusitis": 1
+        },
+        "Recurrent attacks over months to years": {
+          "migraine": 3,
+          "cluster": 2,
+          "tension": 2
+        },
+        "Daily and gradually worsening over weeks": {
+          "mass": 3,
+          "moh": 1
+        }
+      }
+    },
+    {
+      "ask": "Location",
+      "options": [
+        "One-sided, may swap sides between attacks",
+        "Band-like, both sides",
+        "Strictly one eye/temple, always the same side",
+        "Over the cheeks/forehead, worse bending forward",
+        "Temple region in a patient over 50"
+      ],
+      "weights": {
+        "One-sided, may swap sides between attacks": {
+          "migraine": 3
+        },
+        "Band-like, both sides": {
+          "tension": 3
+        },
+        "Strictly one eye/temple, always the same side": {
+          "cluster": 4
+        },
+        "Over the cheeks/forehead, worse bending forward": {
+          "sinusitis": 4
+        },
+        "Temple region in a patient over 50": {
+          "gca": 4
+        }
+      }
+    },
+    {
+      "ask": "Character and severity",
+      "options": [
+        "Throbbing / pulsating, moderate–severe",
+        "Pressing / tightening, mild–moderate",
+        "Boring, excruciating, patient restless and pacing",
+        "Worst headache of my life"
+      ],
+      "weights": {
+        "Throbbing / pulsating, moderate–severe": {
+          "migraine": 3
+        },
+        "Pressing / tightening, mild–moderate": {
+          "tension": 3
+        },
+        "Boring, excruciating, patient restless and pacing": {
+          "cluster": 4
+        },
+        "Worst headache of my life": {
+          "sah": 4
+        }
+      }
+    },
+    {
+      "ask": "Attack duration and frequency",
+      "options": [
+        "4–72 hours, episodic",
+        "30 min – 7 days, featureless",
+        "15–180 min, in daily clusters for weeks",
+        "Constant for > 15 days/month"
+      ],
+      "weights": {
+        "4–72 hours, episodic": {
+          "migraine": 3
+        },
+        "30 min – 7 days, featureless": {
+          "tension": 2
+        },
+        "15–180 min, in daily clusters for weeks": {
+          "cluster": 4
+        },
+        "Constant for > 15 days/month": {
+          "moh": 2,
+          "tension": 1
+        }
+      }
+    },
+    {
+      "ask": "Associated features during attacks",
+      "options": [
+        "Nausea/vomiting with light and sound sensitivity",
+        "Visual aura (zigzag lines, scotoma) before pain",
+        "Same-side eye watering, redness, nasal blockage",
+        "Fever with neck stiffness",
+        "None"
+      ],
+      "weights": {
+        "Nausea/vomiting with light and sound sensitivity": {
+          "migraine": 3
+        },
+        "Visual aura (zigzag lines, scotoma) before pain": {
+          "migraine": 4
+        },
+        "Same-side eye watering, redness, nasal blockage": {
+          "cluster": 4
+        },
+        "Fever with neck stiffness": {
+          "meningitis": 5
+        }
+      }
+    },
+    {
+      "ask": "Aggravation by posture or pressure changes",
+      "options": [
+        "Worse lying down, on waking, or with cough/strain",
+        "Worse standing, better lying",
+        "Worse bending forward with facial pressure",
+        "No postural pattern"
+      ],
+      "weights": {
+        "Worse lying down, on waking, or with cough/strain": {
+          "mass": 3,
+          "sah": 1
+        },
+        "Worse bending forward with facial pressure": {
+          "sinusitis": 3
+        }
+      }
+    },
+    {
+      "ask": "Analgesic use pattern",
+      "options": [
+        "Simple analgesics or triptans ≥ 10–15 days/month for ≥ 3 months",
+        "Occasional use only",
+        "None"
+      ],
+      "weights": {
+        "Simple analgesics or triptans ≥ 10–15 days/month for ≥ 3 months": {
+          "moh": 4
+        }
+      }
+    },
+    {
+      "ask": "Visual and neurological symptoms between attacks",
+      "options": [
+        "Transient visual darkening on standing/bending",
+        "Double vision",
+        "Persistent weakness, numbness, or speech difficulty",
+        "Jaw pain on chewing or scalp tenderness on combing",
+        "None"
+      ],
+      "weights": {
+        "Transient visual darkening on standing/bending": {
+          "mass": 2
+        },
+        "Double vision": {
+          "mass": 3
+        },
+        "Persistent weakness, numbness, or speech difficulty": {
+          "mass": 3
+        },
+        "Jaw pain on chewing or scalp tenderness on combing": {
+          "gca": 4
+        }
+      }
+    },
+    {
+      "ask": "Systemic features",
+      "options": [
+        "Fever",
+        "Weight loss or known cancer",
+        "New headache in pregnancy or postpartum",
+        "None"
+      ],
+      "weights": {
+        "Fever": {
+          "meningitis": 3,
+          "sinusitis": 1
+        },
+        "Weight loss or known cancer": {
+          "mass": 3
+        },
+        "New headache in pregnancy or postpartum": {
+          "sah": 1
+        }
+      }
+    },
+    {
+      "ask": "Age at onset of this headache type",
+      "options": [
+        "Before 50",
+        "New headache starting after 50"
+      ],
+      "weights": {
+        "Before 50": {
+          "migraine": 1
+        },
+        "New headache starting after 50": {
+          "gca": 3,
+          "mass": 2
+        }
+      }
+    },
+    {
+      "ask": "Recent head trauma",
+      "options": [
+        "Within the last 3 months",
+        "None"
+      ],
+      "weights": {
+        "Within the last 3 months": {
+          "mass": 2
+        }
+      }
+    }
+  ],
+  "red_flags": [
+    "Thunderclap onset — maximal intensity within one minute",
+    "Fever with neck stiffness, photophobia, or non-blanching rash",
+    "New focal deficit, papilloedema, seizure, or altered consciousness",
+    "New headache after age 50, especially with jaw claudication or scalp tenderness",
+    "Progressive daily headache worse on waking, lying, coughing, or straining",
+    "Headache with known cancer, immunosuppression, or anticoagulant use",
+    "New headache in pregnancy or the puerperium"
+  ],
+  "exam": [
+    "Record BP and temperature — severe hypertension and fever each redirect the work-up",
+    "Test neck flexion for stiffness; Kernig's sign if febrile",
+    "Perform fundoscopy for papilloedema (raised intracranial pressure) and subhyaloid haemorrhage (SAH)",
+    "Check pupils and eye movements — third-nerve palsy with a dilated pupil raises aneurysm",
+    "Screen visual fields by confrontation — bitemporal or homonymous defects raise a mass lesion",
+    "Palpate the temporal arteries for tenderness, thickening, or absent pulsation (giant cell arteritis)",
+    "Press over the frontal and maxillary sinuses and transilluminate if possible (sinusitis)",
+    "Test limb power, reflexes, and plantar responses for asymmetry (space-occupying lesion, stroke)",
+    "Assess gait and coordination — ataxia points to a posterior fossa lesion",
+    "Palpate pericranial and trapezius muscles for tenderness (tension-type)",
+    "Examine the scalp and jaw: pain on sustained chewing (jaw claudication) supports arteritis"
+  ],
+  "investigations": [
+    {
+      "test": "ESR and CRP",
+      "why": "The decisive first-line test for giant cell arteritis in any new headache over 50 — markedly raised values rule it in as the working diagnosis; normal values make it unlikely; both usually normal in migraine, tension-type, and cluster"
+    },
+    {
+      "test": "CBC",
+      "why": "Leukocytosis supports meningitis or sinusitis; anaemia of chronic disease accompanies arteritis and malignancy; normal count reassures in primary headaches"
+    },
+    {
+      "test": "Random blood glucose and renal function",
+      "why": "Hypoglycaemia is a reversible headache mimic; renal status is required before contrast imaging and interprets severe hypertension found on exam"
+    },
+    {
+      "test": "Brain CT (non-contrast)",
+      "why": "Second-line, but URGENT when indicated: thunderclap onset (blood of SAH), focal deficit, papilloedema, new headache > 50, progressive daily pattern, or head trauma — rules haemorrhage and mass in or out; NOT needed for a typical migraine or tension pattern with a normal exam"
+    },
+    {
+      "test": "Lumbar puncture (after imaging excludes mass effect)",
+      "why": "Rules in meningitis (cells, protein, glucose, culture) in the febrile stiff-necked patient; xanthochromia rules in SAH when CT is normal but the story is thunderclap; opening pressure diagnoses idiopathic intracranial hypertension"
+    },
+    {
+      "test": "Sinus X-ray or limited sinus CT",
+      "why": "Air-fluid levels or mucosal thickening support acute sinusitis when facial pressure and postnasal discharge are present; a normal study moves the pain back to migraine, which is often mislabelled as sinus headache"
+    },
+    {
+      "test": "Brain MRI",
+      "why": "Second-line — preferred over CT for progressively worsening headache with normal CT, suspected posterior fossa lesion (ataxia), or pituitary symptoms; rules structural lesions in or out definitively"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Migraine",
+      "icd10": "G43.9",
+      "supports": [
+        "Recurrent one-sided throbbing attacks lasting 4–72 hours",
+        "Nausea with light and sound sensitivity, wants a dark room",
+        "Visual aura preceding some attacks",
+        "Normal neurological exam between attacks"
+      ],
+      "key": "migraine",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Sumatriptan",
+          "note": "attack treatment"
+        },
+        {
+          "generic": "Ibuprofen",
+          "note": "mild–moderate attacks"
+        }
+      ]
+    },
+    {
+      "dx": "Tension-type headache",
+      "icd10": "G44.2",
+      "supports": [
+        "Band-like pressing pain, mild to moderate, no vomiting",
+        "Pericranial and trapezius muscle tenderness on palpation",
+        "Attacks lasting 30 minutes to days without aura or focal signs"
+      ],
+      "key": "tension",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Paracetamol",
+          "note": "simple analgesia — watch monthly frequency"
+        }
+      ]
+    },
+    {
+      "dx": "Cluster headache",
+      "icd10": "G44.0",
+      "supports": [
+        "Excruciating strictly one-sided orbital/temporal pain, 15–180 min",
+        "Same-side eye watering, redness, and nasal blockage",
+        "Daily attacks in clusters lasting weeks, patient restless and pacing"
+      ],
+      "key": "cluster",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Sumatriptan",
+          "note": "attack treatment; oxygen where available"
+        }
+      ]
+    },
+    {
+      "dx": "Medication-overuse headache",
+      "icd10": "G44.40",
+      "supports": [
+        "Headache ≥ 15 days/month in a known primary-headache patient",
+        "Analgesic or triptan use ≥ 10–15 days/month for over 3 months",
+        "Featureless daily pain on waking, normal exam"
+      ],
+      "key": "moh",
+      "first_line": [],
+      "medications": []
+    },
+    {
+      "dx": "Subarachnoid haemorrhage",
+      "icd10": "I60.9",
+      "supports": [
+        "Thunderclap onset — worst headache of life within a minute",
+        "Neck stiffness without fever; possible third-nerve palsy",
+        "Blood on urgent CT or xanthochromia on LP"
+      ],
+      "key": "sah",
+      "first_line": [
+        "Brain CT (non-contrast)",
+        "Lumbar puncture (after imaging excludes mass effect)"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Bacterial meningitis",
+      "icd10": "G00.9",
+      "supports": [
+        "Headache with fever, neck stiffness, photophobia",
+        "Positive Kernig's sign, possible non-blanching rash",
+        "CSF neutrophilia with low glucose on lumbar puncture"
+      ],
+      "key": "meningitis",
+      "first_line": [
+        "CBC",
+        "Lumbar puncture (after imaging excludes mass effect)"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Giant cell arteritis",
+      "icd10": "M31.6",
+      "supports": [
+        "New temporal headache after age 50",
+        "Jaw claudication, scalp tenderness, thickened tender temporal artery",
+        "ESR markedly raised (often > 50 mm/h)",
+        "Transient visual loss — impending permanent sight loss, same-day referral"
+      ],
+      "key": "gca",
+      "first_line": [
+        "ESR and CRP",
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Prednisolone",
+          "note": "START on strong suspicion — protect vision, then confirm"
+        }
+      ]
+    },
+    {
+      "dx": "Space-occupying intracranial lesion",
+      "icd10": "D49.6",
+      "supports": [
+        "Progressive daily headache worse on waking, coughing, or lying down",
+        "Papilloedema, focal deficit, or new seizure",
+        "Known primary cancer or unexplained weight loss"
+      ],
+      "key": "mass",
+      "first_line": [
+        "Brain CT (non-contrast)",
+        "Brain MRI"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Acute sinusitis",
+      "icd10": "J01.90",
+      "supports": [
+        "Facial pressure over cheeks/forehead worse bending forward",
+        "Purulent nasal discharge after a cold, sinus tenderness on pressure",
+        "Air-fluid level on sinus imaging"
+      ],
+      "key": "sinusitis",
+      "first_line": [
+        "Sinus X-ray or limited sinus CT"
+      ],
+      "medications": [
+        {
+          "generic": "Amoxicillin/Clavulanate",
+          "note": "bacterial sinusitis"
+        },
+        {
+          "generic": "Paracetamol",
+          "note": "analgesia"
+        }
+      ]
+    }
+  ],
+  "priors": {
+    "tension": 4,
+    "migraine": 3,
+    "sinusitis": 2,
+    "moh": 2,
+    "cluster": 1,
+    "mass": 1,
+    "sah": 1,
+    "meningitis": 1,
+    "gca": 1
+  },
+  "exam_weights": {
+    "Test neck flexion for stiffness; Kernig's sign if febrile": {
+      "meningitis": 4
+    },
+    "Perform fundoscopy for papilloedema (raised intracranial pressure) and subhyaloid haemorrhage (SAH)": {
+      "mass": 4
+    },
+    "Check pupils and eye movements — third-nerve palsy with a dilated pupil raises aneurysm": {
+      "sah": 3,
+      "mass": 2
+    },
+    "Screen visual fields by confrontation — bitemporal or homonymous defects raise a mass lesion": {
+      "mass": 3
+    },
+    "Palpate the temporal arteries for tenderness, thickening, or absent pulsation (giant cell arteritis)": {
+      "gca": 4
+    },
+    "Press over the frontal and maxillary sinuses and transilluminate if possible (sinusitis)": {
+      "sinusitis": 3
+    },
+    "Test limb power, reflexes, and plantar responses for asymmetry (space-occupying lesion, stroke)": {
+      "mass": 3
+    },
+    "Assess gait and coordination — ataxia points to a posterior fossa lesion": {
+      "mass": 3
+    },
+    "Palpate pericranial and trapezius muscles for tenderness (tension-type)": {
+      "tension": 2
+    },
+    "Examine the scalp and jaw: pain on sustained chewing (jaw claudication) supports arteritis": {
+      "gca": 4
+    }
+  },
+  "pmh_modifiers": [
+    {
+      "label": "Migraine history",
+      "icd10_prefixes": [
+        "G43"
+      ],
+      "name_contains": [
+        "migraine",
+        "شقيقة"
+      ],
+      "weights": {
+        "migraine": 2
+      }
+    },
+    {
+      "label": "Hypertension",
+      "icd10_prefixes": [
+        "I10"
+      ],
+      "name_contains": [
+        "hypertens",
+        "ضغط"
+      ],
+      "weights": {
+        "sah": 1
+      }
+    },
+    {
+      "label": "Active cancer",
+      "icd10_prefixes": [
+        "C"
+      ],
+      "name_contains": [
+        "cancer",
+        "malign",
+        "سرطان"
+      ],
+      "weights": {
+        "mass": 3
+      }
+    }
+  ],
+  "demographic_modifiers": [
+    {
+      "label": "Age 50+",
+      "min_age": 50,
+      "weights": {
+        "gca": 2,
+        "mass": 1
+      }
+    },
+    {
+      "label": "Male",
+      "sex": "male",
+      "weights": {
+        "cluster": 2
+      }
+    },
+    {
+      "label": "Female",
+      "sex": "female",
+      "weights": {
+        "migraine": 1
+      }
+    }
+  ]
+}

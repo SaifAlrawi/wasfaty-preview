@@ -1,0 +1,58 @@
+{
+  "id": "breast_lump",
+  "specialty": "general_surgery",
+  "complaint": "Breast lump / breast pain",
+  "icd10_symptom": "N63.0",
+  "history": [
+    { "ask": "Age group", "options": ["Under 30", "30–40", "Over 40"] },
+    { "ask": "How was it found and how has it changed?", "options": ["Noticed by chance, unchanged for months", "Growing steadily", "Appeared suddenly, tender", "Pain without a definite lump"] },
+    { "ask": "Relation to the menstrual cycle", "options": ["Swelling/pain before periods, settles after", "No cyclical pattern", "Post-menopausal"] },
+    { "ask": "Pain in the lump", "options": ["Painless", "Cyclical heaviness both breasts", "Constant localized pain", "Hot throbbing pain with fever"] },
+    { "ask": "Nipple discharge", "options": ["Bloody", "Green/brown from multiple ducts", "Milky", "None"] },
+    { "ask": "Currently breastfeeding or recently stopped", "options": ["Breastfeeding now", "Stopped within weeks", "No"] },
+    { "ask": "Trauma to the breast", "options": ["Yes, before the lump appeared", "No"] },
+    { "ask": "Family history of breast or ovarian cancer", "options": ["First-degree relative", "Other relative", "None"] },
+    { "ask": "Skin or nipple change", "options": ["Dimpling or orange-peel skin", "New nipple retraction", "Nipple eczema/scaling", "None"] },
+    { "ask": "Hormonal drugs", "options": ["OCP or HRT", "Drugs linked to gynecomastia in men (e.g. spironolactone, antiandrogens) or anabolic steroids", "None"] },
+    { "ask": "For men: alcohol excess or chronic liver disease", "options": ["Yes", "No", "Not applicable"] }
+  ],
+  "red_flags": [
+    "Hard fixed lump, skin dimpling, or peau d'orange — carcinoma until proven otherwise; urgent surgical referral",
+    "Bloody nipple discharge or new nipple retraction",
+    "Diffuse red hot breast in a non-lactating woman that does not settle — inflammatory carcinoma can mimic an abscess",
+    "Lump with hard axillary or supraclavicular nodes",
+    "Eczema of the nipple that does not heal — Paget's disease of the nipple",
+    "Hard eccentric lump in a male breast — male carcinoma is easily dismissed as gynecomastia"
+  ],
+  "exam": [
+    "Inspect both breasts with arms by the sides, raised, and pressing on hips — asymmetry, dimpling, peau d'orange, nipple retraction or scaling",
+    "Palpate all four quadrants and the axillary tail of both breasts systematically",
+    "Define the lump: site, size, consistency, surface, and margins",
+    "Assess mobility — freely mobile ('breast mouse') vs tethered to skin vs fixed to pectoralis (re-test with the muscle contracted)",
+    "Test for fluctuation and local warmth — abscess or cyst",
+    "Gently express the nipple and note discharge color and whether it comes from one duct or many",
+    "Palpate both axillae for nodes — number, consistency, fixity — and the supraclavicular fossae",
+    "Record temperature when the breast is inflamed",
+    "In men, distinguish a soft symmetric subareolar disc (gynecomastia) from a hard eccentric mass",
+    "Examine for hepatomegaly when carcinoma is suspected"
+  ],
+  "investigations": [
+    { "test": "Breast ultrasound", "why": "First-line under 40 and in lactation: separates a simple cyst (settles the diagnosis) from a solid lump (fibroadenoma vs carcinoma) and shows an abscess cavity" },
+    { "test": "Mammography", "why": "First-line over 40 or with any suspicious exam finding: spiculated mass and clustered microcalcification support carcinoma; also screens the contralateral breast" },
+    { "test": "FNAC or core needle biopsy", "why": "Third arm of triple assessment — the tissue answer separating fibroadenoma, cyst contents, fat necrosis, and carcinoma; core biopsy preferred when carcinoma is suspected" },
+    { "test": "CBC + CRP", "why": "Leukocytosis with high CRP supports abscess/mastitis; both normal in fibroadenoma, cyst, and most carcinomas" },
+    { "test": "Blood glucose / HbA1c", "why": "Recurrent non-lactational breast sepsis and periductal mastitis are commoner with diabetes and smoking" },
+    { "test": "LFT + hormonal profile (men with gynecomastia)", "why": "Excludes chronic liver disease and endocrine causes behind true gynecomastia before labeling it drug-related" }
+  ],
+  "differentials": [
+    { "dx": "Fibroadenoma", "icd10": "D24.9", "supports": ["Woman under 30 with a firm, smooth, very mobile lump", "Painless and slow-growing", "Well-defined solid lesion on ultrasound; benign FNAC"] },
+    { "dx": "Breast cyst", "icd10": "N60.09", "supports": ["Smooth tense lump appearing quickly, often perimenopausal", "May be tender premenstrually", "Simple cyst on ultrasound"] },
+    { "dx": "Fibrocystic change", "icd10": "N60.19", "supports": ["Bilateral lumpiness and heaviness worse before periods", "Settles after menstruation", "No dominant discrete mass on exam or ultrasound"] },
+    { "dx": "Breast carcinoma", "icd10": "C50.9", "supports": ["Hard irregular painless lump, tethering or fixity", "Age over 40, family history, bloody discharge or nipple retraction", "Axillary nodes; suspicious mammogram", "Malignant cells on core biopsy/FNAC"] },
+    { "dx": "Breast abscess", "icd10": "N61.1", "supports": ["Hot tender fluctuant lump with fever", "Breastfeeding (lactational) or smoker/diabetic (non-lactational)", "Collection on ultrasound with raised CBC/CRP"] },
+    { "dx": "Fat necrosis", "icd10": "N64.1", "supports": ["Firm lump after breast trauma, may tether skin and mimic carcinoma", "History of trauma or bruising at the site", "Confirmed benign on biopsy"] },
+    { "dx": "Duct ectasia / periductal mastitis", "icd10": "N60.49", "supports": ["Green-brown discharge from multiple ducts", "Subareolar lump or nipple retraction in a smoker", "Dilated ducts on ultrasound"] },
+    { "dx": "Cyclical mastalgia (no discrete lesion)", "icd10": "N64.4", "supports": ["Bilateral pain tracking the cycle", "Normal exam apart from tenderness", "Normal ultrasound/mammogram"] },
+    { "dx": "Gynecomastia (male)", "icd10": "N62", "supports": ["Soft symmetric subareolar disc, often tender, may be bilateral", "Culprit drug, alcohol, or liver disease", "Benign pattern on ultrasound"] }
+  ]
+}

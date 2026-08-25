@@ -1,0 +1,59 @@
+{
+  "id": "diarrhea",
+  "specialty": "internal_medicine",
+  "complaint": "Diarrhea",
+  "icd10_symptom": "R19.7",
+  "history": [
+    { "ask": "Duration", "options": ["Acute (< 2 weeks)", "Persistent (2–4 weeks)", "Chronic (> 4 weeks)"] },
+    { "ask": "Blood or mucus in stool", "options": ["Frank blood", "Mucus only", "Neither"] },
+    { "ask": "Stool character", "options": ["Profuse watery", "Small-volume, frequent, with urgency", "Greasy / floating / foul-smelling", "Alternating with constipation"] },
+    { "ask": "Diarrhea waking the patient from sleep", "options": ["Yes", "No"] },
+    { "ask": "Fever", "options": ["High fever", "Low-grade", "None"] },
+    { "ask": "Antibiotics or hospital admission in the last 8 weeks", "options": ["Yes", "No"] },
+    { "ask": "Unintentional weight loss", "options": ["Yes", "No"] },
+    { "ask": "Relation to food or stress", "options": ["Milk / dairy triggers it", "Suspicious meal or street food before onset", "Stress-related, pain relieved by defecation", "No clear pattern"] },
+    { "ask": "Palpitations, heat intolerance, or tremor", "options": ["Yes", "No"] },
+    { "ask": "Similar illness in household contacts", "options": ["Yes", "No"] },
+    { "ask": "Drinking-water source & raw vegetables", "options": ["Municipal treated water", "Well / river / tanker water", "Frequent raw vegetables or unwashed salads outside home"] }
+  ],
+  "red_flags": [
+    "Signs of severe dehydration — hypotension, oliguria, confusion",
+    "Bloody diarrhea with high fever",
+    "Severe abdominal pain with distension (toxic megacolon)",
+    "Age > 50 with a new change in bowel habit or rectal bleeding",
+    "Unintentional weight loss or diarrhea waking the patient at night",
+    "Profuse rice-water stools with rapid collapse — cholera pattern, notifiable"
+  ],
+  "exam": [
+    "Vital signs with temperature and postural blood pressure drop",
+    "Assess hydration: skin turgor, mucous membranes, sunken eyes",
+    "Weigh the patient and compare with any previous recorded weight",
+    "Palpate the abdomen for tenderness, masses, and distension",
+    "Auscultate bowel sounds",
+    "Digital rectal examination — blood on glove, mass, impaction",
+    "Inspect conjunctivae for pallor",
+    "Examine the neck and hands: goiter, resting tachycardia, fine tremor",
+    "Look for mouth ulcers and finger clubbing",
+    "Inspect the perianal region for fistula, fissure, or abscess"
+  ],
+  "investigations": [
+    { "test": "Stool exam (microscopy: RBCs, pus cells, ova & parasites)", "why": "E. histolytica trophozoites or Giardia cysts rule amebiasis/giardiasis in; pus cells with RBCs point to invasive dysentery or ulcerative colitis rather than watery viral illness" },
+    { "test": "Stool culture & sensitivity", "why": "Identifies Shigella/Salmonella when stool is bloody or febrile, and confirms suspected C. difficile after antibiotics where toxin testing is available" },
+    { "test": "CBC", "why": "Anemia flags ulcerative colitis or colorectal carcinoma; eosinophilia supports parasitic infection; leukocytosis supports invasive bacterial infection" },
+    { "test": "CRP / ESR", "why": "Raised supports inflammatory bowel disease or invasive infection; persistently normal supports IBS or lactose intolerance" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Quantifies dehydration and hypokalemia from profuse losses — decides who cannot be worked up as an outpatient" },
+    { "test": "TSH", "why": "Suppressed TSH rules thyrotoxicosis in when chronic diarrhea comes with weight loss, tremor, or palpitations" },
+    { "test": "Colonoscopy", "why": "Second-line — if chronic bloody diarrhea, age > 50 with changed habit, weight loss, or iron-deficiency anemia: confirms ulcerative colitis or colorectal carcinoma" }
+  ],
+  "differentials": [
+    { "dx": "Acute infectious gastroenteritis", "icd10": "A09", "supports": ["Acute watery diarrhea < 2 weeks", "Suspicious meal or affected household contacts", "Fever without alarm findings"] },
+    { "dx": "Amebic dysentery", "icd10": "A06.0", "supports": ["Bloody-mucoid, small-volume stools with urgency", "Unsafe water source or raw vegetables", "Gradual onset with lower abdominal tenderness"] },
+    { "dx": "Giardiasis", "icd10": "A07.1", "supports": ["Greasy, floating, foul stools > 2 weeks", "Bloating and cramps", "Well or river water source"] },
+    { "dx": "Antibiotic-associated / C. difficile colitis", "icd10": "A04.7", "supports": ["Antibiotics or hospital admission within 8 weeks", "Profuse watery stools with fever", "Lower abdominal tenderness"] },
+    { "dx": "Irritable bowel syndrome (diarrhea-predominant)", "icd10": "K58.0", "supports": ["Chronic course alternating with constipation", "Stress-related, pain relieved by defecation", "No nocturnal diarrhea, no weight loss, normal exam"] },
+    { "dx": "Ulcerative colitis", "icd10": "K51.9", "supports": ["Chronic bloody diarrhea with urgency", "Nocturnal symptoms and weight loss", "Pallor or mouth ulcers on exam"] },
+    { "dx": "Thyrotoxicosis", "icd10": "E05.9", "supports": ["Chronic watery diarrhea with weight loss", "Palpitations, heat intolerance, tremor", "Goiter or resting tachycardia on exam"] },
+    { "dx": "Colorectal carcinoma", "icd10": "C18.9", "supports": ["Age > 50 with a recent change in bowel habit", "Blood mixed with stool and weight loss", "Rectal mass or pallor on exam"] },
+    { "dx": "Lactose intolerance", "icd10": "E73.9", "supports": ["Watery stools and bloating clearly triggered by dairy", "No fever, no blood", "Normal examination"] }
+  ]
+}

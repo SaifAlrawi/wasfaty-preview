@@ -1,0 +1,63 @@
+{
+  "id": "leg_swelling",
+  "specialty": "internal_medicine",
+  "complaint": "Bilateral leg swelling / edema",
+  "icd10_symptom": "R60.0",
+  "history": [
+    { "ask": "Duration & progression", "options": ["Days", "Weeks", "Months to years", "Long-standing but recently worse"] },
+    { "ask": "Breathlessness", "options": ["On exertion", "Lying flat (orthopnea) or waking gasping at night", "At rest", "None"] },
+    { "ask": "Urine changes", "options": ["Frothy urine", "Facial puffiness on waking", "Urine output reduced", "None"] },
+    { "ask": "Liver history & abdominal girth", "options": ["Known liver disease or previous hepatitis", "Regular alcohol", "Abdomen enlarging", "None"] },
+    { "ask": "Drug history", "options": ["Amlodipine / nifedipine", "NSAIDs", "Corticosteroids or pregabalin", "None of these"] },
+    { "ask": "Smoking, chronic cough, or known chest disease", "options": ["Yes", "No"] },
+    { "ask": "Cold intolerance, weight gain, dry skin", "options": ["Yes", "No"] },
+    { "ask": "Venous history", "options": ["Varicose veins or previous leg vein clot", "Occupation with prolonged standing", "Skin darkening around the ankles", "None"] },
+    { "ask": "Symmetry at onset", "options": ["Both legs together", "One leg first, then the other", "Strictly one leg, painful"] },
+    { "ask": "Diabetes or hypertension", "options": ["Long-standing diabetes", "Long-standing hypertension", "Both", "Neither"] },
+    { "ask": "Swelling elsewhere", "options": ["Face / around the eyes", "Abdomen", "Lower back when lying", "Legs only"] }
+  ],
+  "red_flags": [
+    "Swelling with breathlessness at rest or orthopnea — decompensating heart failure",
+    "Strictly unilateral painful swollen leg — deep vein thrombosis",
+    "Oliguria or anuria",
+    "Rapid facial plus leg swelling with frothy urine — acute nephrotic/nephritic process",
+    "Associated chest pain or hemoptysis"
+  ],
+  "exam": [
+    "Confirm pitting vs non-pitting and mark the upper level (ankle, knee, thigh, sacrum)",
+    "Measure the jugular venous pressure",
+    "Auscultate the heart: gallop rhythm, murmurs, loud P2",
+    "Auscultate the lung bases: crackles, stony dullness of effusion",
+    "Examine the abdomen: shifting dullness, hepatomegaly (tender or pulsatile), splenomegaly",
+    "Search for chronic liver stigmata: spider nevi, palmar erythema, gynecomastia",
+    "Look for periorbital edema",
+    "Check thyroid signs: dry coarse skin, delayed ankle-reflex relaxation",
+    "Inspect leg skin: hemosiderin staining, venous eczema, ulcers, varicosities",
+    "Compare calves: warmth, tenderness, circumference difference",
+    "Record blood pressure and weight"
+  ],
+  "investigations": [
+    { "test": "Urinalysis", "why": "Heavy proteinuria rules nephrotic syndrome in with one dipstick; mild proteinuria with hematuria points instead to CKD — the single highest-yield test in edema" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Raised creatinine rules chronic kidney disease in and grades it; also baseline before any diuresis decision by the treating doctor" },
+    { "test": "Serum albumin + LFT", "why": "Low albumin unifies nephrotic syndrome and cirrhosis; deranged liver enzymes and low albumin together support cirrhosis" },
+    { "test": "CBC", "why": "Normocytic anemia supports CKD; macrocytosis supports chronic liver disease" },
+    { "test": "TSH", "why": "Raised TSH rules hypothyroid (non-pitting) myxedema in when cold intolerance and delayed reflexes are present" },
+    { "test": "ECG", "why": "Old infarction or left ventricular strain supports heart failure; P pulmonale with right-axis deviation supports cor pulmonale" },
+    { "test": "Chest X-ray", "why": "Cardiomegaly with congestion or effusion rules cardiac edema in; hyperinflation supports cor pulmonale from chronic lung disease" },
+    { "test": "Echocardiography", "why": "Confirms heart failure (ejection fraction) and estimates pulmonary pressure for cor pulmonale — the arbiter when ECG/CXR are equivocal" },
+    { "test": "Abdominal ultrasound", "why": "Coarse shrunken liver with ascites rules cirrhosis in; small echogenic kidneys rule chronic kidney disease in" },
+    { "test": "Doppler ultrasound of leg veins", "why": "If swelling is asymmetric, painful, or one leg started first: rules deep vein thrombosis in or out" }
+  ],
+  "differentials": [
+    { "dx": "Congestive heart failure", "icd10": "I50.9", "supports": ["Exertional dyspnea, orthopnea, or nocturnal gasping", "Raised JVP with gallop rhythm", "Basal crackles and tender hepatomegaly"] },
+    { "dx": "Nephrotic syndrome", "icd10": "N04.9", "supports": ["Frothy urine", "Periorbital edema on waking", "Marked pitting edema in an otherwise well-looking patient"] },
+    { "dx": "Chronic kidney disease", "icd10": "N18.9", "supports": ["Long-standing diabetes or hypertension", "Reduced urine output", "Pallor with edema"] },
+    { "dx": "Cirrhosis with portal hypertension", "icd10": "K74.6", "supports": ["Known liver disease, hepatitis, or alcohol history", "Ascites preceding or exceeding the leg swelling", "Spider nevi, palmar erythema, splenomegaly"] },
+    { "dx": "Chronic venous insufficiency", "icd10": "I87.2", "supports": ["Varicose veins and prolonged standing", "Hemosiderin staining, venous eczema, or ulcers", "Swelling worse by evening, better in the morning"] },
+    { "dx": "Drug-induced edema (calcium-channel blocker, NSAID, steroid)", "icd10": "T88.7", "supports": ["Swelling began after starting amlodipine/nifedipine, NSAIDs, or steroids", "No dyspnea, normal JVP", "Normal urine and exam otherwise"] },
+    { "dx": "Hypothyroid myxedema", "icd10": "E03.9", "supports": ["Cold intolerance, weight gain, dry skin", "Non-pitting swelling", "Delayed ankle-reflex relaxation"] },
+    { "dx": "Cor pulmonale", "icd10": "I27.81", "supports": ["Chronic cough, smoking, or known chest disease", "Raised JVP with loud P2", "Warm periphery with edema"] },
+    { "dx": "Lymphedema", "icd10": "I89.0", "supports": ["Non-pitting woody swelling of months to years", "Skin thickening over the toes", "No cardiac, renal, or hepatic findings"] },
+    { "dx": "Deep vein thrombosis", "icd10": "I82.40", "supports": ["Strictly one leg, painful, or one leg first", "Calf tenderness, warmth, and circumference difference", "Previous leg vein clot"] }
+  ]
+}

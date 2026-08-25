@@ -1,0 +1,57 @@
+{
+  "id": "rectal_bleeding",
+  "specialty": "general_surgery",
+  "complaint": "Rectal bleeding",
+  "icd10_symptom": "K62.5",
+  "history": [
+    { "ask": "Relation of blood to stool", "options": ["Bright red on the paper or dripping after stool", "Streaked on the stool surface", "Mixed within the stool, darker", "Black tarry stool (melena)"] },
+    { "ask": "Pain with defecation", "options": ["Severe tearing pain with each stool", "Painless bleeding", "Ache with a prolapsing lump"] },
+    { "ask": "Change in bowel habit or tenesmus", "options": ["New constipation or narrowing of stool", "New diarrhea or urgency", "Feeling of incomplete emptying (tenesmus)", "No change"] },
+    { "ask": "Weight loss or appetite loss", "options": ["Yes", "No"] },
+    { "ask": "Diarrhea with mucus and blood", "options": ["Yes — bloody mucoid diarrhea", "Diarrhea after doubtful food/water", "No"] },
+    { "ask": "Volume and effect of bleeding", "options": ["Spots on paper only", "Dripping or clots", "Large volume with dizziness or collapse"] },
+    { "ask": "Drug history", "options": ["NSAID or aspirin", "Anticoagulant", "Neither"] },
+    { "ask": "Family history of bowel cancer or polyps", "options": ["First-degree relative affected", "None known"] },
+    { "ask": "Age and first occurrence", "options": ["Under 45, recurrent typical outlet bleeding", "Over 45 with new bleeding", "Any age, first significant bleed"] },
+    { "ask": "A lump prolapsing with stool", "options": ["Yes, goes back alone or pushed back", "Yes, permanently out", "No lump"] }
+  ],
+  "red_flags": [
+    "Dizziness, collapse, tachycardia, or postural drop with bleeding — hemodynamically significant hemorrhage; urgent surgical referral",
+    "Age over 45 with new bleeding plus altered habit, weight loss, or tenesmus — colorectal carcinoma until excluded",
+    "Iron-deficiency anemia with rectal bleeding at any age — the source must be found, not assumed to be piles",
+    "Melena or blood mixed through the stool — proximal source, not an anal one",
+    "Bloody diarrhea with fever, distension, and toxicity — severe colitis"
+  ],
+  "exam": [
+    "Record BP and pulse, sitting and standing — postural drop grades the bleed",
+    "Look for pallor of conjunctiva and palmar creases",
+    "Palpate the abdomen for a mass (left or right iliac fossa) and for hepatomegaly",
+    "Perform a digital rectal exam — a palpable rectal mass, blood on the glove, or melena each redirect the whole pathway",
+    "Inspect the anal margin — fissure, prolapsed or thrombosed piles",
+    "Proctoscopy — bleeding internal hemorrhoids seen directly",
+    "Percuss for distension and listen to bowel sounds when colitis is suspected",
+    "Palpate the left supraclavicular fossa for a hard node",
+    "Record temperature — fever supports infective or inflammatory colitis over the anatomical causes"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Microcytic anemia supports carcinoma, angiodysplasia, or chronic colitis; a normal count with typical outlet bleeding fits hemorrhoids or fissure; acute drop grades a brisk bleed" },
+    { "test": "Stool exam (microscopy, culture, Entamoeba histolytica)", "why": "Trophozoites rule in amebic dysentery — a common Iraqi cause of bloody diarrhea — and culture separates infective colitis from ulcerative colitis" },
+    { "test": "CRP / ESR", "why": "Raised values support active colitis (ulcerative or infective) over hemorrhoids, fissure, polyps, and angiodysplasia" },
+    { "test": "RFT / electrolytes", "why": "A urea rise out of proportion to creatinine supports a proximal (upper GI) source presenting as dark rectal bleeding" },
+    { "test": "Coagulation profile (PT/INR)", "why": "Anticoagulant use or liver disease can turn any of the listed sources into a major bleed and must be quantified" },
+    { "test": "Proctoscopy / rigid sigmoidoscopy (clinic)", "why": "Directly confirms an anorectal source — hemorrhoids, fissure, a low rectal tumor — before blaming piles" },
+    { "test": "Colonoscopy", "why": "Second-line — mandatory if over 45 with new bleeding, anemia, altered habit, family history, or no anorectal source found: the definitive test for carcinoma, polyps, colitis, and angiodysplasia" },
+    { "test": "Upper GI endoscopy", "why": "Second-line — if melena or a disproportionate urea rise points to a bleeding source above the colon" }
+  ],
+  "differentials": [
+    { "dx": "Internal hemorrhoids", "icd10": "K64.9", "supports": ["Painless bright bleeding dripping after stool", "Prolapsing reducible lump", "Seen bleeding on proctoscopy", "Straining/constipation history"] },
+    { "dx": "Anal fissure", "icd10": "K60.2", "supports": ["Severe pain with defecation and blood on the paper", "Posterior midline tear on inspection", "Constipation history"] },
+    { "dx": "Colorectal carcinoma", "icd10": "C18.9", "supports": ["Age over 45 with blood mixed in stool", "Altered habit, tenesmus, or weight loss", "Palpable rectal or abdominal mass; iron-deficiency anemia", "Family history"] },
+    { "dx": "Colonic polyp", "icd10": "D12.6", "supports": ["Intermittent painless bleeding mixed with stool", "Family history of polyps or cancer", "Normal anorectal exam with persistent bleeding"] },
+    { "dx": "Diverticular bleeding", "icd10": "K57.31", "supports": ["Sudden painless large-volume dark red bleed in an older patient", "No anorectal source on proctoscopy", "Known diverticular disease"] },
+    { "dx": "Ulcerative colitis", "icd10": "K51.90", "supports": ["Bloody mucoid diarrhea with urgency and tenesmus", "Raised CRP/ESR with anemia", "Recurrent episodes in a younger patient"] },
+    { "dx": "Infective / amebic colitis", "icd10": "A06.0", "supports": ["Acute bloody diarrhea with fever", "Doubtful food or water exposure", "Entamoeba histolytica or pathogens on stool exam"] },
+    { "dx": "Angiodysplasia", "icd10": "K55.21", "supports": ["Painless recurrent bleeding in an elderly patient", "Unexplained iron-deficiency anemia", "Normal proctoscopy; found on colonoscopy"] },
+    { "dx": "Brisk upper GI bleed presenting rectally", "icd10": "K92.2", "supports": ["Melena or maroon stool with hemodynamic compromise", "Urea raised out of proportion to creatinine", "NSAID/anticoagulant use or dyspepsia history"] }
+  ]
+}

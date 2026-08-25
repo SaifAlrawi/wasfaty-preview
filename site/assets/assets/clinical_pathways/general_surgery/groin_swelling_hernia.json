@@ -1,0 +1,56 @@
+{
+  "id": "groin_swelling_hernia",
+  "specialty": "general_surgery",
+  "complaint": "Groin swelling / suspected hernia",
+  "icd10_symptom": "R22.2",
+  "history": [
+    { "ask": "Does the lump disappear?", "options": ["Disappears lying down or with gentle pressure", "Constant, never changes", "Appears only on standing or straining", "Recently stopped reducing"] },
+    { "ask": "Relation to cough or strain", "options": ["Bulges with coughing/lifting", "No relation", "Aches after prolonged standing"] },
+    { "ask": "Pain in the lump now", "options": ["Painless", "Dragging ache", "Suddenly painful and tender", "Painful with fever"] },
+    { "ask": "Vomiting, distension, or absolute constipation", "options": ["Vomiting since the lump became painful", "Distension with no stool or flatus", "None"] },
+    { "ask": "Chronic straining causes", "options": ["Chronic cough", "Chronic constipation / straining", "Heavy lifting occupation", "Urinary straining (prostatism)", "None"] },
+    { "ask": "Any wound, ulcer, or infection in the leg, foot, or genitalia", "options": ["Yes — current or recent", "No"] },
+    { "ask": "Fever, night sweats, or weight loss", "options": ["Night sweats and weight loss", "Fever only", "None"] },
+    { "ask": "Varicose veins in the same leg", "options": ["Yes", "No"] },
+    { "ask": "Back pain or known spine disease (including TB)", "options": ["Back pain with the swelling", "Known or suspected spinal TB", "Neither"] },
+    { "ask": "Duration and growth", "options": ["Years, unchanged", "Months, slowly growing", "Days to weeks", "Sudden appearance"] }
+  ],
+  "red_flags": [
+    "Tense, tender, irreducible lump with vomiting — strangulated hernia; urgent surgical referral",
+    "Sudden pain in a previously reducible lump that no longer reduces — incarceration on its way to strangulation; urgent surgical referral",
+    "Redness of the skin over the lump with fever — strangulation with sepsis or an abscess",
+    "Distension with absolute constipation and a groin lump — obstructed hernia, and a femoral hernia is the classic missed cause",
+    "Small tender lump below the groin crease in an elderly woman with vomiting — femoral hernia strangulates early and looks trivial"
+  ],
+  "exam": [
+    "Examine standing first, then lying — hernias and saphena varix often vanish supine",
+    "Ask the patient to cough and look and feel for an expansile impulse",
+    "Test reducibility gently — direction of reduction helps type the hernia; never force a tender lump",
+    "Locate the lump against the pubic tubercle — above and medial (inguinal) vs below and lateral (femoral)",
+    "Examine the scrotum: can you get above the swelling? A lump you cannot get above is inguinoscrotal",
+    "Percuss and auscultate the lump — resonance or bowel sounds mean bowel content",
+    "Feel for a fluid thrill on tapping the saphenous vein below and a disappearance on lying — saphena varix; check the same leg for varicosities",
+    "Palpate for expansile pulsation — femoral artery aneurysm sits exactly where a femoral hernia does",
+    "Palpate the other groin and both hernial orifices — bilateral disease is common",
+    "Examine the leg, perineum, and genitalia for a septic source when nodes are suspected, and feel the node group's consistency and matting",
+    "Extend the hip against resistance (psoas stretch) and examine the spine when a deep tender swelling with back pain suggests psoas abscess"
+  ],
+  "investigations": [
+    { "test": "Ultrasound of the groin", "why": "First-line discriminator: shows a hernial sac with cough impulse vs solid lymph node vs vascular structure (varix, aneurysm) vs cord lipoma when the exam is equivocal" },
+    { "test": "CBC", "why": "Leukocytosis supports strangulation or an abscess; lymphocytosis or cytopenias with rubbery nodes support lymphoma" },
+    { "test": "ESR / CRP", "why": "Markedly raised supports TB (psoas abscess, tuberculous nodes) or deep sepsis over an uncomplicated hernia" },
+    { "test": "FNAC of a persistent lymph node", "why": "Separates reactive hyperplasia from tuberculous lymphadenitis and metastatic or lymphomatous nodes when no septic source is found" },
+    { "test": "Abdominal X-ray (erect)", "why": "Air-fluid levels confirm obstruction when a hernia has stopped reducing and vomiting has begun" },
+    { "test": "CT abdomen/pelvis", "why": "Second-line — if psoas abscess or an obscure obstructed hernia is suspected: defines the sac, its content, and any retroperitoneal collection or spinal focus" }
+  ],
+  "differentials": [
+    { "dx": "Inguinal hernia", "icd10": "K40.90", "supports": ["Lump above and medial to the pubic tubercle", "Expansile cough impulse, reduces lying down", "Chronic cough, straining, or heavy lifting history"] },
+    { "dx": "Femoral hernia", "icd10": "K41.90", "supports": ["Lump below and lateral to the pubic tubercle", "Small, often irreducible, typically in an older woman", "May present first with obstruction"] },
+    { "dx": "Incarcerated / obstructed hernia", "icd10": "K40.30", "supports": ["Previously reducible lump now fixed and tender", "Vomiting, distension, absolute constipation", "Air-fluid levels on erect X-ray"] },
+    { "dx": "Inguinal lymphadenopathy", "icd10": "R59.0", "supports": ["Constant lump with no cough impulse", "Septic source in leg, foot, perineum, or genitalia", "Matted or rubbery nodes; night sweats and weight loss in TB or lymphoma"] },
+    { "dx": "Saphena varix", "icd10": "I86.8", "supports": ["Soft lump at the saphenous opening that vanishes lying flat", "Fluid thrill on tapping the saphenous vein", "Varicose veins in the same leg"] },
+    { "dx": "Lipoma of the cord", "icd10": "D17.6", "supports": ["Soft, non-tender, slowly growing lump", "No cough impulse, does not reduce", "Solid fatty echotexture on ultrasound"] },
+    { "dx": "Femoral artery aneurysm", "icd10": "I72.4", "supports": ["Expansile pulsation at the femoral point", "Older patient with vascular disease", "Confirmed vascular structure on ultrasound"] },
+    { "dx": "Psoas abscess pointing below the inguinal ligament", "icd10": "K68.12", "supports": ["Deep tender swelling with fever and weight loss", "Back pain or known spinal TB; pain on psoas stretch", "Collection tracking along psoas on ultrasound/CT"] }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "syncope",
+  "specialty": "internal_medicine",
+  "complaint": "Syncope / fainting",
+  "icd10_symptom": "R55",
+  "history": [
+    {
+      "ask": "Situation at the moment of collapse",
+      "options": ["Prolonged standing, heat, crowding, or pain/fear/blood-draw", "On standing up from sitting or lying", "During exertion", "While sitting or lying flat", "During cough, micturition, or defecation"]
+    },
+    {
+      "ask": "Warning symptoms before collapse (prodrome)",
+      "options": ["Nausea, sweating, vision greying out over seconds to minutes", "Palpitations immediately before", "No warning at all — sudden blackout", "Spinning or light-headedness first"]
+    },
+    {
+      "ask": "Eyewitness account of the episode",
+      "options": ["Limp, pale, still — recovered in under a minute", "Jerking limbs for over a minute with tongue biting", "Brief myoclonic jerks after falling (seconds only)", "No witness available"]
+    },
+    {
+      "ask": "Recovery pattern",
+      "options": ["Immediately clear-headed within a minute", "Confused or drowsy for more than 5 minutes", "Woke with tongue laceration or urinary incontinence", "Prolonged fatigue but oriented"]
+    },
+    {
+      "ask": "Number and pattern of episodes",
+      "options": ["First ever", "Recurrent over years, always with typical triggers", "Increasing frequency recently", "Cluster of episodes this week"]
+    },
+    {
+      "ask": "Cardiac background",
+      "options": ["Known structural heart disease or heart failure", "Previous myocardial infarction", "Family history of sudden death < 40 years", "None"]
+    },
+    {
+      "ask": "Medication review",
+      "options": ["Antihypertensives or diuretics (recently started or increased)", "Insulin or sulfonylurea", "QT-prolonging drugs (antipsychotics, some antibiotics/antiemetics)", "None relevant"]
+    },
+    {
+      "ask": "Volume loss / bleeding screen",
+      "options": ["Vomiting or diarrhoea", "Black stools or vomiting blood", "Poor oral intake / fasting in heat", "None"]
+    },
+    {
+      "ask": "Symptoms just before or after the event",
+      "options": ["Chest pain", "Breathlessness or pleuritic pain", "Sweating and hunger relieved by eating", "Headache", "None"]
+    },
+    {
+      "ask": "Diabetic status",
+      "options": ["Diabetic on insulin or sulfonylurea", "Diabetic on other treatment", "Not diabetic"]
+    }
+  ],
+  "red_flags": [
+    "Syncope during exertion or while supine",
+    "Syncope preceded by palpitations or chest pain",
+    "Family history of sudden cardiac death under 40",
+    "Known structural heart disease, heart failure, or previous infarction",
+    "No prodrome at all — instantaneous collapse with facial injury",
+    "Signs of GI bleeding (melaena, haematemesis) with the collapse",
+    "New focal neurological deficit or severe sudden headache on waking"
+  ],
+  "exam": [
+    "Measure lying BP, then standing BP at 1 and 3 minutes — a drop ≥ 20 mmHg systolic (or ≥ 10 diastolic) confirms orthostatic hypotension",
+    "Palpate the pulse for rate, rhythm, and character — slow-rising and weak suggests aortic stenosis; irregular suggests AF",
+    "Auscultate for an ejection systolic murmur radiating to the carotids (aortic stenosis)",
+    "Auscultate for other murmurs and listen at the apex in left lateral position",
+    "Look for pallor of conjunctivae and palmar creases, and check capillary refill (blood loss)",
+    "Perform a digital rectal exam if any suggestion of GI bleeding — melaena confirms the source of hypovolaemia",
+    "Examine tongue lateral borders for bite marks (seizure)",
+    "Screen neurological status: pupils, speech, limb power, gait — any focal deficit reroutes to stroke work-up",
+    "Inspect for injury pattern — facial/head injury without protective hand reflex suggests no prodrome (arrhythmic cause)",
+    "Estimate JVP and auscultate lungs — raised JVP with clear syncope raises massive PE or tamponade"
+  ],
+  "investigations": [
+    {
+      "test": "12-lead ECG",
+      "why": "The single highest-yield test — rules in arrhythmic substrate: bradycardia, AV block, long QT, pre-excitation, Brugada pattern, old infarction; LVH with strain supports aortic stenosis; sinus tachycardia with right-heart strain supports PE"
+    },
+    {
+      "test": "Random blood glucose (fingerstick at presentation)",
+      "why": "Immediately rules hypoglycaemia in or out, especially in diabetics on insulin or sulfonylurea — a documented low value with symptom relief on eating settles the diagnosis"
+    },
+    {
+      "test": "CBC",
+      "why": "Low haemoglobin rules in blood loss / anaemia as the cause of orthostatic collapse — pairs with the melaena question and rectal exam"
+    },
+    {
+      "test": "Renal function and electrolytes",
+      "why": "Dehydration (raised urea/creatinine) supports hypovolaemic orthostatic syncope; potassium, calcium and magnesium abnormalities predispose to the arrhythmias the ECG is screening for"
+    },
+    {
+      "test": "Echocardiography",
+      "why": "Mandatory when a murmur, exertional syncope, or abnormal ECG is present — confirms or excludes aortic stenosis, hypertrophic cardiomyopathy, and structural disease behind ventricular arrhythmia"
+    },
+    {
+      "test": "Ambulatory ECG (Holter 24–48 h)",
+      "why": "For recurrent unexplained episodes with a normal resting ECG — catches intermittent AV block or paroxysmal tachyarrhythmia that a single tracing misses"
+    },
+    {
+      "test": "Pregnancy test (women of childbearing age)",
+      "why": "Rules ectopic pregnancy in or out as the cause of hypovolaemic collapse in any woman of reproductive age with syncope and abdominal symptoms"
+    },
+    {
+      "test": "Brain CT",
+      "why": "Second-line — NOT routine for classic syncope; only if focal deficit, persistent confusion, severe sudden headache, or significant head injury from the fall — then it rules intracranial bleeding in or out"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Vasovagal (reflex) syncope",
+      "icd10": "R55",
+      "supports": ["Trigger: prolonged standing, heat, pain, or blood-draw", "Prodrome of nausea, sweating, and greying vision", "Limp and pale with recovery inside a minute", "Recurrent stereotyped episodes over years"]
+    },
+    {
+      "dx": "Orthostatic hypotension",
+      "icd10": "I95.1",
+      "supports": ["Collapse on standing from sitting or lying", "Recently started or increased antihypertensive/diuretic", "Documented postural BP drop ≥ 20/10 mmHg", "Volume loss: vomiting, diarrhoea, poor intake"]
+    },
+    {
+      "dx": "Cardiac arrhythmia (brady- or tachyarrhythmia)",
+      "icd10": "I49.9",
+      "supports": ["No prodrome — instantaneous collapse, facial injury", "Palpitations immediately before the blackout", "AV block, long QT, pre-excitation, or old infarct on ECG", "Syncope while supine or during exertion"]
+    },
+    {
+      "dx": "Severe aortic stenosis",
+      "icd10": "I35.0",
+      "supports": ["Exertional syncope in an older adult", "Ejection systolic murmur radiating to carotids with slow-rising pulse", "LVH on ECG, confirmed on echocardiography"]
+    },
+    {
+      "dx": "Generalised seizure (syncope mimic)",
+      "icd10": "G40.9",
+      "supports": ["Witnessed jerking > 1 minute with tongue biting", "Post-event confusion longer than 5 minutes", "Lateral tongue laceration on exam", "Urinary incontinence with prolonged disorientation"]
+    },
+    {
+      "dx": "Hypoglycaemia",
+      "icd10": "E16.2",
+      "supports": ["Diabetic on insulin or sulfonylurea", "Sweating and hunger preceding the collapse, relieved by eating", "Low fingerstick glucose documented at presentation"]
+    },
+    {
+      "dx": "Acute blood-loss hypovolaemia (GI bleed)",
+      "icd10": "D62",
+      "supports": ["Black stools or haematemesis with collapse on standing", "Pallor with tachycardia and postural BP drop", "Melaena on rectal exam with low haemoglobin"]
+    },
+    {
+      "dx": "Pulmonary embolism",
+      "icd10": "I26.99",
+      "supports": ["Syncope with breathlessness or pleuritic chest pain", "Immobilisation, surgery, cancer, or unilateral leg swelling", "Sinus tachycardia with right-heart strain on ECG and raised JVP"]
+    }
+  ]
+}

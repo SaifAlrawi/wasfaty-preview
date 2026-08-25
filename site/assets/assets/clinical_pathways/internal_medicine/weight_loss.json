@@ -1,0 +1,63 @@
+{
+  "id": "weight_loss",
+  "specialty": "internal_medicine",
+  "complaint": "Unintentional weight loss",
+  "icd10_symptom": "R63.4",
+  "history": [
+    { "ask": "How much, over how long", "options": ["More than 10% of body weight in 6 months", "Less than 5%, gradual", "Not weighed, but clothes clearly looser"] },
+    { "ask": "Appetite", "options": ["Increased or normal despite the loss", "Decreased", "Avoids eating because food brings symptoms"] },
+    { "ask": "Thirst and urination", "options": ["Marked thirst with frequent urination", "Normal"] },
+    { "ask": "Heat intolerance, palpitations, tremor, irritability", "options": ["Yes", "No"] },
+    { "ask": "Respiratory symptoms", "options": ["Cough more than 2 weeks", "Coughing blood", "Night sweats", "TB contact at home", "None"] },
+    { "ask": "Upper GI symptoms", "options": ["Difficulty swallowing", "Early fullness after small meals", "Black tarry stool", "None"] },
+    { "ask": "Bowel pattern", "options": ["Chronic diarrhea", "Bulky, greasy, floating stools with bloating", "Normal"] },
+    { "ask": "Lymph node swellings or recurring unexplained fever", "options": ["Yes", "No"] },
+    { "ask": "Mood, interest, and sleep", "options": ["Low mood with loss of interest", "Normal"] },
+    { "ask": "Risk exposures", "options": ["Blood transfusion before screening / unsterile injections", "High-risk sexual contact", "None"] },
+    { "ask": "Known kidney disease, food aversion with nausea, generalized itching", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Coughing blood (hemoptysis)",
+    "Progressive difficulty swallowing",
+    "Black tarry stool (melena)",
+    "Painless enlarging lymph nodes with drenching night sweats",
+    "Loss of more than 10% of body weight in 6 months",
+    "Weight loss with persistent unexplained fever"
+  ],
+  "exam": [
+    "Document weight and BMI; compare with any previous recorded weight",
+    "Examine every lymph node station, especially the left supraclavicular fossa",
+    "Examine the thyroid: goiter, tremor, resting tachycardia, lid lag or exophthalmos",
+    "Auscultate the chest with attention to the apices",
+    "Palpate the abdomen: epigastric mass, hepatosplenomegaly, ascites",
+    "Inspect the mouth for oral thrush and glossitis",
+    "Check conjunctivae for pallor and sclerae for jaundice",
+    "Assess mental state and affect",
+    "Record temperature",
+    "Look for muscle wasting (temporalis, hand muscles)",
+    "Digital rectal examination if melena or altered bowel habit reported"
+  ],
+  "investigations": [
+    { "test": "Fasting glucose / HbA1c", "why": "Rules new or uncontrolled diabetes in — weight loss with thirst, polyuria, and preserved appetite" },
+    { "test": "TSH", "why": "Suppressed TSH rules hyperthyroidism in — weight loss with increased appetite, tremor, and tachycardia" },
+    { "test": "CBC", "why": "Anemia points to GI malignancy or chronic disease; lymphocytosis or cytopenias flag lymphoma or HIV" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Raised urea/creatinine rules uremia in as the cause of food aversion, nausea, and itching" },
+    { "test": "Chest X-ray", "why": "Apical infiltrates or cavitation rule pulmonary TB in; a mass or mediastinal widening points to malignancy or lymphoma" },
+    { "test": "Sputum for AFB x2 (GeneXpert if available)", "why": "Confirms pulmonary TB when cough exceeds 2 weeks — the single most important treatable cause in this setting" },
+    { "test": "Anti-tissue transglutaminase (anti-tTG)", "why": "Rules celiac disease in when weight loss comes with chronic diarrhea, bulky stools, or unexplained anemia" },
+    { "test": "HIV serology (with counseling)", "why": "Rules HIV in when risk exposures, oral thrush, or generalized lymphadenopathy are present — treatable and otherwise missed" },
+    { "test": "Abdominal ultrasound", "why": "Detects hepatosplenomegaly, para-aortic nodes (lymphoma), ascites, or a solid mass behind an abdominal cause" },
+    { "test": "Upper GI endoscopy", "why": "Second-line — if dysphagia, early satiety, or melena: rules gastric or esophageal carcinoma in or out" }
+  ],
+  "differentials": [
+    { "dx": "Uncontrolled diabetes mellitus", "icd10": "E11.9", "supports": ["Weight loss despite normal or increased appetite", "Marked thirst with frequent urination"] },
+    { "dx": "Hyperthyroidism", "icd10": "E05.9", "supports": ["Increased appetite with heat intolerance and palpitations", "Goiter, tremor, resting tachycardia", "Lid lag or exophthalmos"] },
+    { "dx": "Pulmonary tuberculosis", "icd10": "A15.9", "supports": ["Cough > 2 weeks with night sweats", "TB contact at home", "Apical findings on chest exam"] },
+    { "dx": "Gastric carcinoma", "icd10": "C16.9", "supports": ["Early satiety, dysphagia, or melena", "Epigastric mass or left supraclavicular node", "Pallor with marked weight loss"] },
+    { "dx": "Lymphoma", "icd10": "C85.9", "supports": ["Painless enlarging lymph nodes", "Recurring fever and night sweats", "Splenomegaly"] },
+    { "dx": "Depression", "icd10": "F32.9", "supports": ["Low mood with loss of interest and poor sleep", "Decreased appetite", "Normal physical examination"] },
+    { "dx": "Celiac disease / malabsorption", "icd10": "K90.0", "supports": ["Chronic diarrhea with bulky greasy stools and bloating", "Pallor with glossitis", "Weight loss despite eating"] },
+    { "dx": "HIV infection", "icd10": "B20", "supports": ["Transfusion, unsterile injections, or high-risk contact", "Oral thrush", "Generalized lymphadenopathy"] },
+    { "dx": "Uremia (advanced CKD)", "icd10": "N18.9", "supports": ["Known kidney disease", "Food aversion with nausea and generalized itching", "Pallor with muscle wasting"] }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "joint_pain",
+  "specialty": "internal_medicine",
+  "complaint": "Joint pain",
+  "icd10_symptom": "M25.5",
+  "history": [
+    { "ask": "Number & distribution of joints", "options": ["Single joint", "2–4 joints", "Many joints (> 4), symmetric", "Widespread pain including muscles"] },
+    { "ask": "Which joints", "options": ["Big toe (1st MTP) or foot", "Knee or hip", "Small hand joints (MCP/PIP), wrists", "DIP joints of fingers", "Low back / buttocks"] },
+    { "ask": "Speed of onset", "options": ["Overnight, excruciating", "Over days with fever", "Over weeks to months", "Over years, gradual"] },
+    { "ask": "Morning stiffness", "options": ["More than 1 hour", "Less than 30 minutes / after rest only", "None"] },
+    { "ask": "Relation to activity", "options": ["Worse with use, better with rest", "Better with movement, worse with rest"] },
+    { "ask": "Fever & sweats", "options": ["High fever", "Low-grade undulant fever with drenching sweats", "None"] },
+    { "ask": "Raw milk / unpasteurized dairy or livestock contact", "options": ["Yes", "No"] },
+    { "ask": "Skin, nails, and mucosa", "options": ["Psoriatic plaques or nail pitting", "Facial rash worse in sunlight", "Recurrent mouth ulcers", "None"] },
+    { "ask": "Diarrhea or urethritis 2–4 weeks before the joint pain", "options": ["Yes", "No"] },
+    { "ask": "Gout pattern & triggers", "options": ["Attacks after red meat / organ meat or alcohol", "On a diuretic", "Previous identical attacks resolving completely", "None"] },
+    { "ask": "Sleep and fatigue", "options": ["Unrefreshing sleep with fatigue and widespread tenderness", "Normal sleep"] }
+  ],
+  "red_flags": [
+    "Single hot swollen joint with fever — septic arthritis until proven otherwise",
+    "Inability to move the joint or bear weight",
+    "Acute monoarthritis in a diabetic or immunosuppressed patient",
+    "Pain and fever in a joint with a prosthesis",
+    "Constitutional decline: weight loss, drenching night sweats"
+  ],
+  "exam": [
+    "Count and map every involved joint; note symmetry",
+    "Feel for warmth and effusion (patellar tap); note overlying erythema",
+    "Compare active and passive range of motion",
+    "Examine the hands: MCP/PIP synovitis, DIP Heberden nodes, deformities",
+    "Search for tophi on ears, elbows, and fingers",
+    "Inspect skin, scalp, and nails: psoriatic plaques, nail pitting, malar rash, oral ulcers",
+    "Look for dactylitis and Achilles/plantar enthesitis",
+    "Assess widespread soft-tissue tender points",
+    "Stress the sacroiliac joints and screen spinal movement",
+    "Record temperature; palpate for lymphadenopathy and splenomegaly"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Marked leukocytosis supports septic arthritis; cytopenias support SLE; normal counts fit osteoarthritis and fibromyalgia" },
+    { "test": "ESR / CRP", "why": "Separates inflammatory disease (RA, septic, brucellosis, SLE — raised) from mechanical osteoarthritis and fibromyalgia (normal)" },
+    { "test": "Serum uric acid", "why": "Supports gout between attacks; may be normal during the acute attack, so it does not exclude it" },
+    { "test": "Rheumatoid factor ± anti-CCP", "why": "Positive serology rules rheumatoid arthritis in when small joints are symmetrically involved > 6 weeks" },
+    { "test": "Brucella agglutination test (Rose Bengal / Wright)", "why": "Rules brucellosis in — a common cause of mono/oligoarthritis with undulant fever and raw-dairy exposure in Iraq" },
+    { "test": "X-ray of the affected joint", "why": "Joint-space narrowing and osteophytes rule osteoarthritis in; erosions support established RA or gout" },
+    { "test": "Joint aspiration + synovial fluid analysis", "why": "The decisive test for any effusion: organisms on Gram stain/culture rule septic arthritis in; crystals rule gout in" },
+    { "test": "ANA", "why": "Second-line — if photosensitive rash, oral ulcers, or cytopenias: supports SLE; ordered only with lupus features because a lone positive misleads" },
+    { "test": "Urinalysis", "why": "Proteinuria or hematuria flags renal involvement of SLE and separates it from uncomplicated joint disease" }
+  ],
+  "differentials": [
+    { "dx": "Osteoarthritis", "icd10": "M19.9", "supports": ["Gradual pain over years in knee, hip, or DIP joints", "Worse with use, better with rest; stiffness < 30 minutes", "Heberden nodes without warmth"] },
+    { "dx": "Rheumatoid arthritis", "icd10": "M06.9", "supports": ["Symmetric small-joint involvement (MCP/PIP, wrists)", "Morning stiffness > 1 hour", "Synovitis on palpation"] },
+    { "dx": "Gout", "icd10": "M10.9", "supports": ["Overnight excruciating 1st MTP attack", "Triggers: meat feast, alcohol, diuretics", "Tophi; previous attacks resolving completely"] },
+    { "dx": "Septic arthritis", "icd10": "M00.9", "supports": ["Single hot swollen joint over days", "High fever", "Refusal to move the joint or bear weight"] },
+    { "dx": "Brucellosis with arthritis", "icd10": "A23.9", "supports": ["Raw dairy or livestock exposure", "Undulant fever with drenching sweats", "Mono/oligoarthritis with splenomegaly"] },
+    { "dx": "Systemic lupus erythematosus", "icd10": "M32.9", "supports": ["Polyarthralgia in a young woman", "Photosensitive facial rash or oral ulcers", "Fatigue with lymphadenopathy"] },
+    { "dx": "Psoriatic arthritis", "icd10": "L40.5", "supports": ["Psoriatic plaques or nail pitting", "DIP involvement or dactylitis", "Enthesitis"] },
+    { "dx": "Reactive arthritis", "icd10": "M02.9", "supports": ["Diarrhea or urethritis 2–4 weeks earlier", "Asymmetric lower-limb oligoarthritis", "Young adult with enthesitis"] },
+    { "dx": "Fibromyalgia", "icd10": "M79.7", "supports": ["Widespread pain including muscles", "Unrefreshing sleep and fatigue", "Multiple soft-tissue tender points with no synovitis"] }
+  ]
+}

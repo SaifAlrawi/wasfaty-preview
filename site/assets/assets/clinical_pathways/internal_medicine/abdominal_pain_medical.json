@@ -1,0 +1,630 @@
+{
+  "id": "abdominal_pain_medical",
+  "specialty": "internal_medicine",
+  "complaint": "Abdominal pain (medical assessment)",
+  "icd10_symptom": "R10.9",
+  "history": [
+    {
+      "ask": "Main site of pain",
+      "options": [
+        "Diffuse / all over",
+        "Epigastric",
+        "Periumbilical",
+        "Flank, radiating to the groin",
+        "Lower abdomen / suprapubic",
+        "Right upper quadrant"
+      ],
+      "weights": {
+        "Diffuse / all over": {
+          "gastro": 2,
+          "dka": 1,
+          "fmf": 1,
+          "ischaemia": 1
+        },
+        "Epigastric": {
+          "pud": 3,
+          "gastro": 1
+        },
+        "Periumbilical": {
+          "gastro": 1,
+          "ischaemia": 1
+        },
+        "Flank, radiating to the groin": {
+          "renal_colic": 4,
+          "uti": 1
+        },
+        "Lower abdomen / suprapubic": {
+          "uti": 3,
+          "ibs": 1
+        },
+        "Right upper quadrant": {
+          "hepatitis": 2
+        }
+      }
+    },
+    {
+      "ask": "Character",
+      "options": [
+        "Colicky — comes in waves",
+        "Constant dull ache",
+        "Burning",
+        "Severe pain out of proportion to a soft belly"
+      ],
+      "weights": {
+        "Colicky — comes in waves": {
+          "renal_colic": 3,
+          "gastro": 1,
+          "ibs": 1
+        },
+        "Constant dull ache": {
+          "hepatitis": 1,
+          "constipation": 1
+        },
+        "Burning": {
+          "pud": 3
+        },
+        "Severe pain out of proportion to a soft belly": {
+          "ischaemia": 5
+        }
+      }
+    },
+    {
+      "ask": "Onset and duration",
+      "options": [
+        "Hours (acute)",
+        "Days",
+        "Weeks to months, intermittent",
+        "Recurrent self-limiting attacks since youth, 1–3 days each"
+      ],
+      "weights": {
+        "Hours (acute)": {
+          "gastro": 2,
+          "renal_colic": 2,
+          "dka": 1
+        },
+        "Days": {
+          "hepatitis": 1,
+          "uti": 1
+        },
+        "Weeks to months, intermittent": {
+          "ibs": 3,
+          "pud": 1,
+          "constipation": 2
+        },
+        "Recurrent self-limiting attacks since youth, 1–3 days each": {
+          "fmf": 5
+        }
+      }
+    },
+    {
+      "ask": "Bowel pattern",
+      "options": [
+        "Watery diarrhoea",
+        "Bloody diarrhoea",
+        "Constipation, hard infrequent stool",
+        "Alternating habit, pain relieved by defecation",
+        "Normal"
+      ],
+      "weights": {
+        "Watery diarrhoea": {
+          "gastro": 4
+        },
+        "Bloody diarrhoea": {
+          "gastro": 2,
+          "ischaemia": 2
+        },
+        "Constipation, hard infrequent stool": {
+          "constipation": 4
+        },
+        "Alternating habit, pain relieved by defecation": {
+          "ibs": 4
+        }
+      }
+    },
+    {
+      "ask": "Vomiting",
+      "options": [
+        "Vomiting with the diarrhoea (others at home affected)",
+        "Persistent vomiting without diarrhoea",
+        "None"
+      ],
+      "weights": {
+        "Vomiting with the diarrhoea (others at home affected)": {
+          "gastro": 4
+        },
+        "Persistent vomiting without diarrhoea": {
+          "dka": 2,
+          "pud": 1
+        }
+      }
+    },
+    {
+      "ask": "Urinary symptoms",
+      "options": [
+        "Burning or frequency",
+        "Visible blood in urine",
+        "Colicky flank-to-groin pain with restlessness",
+        "None"
+      ],
+      "weights": {
+        "Burning or frequency": {
+          "uti": 3
+        },
+        "Visible blood in urine": {
+          "renal_colic": 3
+        },
+        "Colicky flank-to-groin pain with restlessness": {
+          "renal_colic": 4
+        }
+      }
+    },
+    {
+      "ask": "Fever with the pain",
+      "options": [
+        "Fever now",
+        "Recurrent short fevers with each pain attack (family members similar)",
+        "No fever"
+      ],
+      "weights": {
+        "Fever now": {
+          "uti": 2,
+          "gastro": 1,
+          "hepatitis": 1
+        },
+        "Recurrent short fevers with each pain attack (family members similar)": {
+          "fmf": 5
+        }
+      }
+    },
+    {
+      "ask": "Diabetic status and osmotic symptoms",
+      "options": [
+        "Diabetic — missed insulin or intercurrent illness",
+        "Thirst, polyuria, deep sighing breathing",
+        "Not diabetic, none of these"
+      ],
+      "weights": {
+        "Diabetic — missed insulin or intercurrent illness": {
+          "dka": 5
+        },
+        "Thirst, polyuria, deep sighing breathing": {
+          "dka": 4
+        }
+      }
+    },
+    {
+      "ask": "Meal relation and weight",
+      "options": [
+        "Pain after meals with fear of eating and weight loss (elderly, vascular disease)",
+        "Hunger pain eased by food",
+        "No meal relation, weight stable"
+      ],
+      "weights": {
+        "Pain after meals with fear of eating and weight loss (elderly, vascular disease)": {
+          "ischaemia": 4
+        },
+        "Hunger pain eased by food": {
+          "pud": 4
+        }
+      }
+    },
+    {
+      "ask": "Jaundice screen",
+      "options": [
+        "Yellow eyes or dark urine",
+        "Nausea and appetite loss preceding the pain",
+        "Neither"
+      ],
+      "weights": {
+        "Yellow eyes or dark urine": {
+          "hepatitis": 5
+        },
+        "Nausea and appetite loss preceding the pain": {
+          "hepatitis": 2
+        }
+      }
+    },
+    {
+      "ask": "Menstrual / obstetric status (women of childbearing age)",
+      "options": [
+        "Missed or late period",
+        "Normal recent period",
+        "Postmenopausal / not applicable"
+      ]
+    },
+    {
+      "ask": "Family background",
+      "options": [
+        "Family members with recurrent fever-and-pain attacks (FMF)",
+        "Family history of inflammatory bowel disease",
+        "Neither"
+      ],
+      "weights": {
+        "Family members with recurrent fever-and-pain attacks (FMF)": {
+          "fmf": 4
+        }
+      }
+    }
+  ],
+  "red_flags": [
+    "Rigid abdomen, rebound tenderness, or absent bowel sounds — surgical abdomen, refer immediately",
+    "Severe pain out of proportion to examination in an elderly or atrial-fibrillation patient (mesenteric ischaemia)",
+    "Hypotension, tachycardia, or cold peripheries with abdominal pain",
+    "Haematemesis, melaena, or bloody diarrhoea with fever",
+    "Missed period with acute lower abdominal pain — ectopic pregnancy until excluded",
+    "Diabetic with vomiting, deep sighing breathing, or drowsiness (DKA)",
+    "Anuria, or colic with fever and rigors (obstructed infected kidney)"
+  ],
+  "exam": [
+    "Record full vitals — fever, tachycardia, hypotension, and deep sighing (Kussmaul) breathing each redirect the pathway",
+    "Inspect for jaundice, dehydration (dry tongue, skin turgor), and pallor",
+    "Auscultate bowel sounds BEFORE palpation — silent abdomen or high-pitched tinkling changes everything",
+    "Palpate all quadrants starting away from the pain — localise tenderness, guarding, rigidity, rebound",
+    "Palpate specifically for masses, hepatomegaly, and a distended bladder",
+    "Perform Murphy's manoeuvre for right-upper-quadrant pain",
+    "Percuss the renal angles for tenderness (pyelonephritis, obstructed stone)",
+    "Watch the patient during a colic wave — a restless rolling patient suggests stone; a still patient guarding suggests peritoneal irritation",
+    "Perform a digital rectal exam when bleeding, severe constipation, or diarrhoea needs characterising",
+    "Smell the breath for ketones and check a fingerstick glucose in any diabetic with pain",
+    "Examine hernial orifices — an obstructed hernia mimics medical colic",
+    "Check the skin over the painful area for vesicular zoster rash before it declares itself"
+  ],
+  "investigations": [
+    {
+      "test": "Urinalysis",
+      "why": "Haematuria supports ureteric stone; pyuria and nitrites rule in UTI/pyelonephritis; ketones and glucose flag DKA — one strip test arbitrates three differentials"
+    },
+    {
+      "test": "Random blood glucose (fingerstick immediately if diabetic)",
+      "why": "Rules DKA in or out at the bedside in any diabetic with pain and vomiting — DKA is the abdominal pain that must never reach a surgeon"
+    },
+    {
+      "test": "CBC",
+      "why": "Marked leukocytosis supports pyelonephritis, mesenteric ischaemia, or a surgical cause over IBS and constipation; anaemia raises bleeding ulcer or malignancy; leukocytosis also accompanies FMF attacks"
+    },
+    {
+      "test": "Renal function and electrolytes",
+      "why": "Dehydration from gastroenteritis, obstruction of a solitary kidney by stone, and DKA all declare themselves here; potassium guides safety before fluids in DKA"
+    },
+    {
+      "test": "LFT and amylase/lipase",
+      "why": "Raised transaminases with bilirubin support acute hepatitis for right-upper-quadrant pain; raised lipase rules in pancreatitis before any surgical referral for epigastric pain"
+    },
+    {
+      "test": "CRP or ESR",
+      "why": "High values push toward inflammatory/infective causes (pyelonephritis, IBD flare, FMF attack, ischaemia); a normal CRP after 12–24 h of pain argues against them and supports IBS or constipation"
+    },
+    {
+      "test": "Pregnancy test (all women of childbearing age)",
+      "why": "Non-negotiable before imaging or referral — a positive test with lower abdominal pain makes ectopic pregnancy the working diagnosis"
+    },
+    {
+      "test": "Abdominal ultrasound",
+      "why": "First-line imaging: hydronephrosis (obstructing stone), gallbladder and liver disease, free fluid, appendiceal mass — directs whether the patient stays medical or crosses to surgery"
+    },
+    {
+      "test": "Stool exam (microscopy ± occult blood)",
+      "why": "Ova/parasites and pus cells characterise infective gastroenteritis; occult blood or pus supports IBD over IBS in chronic diarrhoea"
+    },
+    {
+      "test": "CT abdomen with contrast (CT angiography if ischaemia suspected)",
+      "why": "Second-line — when ultrasound is inconclusive, or urgently when mesenteric ischaemia is suspected (pain out of proportion in elderly/AF): rules vascular occlusion and deep pathology in or out"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Acute gastroenteritis",
+      "icd10": "A09",
+      "supports": [
+        "Crampy diffuse pain with vomiting and watery diarrhoea",
+        "Household contacts affected or suspect food",
+        "Diffuse mild tenderness without guarding; active bowel sounds"
+      ],
+      "key": "gastro",
+      "first_line": [
+        "Stool exam (microscopy ± occult blood)",
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Oral Rehydration Salts",
+          "note": "rehydration first"
+        },
+        {
+          "generic": "Paracetamol",
+          "note": "fever and aches"
+        }
+      ]
+    },
+    {
+      "dx": "Irritable bowel syndrome",
+      "icd10": "K58.9",
+      "supports": [
+        "Months of recurrent pain relieved by defecation with alternating habit",
+        "No weight loss, bleeding, fever, or nocturnal symptoms",
+        "Normal exam, CBC, and CRP"
+      ],
+      "key": "ibs",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Mebeverine",
+          "note": "antispasmodic"
+        },
+        {
+          "generic": "Hyoscine Butylbromide",
+          "note": "cramp relief"
+        }
+      ]
+    },
+    {
+      "dx": "Constipation",
+      "icd10": "K59.00",
+      "supports": [
+        "Left-sided or diffuse ache with hard infrequent stool",
+        "Palpable indentable mass in the left iliac fossa",
+        "Hard stool on rectal exam"
+      ],
+      "key": "constipation",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Lactulose",
+          "note": "osmotic laxative"
+        }
+      ]
+    },
+    {
+      "dx": "Renal / ureteric colic",
+      "icd10": "N20.0",
+      "supports": [
+        "Colicky flank-to-groin pain with a restless rolling patient",
+        "Haematuria on urinalysis",
+        "Hydronephrosis or stone on ultrasound"
+      ],
+      "key": "renal_colic",
+      "first_line": [
+        "Urinalysis",
+        "Abdominal ultrasound"
+      ],
+      "medications": [
+        {
+          "generic": "Diclofenac",
+          "note": "first-line analgesia"
+        },
+        {
+          "generic": "Hyoscine Butylbromide",
+          "note": "adjunct antispasmodic"
+        }
+      ]
+    },
+    {
+      "dx": "Urinary tract infection / pyelonephritis",
+      "icd10": "N39.0",
+      "supports": [
+        "Suprapubic pain with burning and frequency; flank pain with fever if ascending",
+        "Renal angle tenderness",
+        "Pyuria and nitrites on urinalysis"
+      ],
+      "key": "uti",
+      "first_line": [
+        "Urinalysis",
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Nitrofurantoin",
+          "note": "lower tract"
+        },
+        {
+          "generic": "Ciprofloxacin",
+          "note": "upper tract / pyelonephritis"
+        }
+      ]
+    },
+    {
+      "dx": "Peptic ulcer disease",
+      "icd10": "K27.9",
+      "supports": [
+        "Epigastric burning related to meals, eased by food or antacids",
+        "NSAID/aspirin use",
+        "Melaena or anaemia if bleeding"
+      ],
+      "key": "pud",
+      "first_line": [
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Omeprazole",
+          "note": "PPI; test-and-treat H. pylori"
+        }
+      ]
+    },
+    {
+      "dx": "Acute viral hepatitis",
+      "icd10": "B19.9",
+      "supports": [
+        "Right-upper-quadrant ache with nausea and appetite loss",
+        "Jaundice with dark urine following a prodrome",
+        "Markedly raised transaminases with tender hepatomegaly"
+      ],
+      "key": "hepatitis",
+      "first_line": [
+        "LFT and amylase/lipase",
+        "CBC"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Diabetic ketoacidosis",
+      "icd10": "E11.10",
+      "supports": [
+        "Diabetic with pain, vomiting, thirst, and polyuria after missed insulin or infection",
+        "Kussmaul breathing with ketotic breath",
+        "High glucose with ketonuria on strip testing"
+      ],
+      "key": "dka",
+      "first_line": [
+        "Random blood glucose (fingerstick immediately if diabetic)",
+        "Renal function and electrolytes"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Acute mesenteric ischaemia",
+      "icd10": "K55.0",
+      "supports": [
+        "Severe pain out of proportion to a soft abdomen",
+        "Elderly with atrial fibrillation or vascular disease; post-meal pain and food fear if chronic",
+        "Marked leukocytosis; occlusion on CT angiography"
+      ],
+      "key": "ischaemia",
+      "first_line": [
+        "CT abdomen with contrast (CT angiography if ischaemia suspected)",
+        "CBC"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Familial Mediterranean fever attack",
+      "icd10": "M04.1",
+      "supports": [
+        "Recurrent self-limiting attacks of fever with abdominal pain since youth, 1–3 days each",
+        "Family history of similar attacks",
+        "High CRP/leukocytosis during attacks, fully normal between them"
+      ],
+      "key": "fmf",
+      "first_line": [
+        "CRP or ESR",
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Colchicine",
+          "note": "attack prevention — lifelong"
+        }
+      ]
+    }
+  ],
+  "priors": {
+    "gastro": 3,
+    "ibs": 3,
+    "constipation": 3,
+    "pud": 2,
+    "uti": 2,
+    "renal_colic": 2,
+    "hepatitis": 1,
+    "dka": 1,
+    "ischaemia": 1,
+    "fmf": 1
+  },
+  "exam_weights": {
+    "Auscultate bowel sounds BEFORE palpation — silent abdomen or high-pitched tinkling changes everything": {
+      "ischaemia": 2,
+      "gastro": 1
+    },
+    "Perform Murphy's manoeuvre for right-upper-quadrant pain": {
+      "hepatitis": 1
+    },
+    "Percuss the renal angles for tenderness (pyelonephritis, obstructed stone)": {
+      "uti": 2,
+      "renal_colic": 2
+    },
+    "Watch the patient during a colic wave — a restless rolling patient suggests stone; a still patient guarding suggests peritoneal irritation": {
+      "renal_colic": 3
+    },
+    "Smell the breath for ketones and check a fingerstick glucose in any diabetic with pain": {
+      "dka": 4
+    }
+  },
+  "pmh_modifiers": [
+    {
+      "label": "Diabetes",
+      "icd10_prefixes": [
+        "E10",
+        "E11"
+      ],
+      "name_contains": [
+        "diabet",
+        "سكري"
+      ],
+      "weights": {
+        "dka": 3
+      }
+    },
+    {
+      "label": "Peptic ulcer history",
+      "icd10_prefixes": [
+        "K25",
+        "K26",
+        "K27"
+      ],
+      "name_contains": [
+        "ulcer",
+        "قرحة"
+      ],
+      "weights": {
+        "pud": 2
+      }
+    },
+    {
+      "label": "Kidney stone history",
+      "icd10_prefixes": [
+        "N20"
+      ],
+      "name_contains": [
+        "stone",
+        "حصى"
+      ],
+      "weights": {
+        "renal_colic": 2
+      }
+    },
+    {
+      "label": "FMF history",
+      "icd10_prefixes": [
+        "M04"
+      ],
+      "name_contains": [
+        "mediterranean",
+        "حمى البحر"
+      ],
+      "weights": {
+        "fmf": 4
+      }
+    },
+    {
+      "label": "Atrial fibrillation / vascular disease",
+      "icd10_prefixes": [
+        "I48",
+        "I70"
+      ],
+      "name_contains": [
+        "atrial",
+        "رجفان",
+        "تصلب"
+      ],
+      "weights": {
+        "ischaemia": 3
+      }
+    }
+  ],
+  "demographic_modifiers": [
+    {
+      "label": "Age 60+",
+      "min_age": 60,
+      "weights": {
+        "ischaemia": 2
+      }
+    },
+    {
+      "label": "Under 40",
+      "max_age": 39,
+      "weights": {
+        "fmf": 1,
+        "ibs": 1
+      }
+    }
+  ]
+}

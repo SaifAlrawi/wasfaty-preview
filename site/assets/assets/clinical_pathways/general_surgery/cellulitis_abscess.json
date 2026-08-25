@@ -1,0 +1,58 @@
+{
+  "id": "cellulitis_abscess",
+  "specialty": "general_surgery",
+  "complaint": "Cellulitis / abscess",
+  "icd10_symptom": "L08.9",
+  "history": [
+    { "ask": "Speed of spread of the redness", "options": ["Spreading over hours, visibly worse same day", "Over 1–3 days", "Static or slowly changing over weeks"] },
+    { "ask": "Severity of pain relative to what the skin looks like", "options": ["Pain far worse than the skin appearance", "Pain matches the redness", "Little or no pain"] },
+    { "ask": "Fever or rigors", "options": ["Rigors / feels very unwell", "Mild fever", "None"] },
+    { "ask": "Any break in the skin", "options": ["Wound, ulcer, or scratch at the site", "Insect bite or injection site", "Athlete's foot / cracked web spaces", "No visible entry point"] },
+    { "ask": "Diabetes or immunosuppression", "options": ["Known diabetic", "On steroids / chemotherapy / immunosuppressed", "Neither"] },
+    { "ask": "One limb or both?", "options": ["Strictly one side", "Both legs symmetrically"] },
+    { "ask": "Calf swelling risk factors", "options": ["Recent surgery, travel, or immobilization", "Previous DVT", "None"] },
+    { "ask": "Is the pain centered on a joint?", "options": ["Yes — base of the big toe or another joint, worse at night", "No — skin and soft tissue only"] },
+    { "ask": "A soft or pointing area in the swelling", "options": ["Yes — a tender boggy center", "No — diffuse firmness only"] },
+    { "ask": "Previous similar episodes", "options": ["Recurrent boils/abscesses", "Recurrent leg redness in the same leg", "First episode"] }
+  ],
+  "red_flags": [
+    "Pain out of proportion, rapid hour-by-hour spread, dusky or blistering skin, or crepitus — necrotizing fasciitis; urgent surgical referral",
+    "Anesthetic patches within the red area — nerve death in necrotizing infection",
+    "Hypotension, confusion, or rigors with a skin infection — sepsis",
+    "Cellulitis of the face around the eye — orbital involvement threatens vision and the cavernous sinus",
+    "Rapidly progressive infection in a diabetic or immunosuppressed patient"
+  ],
+  "exam": [
+    "Mark the edge of the erythema with a pen and write the time — objective spread on review is a decision-changing finding",
+    "Record temperature, BP, pulse, and mental state — quantify systemic toxicity",
+    "Palpate the whole area for fluctuance — a drainable collection distinguishes abscess from pure cellulitis",
+    "Feel deliberately for crepitus and note any dusky patches, blisters, or bullae",
+    "Test skin sensation over the erythema — anesthesia is a necrotizing sign",
+    "Examine the border: sharply raised and demarcated (erysipelas) vs diffuse fading edge (cellulitis)",
+    "Search for the portal of entry — toe web spaces for tinea, ulcers, bites, injection marks",
+    "Look for lymphangitic streaking and palpate the regional nodes",
+    "Measure both calves and squeeze gently for deep tenderness when the leg is swollen — DVT does not cause hot spreading erythema but is the classic mimic",
+    "Examine the nearby joint through its range — true joint-line pain and restriction point to gout or septic arthritis rather than skin infection",
+    "Inspect both legs for hemosiderin staining and venous skin change — bilateral chronic changes suggest stasis dermatitis, not infection"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Marked leukocytosis supports abscess or necrotizing infection; a normal count with bilateral chronic changes supports stasis dermatitis" },
+    { "test": "CRP", "why": "Grades severity — very high values raise necrotizing fasciitis and deep collection above simple cellulitis" },
+    { "test": "Blood glucose / HbA1c", "why": "Undiagnosed or uncontrolled diabetes drives recurrent abscesses and necrotizing infection; every recurrent skin sepsis deserves this" },
+    { "test": "RFT / electrolytes", "why": "Renal impairment and sodium derangement accompany necrotizing fasciitis and sepsis, and separate the sick patient from simple cellulitis" },
+    { "test": "Ultrasound of the area", "why": "Finds the drainable collection cellulitis hides, and defines its depth and size when the exam is equivocal" },
+    { "test": "Pus swab / culture from any drained or discharging point", "why": "Identifies the organism in abscess and guides the record for recurrent disease" },
+    { "test": "Venous Doppler ultrasound of the leg", "why": "Rules DVT in or out when there is unilateral swelling with risk factors and no clear portal of entry" },
+    { "test": "Serum uric acid", "why": "Supports gout when the picture is joint-centered — though a normal level during the acute attack does not exclude it" }
+  ],
+  "differentials": [
+    { "dx": "Cellulitis", "icd10": "L03.90", "supports": ["Unilateral spreading tender erythema with a diffuse edge", "Portal of entry — cracked web spaces, wound, or bite", "Fever with raised CBC/CRP, no fluctuance"] },
+    { "dx": "Cutaneous abscess", "icd10": "L02.91", "supports": ["Localized throbbing pain over days", "Fluctuant or pointing center on palpation", "Collection on ultrasound"] },
+    { "dx": "Necrotizing fasciitis", "icd10": "M72.6", "supports": ["Pain out of proportion to visible signs", "Hour-by-hour spread, dusky skin, bullae, crepitus, or anesthesia", "Systemic toxicity with deranged RFT", "Diabetic or immunosuppressed host"] },
+    { "dx": "Erysipelas", "icd10": "A46", "supports": ["Bright red, sharply raised, well-demarcated border", "Face or shin location with fever", "Streaking lymphangitis with tender nodes"] },
+    { "dx": "Infected epidermoid cyst", "icd10": "L72.0", "supports": ["Long-standing lump at the same site that became hot and tense", "Central punctum or cheesy discharge history", "Well-defined collection on ultrasound"] },
+    { "dx": "Deep vein thrombosis", "icd10": "I82.40", "supports": ["Unilateral calf swelling and deep tenderness without hot spreading erythema or entry wound", "Recent surgery, travel, or immobilization", "Thrombus on venous Doppler"] },
+    { "dx": "Stasis dermatitis", "icd10": "I87.2", "supports": ["Bilateral chronic redness with hemosiderin staining", "No fever, normal CBC/CRP", "Long-standing venous disease and edema"] },
+    { "dx": "Acute gout", "icd10": "M10.9", "supports": ["Redness centered on a joint — classically the first MTP — with severe night pain", "Previous attacks", "Raised uric acid between attacks; joint movement exquisitely painful"] }
+  ]
+}

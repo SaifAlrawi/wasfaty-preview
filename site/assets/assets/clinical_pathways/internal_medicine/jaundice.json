@@ -1,0 +1,61 @@
+{
+  "id": "jaundice",
+  "specialty": "internal_medicine",
+  "complaint": "Jaundice",
+  "icd10_symptom": "R17",
+  "history": [
+    { "ask": "Onset & course", "options": ["Sudden, over days", "Gradual and progressive over weeks", "Recurrent mild episodes since youth"] },
+    { "ask": "Abdominal pain", "options": ["Colicky right-upper-quadrant pain radiating to shoulder/back", "Dull right-upper-quadrant ache", "Painless"] },
+    { "ask": "Fever or rigors", "options": ["Fever with rigors", "Low-grade fever / flu-like prodrome", "None"] },
+    { "ask": "Urine and stool color", "options": ["Dark urine with pale stool", "Dark urine, normal stool", "Both normal color"] },
+    { "ask": "Itching (pruritus)", "options": ["Yes, generalized", "No"] },
+    { "ask": "Drugs, herbs & alcohol in the last 3 months", "options": ["High-dose paracetamol", "Anti-TB, antiepileptic, or antibiotic course", "Herbal / traditional remedies", "Regular / heavy alcohol", "None"] },
+    { "ask": "Pregnancy (women of childbearing age)", "options": ["Pregnant / possibly pregnant", "Not pregnant / not applicable"] },
+    { "ask": "Exposure risks", "options": ["Contact with a jaundiced person, unsafe water or food", "Transfusion, surgery, dental work, tattooing, or injections", "None"] },
+    { "ask": "Weight loss & appetite", "options": ["Marked weight loss with poor appetite", "Stable weight"] },
+    { "ask": "Personal or family history of anemia, gallstones, or splenectomy", "options": ["Yes", "No"] },
+    { "ask": "Episodes triggered by fasting, stress, or minor illness", "options": ["Yes", "No"] },
+    { "ask": "Confusion, day–night sleep reversal, easy bruising, or abdominal swelling", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Fever with rigors + right-upper-quadrant pain + jaundice (Charcot triad — ascending cholangitis)",
+    "Confusion, drowsiness, or flapping tremor — hepatic encephalopathy / fulminant failure",
+    "Bleeding tendency: hematemesis, melena, or easy bruising",
+    "Painless progressive jaundice with weight loss after age 50",
+    "Jaundice in pregnancy",
+    "History of paracetamol overdose"
+  ],
+  "exam": [
+    "Grade the depth of scleral and skin icterus",
+    "Palpate the liver: size, tenderness, edge and surface character",
+    "Palpate for splenomegaly",
+    "Feel for a palpable non-tender gallbladder (Courvoisier sign)",
+    "Elicit Murphy's sign",
+    "Search for stigmata of chronic liver disease: spider nevi, palmar erythema, gynecomastia",
+    "Percuss for ascites — shifting dullness",
+    "Test for asterixis and assess orientation",
+    "Check conjunctivae for pallor and skin for scratch marks",
+    "Palpate cervical and left supraclavicular lymph nodes"
+  ],
+  "investigations": [
+    { "test": "LFT with total & direct bilirubin", "why": "The branch point: isolated indirect bilirubin = hemolysis or Gilbert; ALT/AST in the hundreds = viral/drug/alcoholic hepatitis; ALP-predominant rise = biliary obstruction" },
+    { "test": "CBC + reticulocyte count", "why": "Anemia with reticulocytosis rules hemolysis in; a completely normal CBC with isolated indirect bilirubin supports Gilbert syndrome" },
+    { "test": "Viral serology: HBsAg, anti-HCV, anti-HAV IgM", "why": "Rules acute viral hepatitis in or out — the commonest medical jaundice in this setting" },
+    { "test": "Abdominal ultrasound", "why": "Dilated bile ducts separate surgical (stone / pancreatic-head mass) from medical jaundice; also shows gallstones, liver texture, splenomegaly, and ascites" },
+    { "test": "PT / INR", "why": "Measures synthetic failure — the severity marker in hepatitis and cirrhosis, and the screen behind the bleeding red flag" },
+    { "test": "Urinalysis", "why": "Bilirubinuria present in obstructive and hepatocellular jaundice but absent in hemolysis — a cheap bedside discriminator" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Detects renal impairment complicating sepsis with cholangitis or advanced cirrhosis — changes urgency" },
+    { "test": "CT abdomen / MRCP", "why": "Second-line — if ultrasound shows dilated ducts or a mass: defines the level and cause of obstruction (ductal stone vs pancreatic-head carcinoma)" }
+  ],
+  "differentials": [
+    { "dx": "Acute viral hepatitis", "icd10": "B19.9", "supports": ["Flu-like prodrome then jaundice over days", "Contact with jaundice, unsafe water, or blood exposure", "Tender enlarged liver with dark urine"] },
+    { "dx": "Choledocholithiasis (bile-duct stone)", "icd10": "K80.5", "supports": ["Colicky right-upper-quadrant pain", "Dark urine, pale stool, pruritus", "History of gallstones or positive Murphy's sign"] },
+    { "dx": "Ascending cholangitis", "icd10": "K83.0", "supports": ["Fever with rigors", "Right-upper-quadrant pain with jaundice", "Known gallstones"] },
+    { "dx": "Carcinoma of the head of pancreas", "icd10": "C25.0", "supports": ["Painless progressive jaundice over weeks", "Marked weight loss after age 50", "Palpable non-tender gallbladder"] },
+    { "dx": "Drug- or herb-induced liver injury", "icd10": "K71.6", "supports": ["Paracetamol, anti-TB drugs, or herbal remedies in the preceding weeks", "No viral exposure risks", "Jaundice onset matching the drug timeline"] },
+    { "dx": "Alcoholic hepatitis", "icd10": "K70.1", "supports": ["Regular heavy alcohol intake", "Tender hepatomegaly with low-grade fever"] },
+    { "dx": "Hemolytic anemia", "icd10": "D59.9", "supports": ["Jaundice with pallor, urine and stool of normal color", "Splenomegaly", "Personal or family history of anemia or splenectomy"] },
+    { "dx": "Gilbert syndrome", "icd10": "E80.4", "supports": ["Recurrent mild jaundice since youth", "Triggered by fasting, stress, or minor illness", "Entirely normal examination"] },
+    { "dx": "Decompensated cirrhosis", "icd10": "K74.6", "supports": ["Stigmata of chronic liver disease", "Ascites and splenomegaly", "Asterixis, bruising, or sleep reversal"] }
+  ]
+}

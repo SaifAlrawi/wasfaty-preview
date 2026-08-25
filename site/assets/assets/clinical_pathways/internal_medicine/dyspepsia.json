@@ -1,0 +1,145 @@
+{
+  "id": "dyspepsia",
+  "specialty": "internal_medicine",
+  "complaint": "Dyspepsia / epigastric pain",
+  "icd10_symptom": "R10.13",
+  "history": [
+    {
+      "ask": "Dominant symptom",
+      "options": ["Burning epigastric pain", "Post-meal fullness and early satiety", "Retrosternal burning rising to the throat", "Colicky right-upper/epigastric pain in waves"]
+    },
+    {
+      "ask": "Relation to meals",
+      "options": ["Worse on empty stomach, eased by food", "Worse 30–60 min after eating", "Triggered by fatty meals", "No meal relation"]
+    },
+    {
+      "ask": "Duration and course",
+      "options": ["< 4 weeks, new onset", "Months to years, intermittent", "Progressive and worsening despite antacids"]
+    },
+    {
+      "ask": "Night symptoms",
+      "options": ["Pain wakes from sleep", "Acid taste or cough on lying down", "None at night"]
+    },
+    {
+      "ask": "Drug history",
+      "options": ["NSAID or aspirin use (regular or recent course)", "Corticosteroids", "Antiplatelet/anticoagulant", "None of these"]
+    },
+    {
+      "ask": "Alarm-symptom screen: swallowing",
+      "options": ["Food sticking (progressive dysphagia)", "Painful swallowing", "Normal swallowing"]
+    },
+    {
+      "ask": "Alarm-symptom screen: bleeding and weight",
+      "options": ["Black tarry stools or vomiting blood/coffee-grounds", "Unintentional weight loss", "Persistent vomiting", "None"]
+    },
+    {
+      "ask": "Radiation of pain",
+      "options": ["Straight through to the back", "To the right shoulder blade", "To the chest/left arm, with exertion", "No radiation"]
+    },
+    {
+      "ask": "Cardiac risk overlap",
+      "options": ["Pain on exertion with sweating or breathlessness", "Diabetic/hypertensive/smoker over 40", "No exertional pattern or risk factors"]
+    },
+    {
+      "ask": "Alcohol use",
+      "options": ["Regular or heavy use", "Occasional", "None"]
+    },
+    {
+      "ask": "Family and infection background",
+      "options": ["Family history of gastric cancer", "Previously documented H. pylori or ulcer", "Neither"]
+    }
+  ],
+  "red_flags": [
+    "Haematemesis, coffee-ground vomiting, or melaena",
+    "Progressive dysphagia or painful swallowing",
+    "Unintentional weight loss or anorexia with new dyspepsia",
+    "New-onset dyspepsia after age 50, or family history of gastric cancer",
+    "Persistent vomiting or early satiety with an epigastric mass",
+    "Epigastric pain with exertional pattern, diaphoresis, or radiation to arm/jaw — treat as cardiac until ECG done",
+    "Iron-deficiency anaemia on testing"
+  ],
+  "exam": [
+    "Record vitals — tachycardia or hypotension raises active bleeding",
+    "Inspect conjunctivae and palmar creases for pallor (chronic blood loss)",
+    "Look for jaundice and scratch marks (biliary obstruction)",
+    "Palpate the epigastrium for tenderness and any mass",
+    "Palpate for hepatomegaly and an enlarged left supraclavicular node — either raises gastric malignancy",
+    "Perform Murphy's manoeuvre — inspiratory arrest on right-upper-quadrant pressure supports biliary disease",
+    "Percuss and palpate for splenomegaly (portal hypertension changes the bleeding differential)",
+    "Perform a digital rectal exam when bleeding is suspected — melaena on the glove settles it",
+    "Auscultate the chest and record an ECG-directed cardiac exam when the pain has any exertional flavour",
+    "Check for succussion splash hours after eating (gastric outlet obstruction from chronic ulcer or tumour)"
+  ],
+  "investigations": [
+    {
+      "test": "H. pylori stool antigen test (off acid suppression per lab instructions)",
+      "why": "First-line in uninvestigated dyspepsia WITHOUT alarm features — positive result rules in H. pylori-associated disease (ulcer, gastritis); negative shifts weight to functional dyspepsia or GERD"
+    },
+    {
+      "test": "CBC",
+      "why": "Iron-deficiency anaemia converts simple dyspepsia into an alarm presentation — supports bleeding ulcer or gastric malignancy and mandates endoscopy"
+    },
+    {
+      "test": "ECG (and troponin if the story is acute)",
+      "why": "Epigastric pain is a classic inferior-ACS presentation — an ischaemic tracing rules the cardiac mimic in; a normal ECG with troponin lets the GI pathway proceed safely in at-risk patients"
+    },
+    {
+      "test": "Abdominal ultrasound",
+      "why": "Rules gallstones and biliary dilatation in or out when pain is colicky, fatty-meal-triggered, or Murphy-positive; also screens the pancreas and liver for structural disease"
+    },
+    {
+      "test": "LFT and amylase/lipase",
+      "why": "Raised amylase/lipase rules in pancreatitis for pain radiating to the back; abnormal LFT supports biliary obstruction over ulcer and functional disease"
+    },
+    {
+      "test": "Random glucose / HbA1c",
+      "why": "Longstanding diabetes with gastroparesis explains post-meal fullness and early satiety; also completes cardiac risk profiling for the ACS mimic"
+    },
+    {
+      "test": "Upper GI endoscopy",
+      "why": "Second-line — mandatory if ANY alarm feature (bleeding, dysphagia, weight loss, anaemia, onset > 50, persistent vomiting) or symptoms persisting despite the first-line work-up: directly rules ulcer, oesophagitis, and gastric cancer in or out with biopsy"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Functional dyspepsia",
+      "icd10": "K30",
+      "supports": ["Months of post-meal fullness or epigastric burning with no alarm features", "Normal exam, CBC, and negative H. pylori testing", "No weight loss despite long history"]
+    },
+    {
+      "dx": "Peptic ulcer disease",
+      "icd10": "K27.9",
+      "supports": ["Burning epigastric pain related to meals — hunger pain eased by food (duodenal) or worse after food (gastric)", "Pain waking from sleep", "NSAID/aspirin use or positive H. pylori test", "Melaena or iron-deficiency anaemia if bleeding"]
+    },
+    {
+      "dx": "Gastro-oesophageal reflux disease",
+      "icd10": "K21.9",
+      "supports": ["Retrosternal burning rising to the throat, worse on lying down", "Acid taste or nocturnal cough", "Symptoms without epigastric tenderness or alarm features"]
+    },
+    {
+      "dx": "NSAID- or H. pylori-associated gastritis",
+      "icd10": "K29.70",
+      "supports": ["Diffuse epigastric burning during an NSAID or steroid course", "Alcohol use", "Positive H. pylori stool antigen with no alarm features"]
+    },
+    {
+      "dx": "Biliary colic / cholelithiasis",
+      "icd10": "K80.20",
+      "supports": ["Waves of severe pain after fatty meals radiating to the right shoulder blade", "Positive Murphy's manoeuvre", "Gallstones on ultrasound"]
+    },
+    {
+      "dx": "Chronic pancreatitis",
+      "icd10": "K86.1",
+      "supports": ["Epigastric pain boring through to the back, worse after meals", "Alcohol history", "Raised amylase/lipase or pancreatic calcification on imaging"]
+    },
+    {
+      "dx": "Gastric malignancy",
+      "icd10": "C16.9",
+      "supports": ["Progressive dyspepsia with weight loss, early satiety, or dysphagia", "New onset after 50 or family history of gastric cancer", "Epigastric mass, supraclavicular node, or iron-deficiency anaemia", "Lesion confirmed on endoscopy with biopsy"]
+    },
+    {
+      "dx": "Acute coronary syndrome (epigastric presentation)",
+      "icd10": "I21.9",
+      "supports": ["Epigastric pain with exertion, diaphoresis, or radiation to arm/jaw", "Diabetic, hypertensive, or smoker over 40", "Ischaemic ECG changes or raised troponin"]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "id": "dysuria",
+  "specialty": "internal_medicine",
+  "complaint": "Dysuria / urinary frequency",
+  "icd10_symptom": "R30.0",
+  "history": [
+    { "ask": "Duration & pattern", "options": ["First acute episode", "Recurrent episodes (≥ 3/year)", "Chronic symptoms > 4 weeks"] },
+    { "ask": "Fever, rigors, or flank pain", "options": ["Fever with rigors", "Loin / flank pain", "Both", "Neither"] },
+    { "ask": "Blood in urine", "options": ["Visible, painless", "With pain or at the end of urination", "None"] },
+    { "ask": "Colicky pain radiating loin to groin", "options": ["Yes", "No"] },
+    { "ask": "Urethral discharge or new sexual contact", "options": ["Yes", "No"] },
+    { "ask": "Obstructive symptoms (men)", "options": ["Hesitancy, weak stream, nocturia, terminal dribbling", "None"] },
+    { "ask": "Perineal or low back pain with fever (men)", "options": ["Yes", "No"] },
+    { "ask": "Vaginal discharge or itching (women)", "options": ["Yes", "No"] },
+    { "ask": "Diabetes or pregnancy", "options": ["Known diabetes", "Pregnant / possibly pregnant", "Neither"] },
+    { "ask": "Weight loss, night sweats, or TB history/contact", "options": ["Yes", "No"] },
+    { "ask": "Catheter, recent urological procedure, or known stones", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Fever with rigors and flank pain — ascending infection with sepsis risk",
+    "Inability to pass urine (acute retention) or anuria",
+    "Visible painless hematuria at age > 40",
+    "Fever with urinary symptoms in pregnancy",
+    "Vomiting with inability to keep fluids down plus reduced urine output"
+  ],
+  "exam": [
+    "Temperature and full vital signs — quantify systemic upset",
+    "Percuss and press over both renal angles for tenderness",
+    "Palpate suprapubically for tenderness",
+    "Percuss and palpate for a distended bladder",
+    "Inspect external genitalia: urethral discharge in men, vulvovaginal inflammation or discharge in women",
+    "Gentle digital rectal exam in men: exquisitely tender boggy prostate (prostatitis) vs smooth symmetric enlargement (BPH)",
+    "Assess hydration status",
+    "Look for cachexia or pallor when symptoms are chronic",
+    "Palpate the abdomen for masses"
+  ],
+  "investigations": [
+    { "test": "Urinalysis (dipstick + microscopy)", "why": "Nitrites with pyuria rule bacterial cystitis/pyelonephritis in; RBCs point to stone or tumor; persistent sterile pyuria points to genitourinary TB or urethritis; candida appears in diabetics" },
+    { "test": "Urine culture & sensitivity", "why": "Confirms the organism — indicated for fever, all men, recurrence, pregnancy, or failed empirical course" },
+    { "test": "CBC", "why": "Leukocytosis supports pyelonephritis or acute prostatitis over simple cystitis" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Detects renal impairment from obstruction, stones, or sepsis — changes disposition" },
+    { "test": "Random glucose / HbA1c", "why": "Uncovers uncontrolled diabetes behind recurrent infection or candidal dysuria" },
+    { "test": "Urine pregnancy test (childbearing age)", "why": "Screens the pregnancy red flag and reframes any febrile urinary infection as high-risk" },
+    { "test": "Ultrasound KUB with post-void residual", "why": "Shows hydronephrosis or stone behind colicky pain, prostate size and residual volume in obstructive symptoms, and any bladder mass" },
+    { "test": "Urethral / high vaginal swab", "why": "If discharge is present: confirms urethritis (STI) or vulvovaginitis as the cause of dysuria without bacteriuria" },
+    { "test": "Early-morning urine for AFB x3", "why": "If chronic symptoms with sterile pyuria, weight loss, or TB contact: rules genitourinary tuberculosis in" },
+    { "test": "Cystoscopy (± CT urography)", "why": "Second-line — for visible painless hematuria at age > 40: rules bladder carcinoma in or out" }
+  ],
+  "differentials": [
+    { "dx": "Acute cystitis", "icd10": "N30.0", "supports": ["Burning frequency and urgency without fever or flank pain", "Suprapubic tenderness only", "Recurrent pattern in women"] },
+    { "dx": "Acute pyelonephritis", "icd10": "N10", "supports": ["Fever with rigors and loin pain", "Renal angle tenderness", "Vomiting with systemic upset"] },
+    { "dx": "Urethritis (sexually transmitted)", "icd10": "N34.2", "supports": ["Urethral discharge", "New sexual contact", "Dysuria with little frequency"] },
+    { "dx": "Acute prostatitis", "icd10": "N41.0", "supports": ["Perineal or low back pain with fever in a man", "Obstructive symptoms of sudden onset", "Exquisitely tender boggy prostate"] },
+    { "dx": "Ureteric stone", "icd10": "N20.1", "supports": ["Colicky loin-to-groin pain", "Hematuria with pain", "Previous stones"] },
+    { "dx": "Benign prostatic hyperplasia with LUTS", "icd10": "N40.1", "supports": ["Gradual hesitancy, weak stream, nocturia in an older man", "Smooth symmetric prostatic enlargement", "Palpable residual bladder"] },
+    { "dx": "Vulvovaginitis", "icd10": "N76.0", "supports": ["Vaginal discharge or itching", "External burning rather than deep dysuria", "Vulval inflammation on exam"] },
+    { "dx": "Bladder carcinoma", "icd10": "C67.9", "supports": ["Visible painless hematuria at age > 40", "Chronic irritative symptoms without infection", "Weight loss or pallor"] },
+    { "dx": "Genitourinary tuberculosis", "icd10": "A18.1", "supports": ["Chronic frequency > 4 weeks unresponsive to antibiotic courses", "Weight loss, night sweats, or TB contact", "Cachexia on examination"] }
+  ]
+}

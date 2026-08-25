@@ -1,0 +1,63 @@
+{
+  "id": "low_back_pain",
+  "specialty": "internal_medicine",
+  "complaint": "Low back pain",
+  "icd10_symptom": "M54.5",
+  "history": [
+    { "ask": "Onset", "options": ["Sudden after lifting or twisting", "Gradual over weeks", "After a fall or trauma"] },
+    { "ask": "Radiation", "options": ["Below the knee with numbness or tingling", "To buttock or thigh only", "Loin to groin, colicky", "No radiation"] },
+    { "ask": "Inflammatory pattern", "options": ["Morning stiffness > 30 min, improves with exercise, began before age 40", "No inflammatory features"] },
+    { "ask": "Night and rest pain", "options": ["Wakes the patient at night, not relieved by rest", "Relieved by rest and lying down"] },
+    { "ask": "Constitutional symptoms", "options": ["Fever", "Weight loss", "Night sweats", "None"] },
+    { "ask": "Walking pattern", "options": ["Leg pain on walking, relieved by sitting or leaning forward", "Walking unaffected"] },
+    { "ask": "Sphincter & saddle symptoms", "options": ["Urinary retention or incontinence", "Numbness in the saddle area", "Weakness of both legs", "None"] },
+    { "ask": "History of cancer", "options": ["Yes", "No"] },
+    { "ask": "TB contact or chronic cough", "options": ["Yes", "No"] },
+    { "ask": "Osteoporosis risk", "options": ["Postmenopausal", "Long-term corticosteroids", "Previous fragility fracture", "None"] },
+    { "ask": "Urinary symptoms with the loin pain", "options": ["Burning urination or blood in urine", "None"] }
+  ],
+  "red_flags": [
+    "Saddle anesthesia, urinary retention/incontinence, or bilateral leg weakness — cauda equina",
+    "Progressive focal neurological deficit (foot drop, worsening numbness)",
+    "Back pain with fever — spinal infection or TB until excluded",
+    "Known malignancy with new back pain",
+    "Significant trauma, or minimal trauma in an osteoporotic or steroid-treated patient",
+    "Pain waking the patient at night, unrelieved by rest",
+    "Age > 50 with new pain and weight loss",
+    "Sudden severe back/abdominal pain with hypotension, collapse, or a pulsatile abdominal mass — ruptured aortic aneurysm"
+  ],
+  "exam": [
+    "Observe gait and posture; look for deformity or a gibbus",
+    "Palpate spinous processes — focal bony tenderness vs paraspinal muscle spasm",
+    "Measure lumbar flexion and extension range",
+    "Straight-leg raise and crossed straight-leg raise",
+    "Lower-limb neurology: power (especially ankle/great-toe dorsiflexion), knee and ankle reflexes, dermatomal sensation",
+    "Perianal sensation and anal tone whenever cauda equina is suspected",
+    "Modified Schober test and chest expansion for spondyloarthritis",
+    "Sacroiliac provocation tests",
+    "Percuss the renal angles for tenderness",
+    "Palpate the abdomen for a pulsatile expansile mass in patients > 60 or with sudden atraumatic pain",
+    "Examine hip rotation to exclude hip disease referring to the back"
+  ],
+  "investigations": [
+    { "test": "Lumbar spine X-ray", "why": "First-line when trauma, osteoporosis risk, or chronic features exist: shows vertebral collapse, lytic/sclerotic metastatic lesions, disc-space destruction of TB, or sacroiliitis of ankylosing spondylitis" },
+    { "test": "ESR / CRP", "why": "Raised markers separate infection, spinal TB, and metastasis from mechanical pain and disc prolapse, where they stay normal" },
+    { "test": "CBC", "why": "Anemia supports malignant infiltration; leukocytosis supports spinal infection" },
+    { "test": "Serum calcium & alkaline phosphatase", "why": "Raised ALP or disturbed calcium supports bony metastasis; part of the fragility-fracture workup" },
+    { "test": "PSA (men > 50 with suspicious features)", "why": "Prostate carcinoma is a common source of blastic spinal metastasis presenting as back pain" },
+    { "test": "Urinalysis", "why": "Hematuria supports ureteric stone when pain is colicky loin-to-groin; pyuria points to renal infection referring to the back" },
+    { "test": "Ultrasound KUB", "why": "If renal colic is suspected: shows stone or hydronephrosis without irradiation" },
+    { "test": "MRI lumbar spine", "why": "Second-line — urgent the same day for cauda equina signs; otherwise if radiculopathy persists > 6 weeks or infection, TB, or metastasis is suspected" }
+  ],
+  "differentials": [
+    { "dx": "Non-specific mechanical low back pain", "icd10": "M54.59", "supports": ["Sudden onset after lifting or twisting", "No radiation below the knee, no red flags", "Paraspinal spasm with normal neurology"] },
+    { "dx": "Lumbar disc prolapse with radiculopathy", "icd10": "M51.16", "supports": ["Pain radiating below the knee with numbness or tingling", "Positive straight-leg raise", "Dermatomal sensory loss or depressed ankle reflex"] },
+    { "dx": "Lumbar spinal stenosis", "icd10": "M48.06", "supports": ["Leg pain on walking relieved by sitting or leaning forward", "Older patient with gradual course", "Normal exam at rest"] },
+    { "dx": "Ankylosing spondylitis", "icd10": "M45.9", "supports": ["Onset before age 40 with morning stiffness > 30 min improving with exercise", "Buttock pain alternating sides", "Reduced Schober and chest expansion, positive sacroiliac tests"] },
+    { "dx": "Osteoporotic vertebral compression fracture", "icd10": "M80.08", "supports": ["Sudden pain after minimal trauma", "Postmenopausal or long-term steroids", "Focal bony tenderness over one vertebra"] },
+    { "dx": "Spinal tuberculosis (Pott disease)", "icd10": "A18.01", "supports": ["Weeks of pain with fever, night sweats, or weight loss", "TB contact or chronic cough", "Gibbus or focal spinal tenderness"] },
+    { "dx": "Spinal metastasis", "icd10": "C79.51", "supports": ["Known malignancy or age > 50 with weight loss", "Night pain unrelieved by rest", "Focal bony tenderness"] },
+    { "dx": "Ureteric stone (referred pain)", "icd10": "N20.1", "supports": ["Colicky loin-to-groin pain", "Burning urination or hematuria", "Renal angle tenderness with a normal spine exam"] },
+    { "dx": "Cauda equina syndrome", "icd10": "G83.4", "supports": ["Urinary retention or incontinence with saddle numbness", "Bilateral leg weakness", "Reduced perianal sensation and lax anal tone"] }
+  ]
+}

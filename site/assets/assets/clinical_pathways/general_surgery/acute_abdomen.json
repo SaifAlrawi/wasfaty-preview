@@ -1,0 +1,61 @@
+{
+  "id": "acute_abdomen",
+  "specialty": "general_surgery",
+  "complaint": "Acute abdominal pain (surgical assessment)",
+  "icd10_symptom": "R10.0",
+  "history": [
+    { "ask": "Onset", "options": ["Sudden — seconds to minutes", "Rapid — over hours", "Gradual — over a day or more"] },
+    { "ask": "Site at onset vs now", "options": ["Started periumbilical, moved to right iliac fossa", "Epigastric, now generalized", "Stayed in one region", "Diffuse from the start"] },
+    { "ask": "Character", "options": ["Colicky — comes in waves", "Constant and worsening", "Constant, patient lies rigidly still", "Writhing, cannot find a comfortable position"] },
+    { "ask": "Radiation", "options": ["Straight through to the back", "Loin to groin", "To right shoulder tip", "None"] },
+    { "ask": "Vomiting", "options": ["None", "Once or twice, after pain started", "Repeated bilious", "Feculent"] },
+    { "ask": "Bowels and flatus", "options": ["Normal", "Absolute constipation — no stool, no flatus", "Diarrhea", "Blood or melena in stool"] },
+    { "ask": "Dyspepsia / NSAID or aspirin use / known ulcer", "options": ["Regular NSAID or aspirin", "Known peptic ulcer or chronic dyspepsia", "Neither"] },
+    { "ask": "Gallstones or alcohol history", "options": ["Known gallstones", "Regular alcohol use", "Previous similar attacks after fatty meals", "None"] },
+    { "ask": "Vascular risk — AF, known aneurysm, ischemic heart disease", "options": ["Atrial fibrillation", "Known aortic aneurysm or previous vascular surgery", "Ischemic heart disease / smoker over 60", "None"] },
+    { "ask": "Last menstrual period (women of childbearing age)", "options": ["On time", "Missed or late period", "Irregular / unsure", "Post-menopausal or not applicable"] },
+    { "ask": "Fever or rigors", "options": ["None", "Low-grade fever", "High fever with rigors"] }
+  ],
+  "red_flags": [
+    "Rigid, silent abdomen with the patient lying still — perforation with peritonitis; urgent surgical referral",
+    "Hypotension, syncope, or back pain with a pulsatile abdominal mass — ruptured aortic aneurysm until proven otherwise; urgent surgical referral",
+    "Severe pain out of proportion to a soft abdomen in an elderly patient or one with atrial fibrillation — mesenteric ischemia; urgent surgical referral",
+    "Feculent vomiting with distension and absolute constipation — established intestinal obstruction",
+    "Acute abdomen with a missed period or positive pregnancy test in a woman of childbearing age — ruptured ectopic pregnancy until proven otherwise",
+    "Cold, sweaty, tachycardic patient whatever the presumed cause — shock in an acute abdomen"
+  ],
+  "exam": [
+    "Record BP, pulse, temperature, and respiratory rate — look for shock and fever",
+    "Inspect the abdomen for distension, visible peristalsis, and surgical scars",
+    "Palpate all quadrants for guarding, rigidity, and rebound tenderness — start away from the pain",
+    "Palpate deliberately for an expansile pulsatile mass above the umbilicus",
+    "Percuss for loss of liver dullness (free air) and for tympanitic distension",
+    "Auscultate bowel sounds — absent (peritonitis/ileus) vs high-pitched tinkling (obstruction)",
+    "Examine both hernial orifices in every patient — an obstructed femoral hernia is easily missed",
+    "Elicit Murphy's sign at the right costal margin",
+    "Test McBurney's point tenderness and Rovsing's sign",
+    "Feel femoral pulses on both sides — asymmetry with a tender abdomen points to aortic pathology",
+    "Perform a rectal examination — tenderness, mass, melena, or empty ballooned rectum"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Leukocytosis supports appendicitis, cholecystitis, or perforation; a falling hemoglobin supports ruptured aneurysm or ectopic pregnancy over the non-bleeding differentials" },
+    { "test": "Serum amylase / lipase", "why": "Markedly raised rules in acute pancreatitis; mild elevation can occur with perforated ulcer or mesenteric ischemia, so interpret against the exam" },
+    { "test": "Erect chest X-ray + supine abdominal X-ray", "why": "Free air under the diaphragm rules in perforation; dilated loops with air-fluid levels rule in obstruction — separates the two operative emergencies from colic" },
+    { "test": "Urinalysis", "why": "Hematuria supports ureteric colic; pyuria and nitrites point away from the surgical differentials toward urinary infection" },
+    { "test": "Urine pregnancy test (all women of childbearing age)", "why": "A positive test with an acute abdomen makes ectopic pregnancy the working diagnosis and changes the whole pathway" },
+    { "test": "RFT / electrolytes", "why": "Assesses dehydration from vomiting in obstruction and pancreatitis; unexplained acidosis-range picture with lactate supports mesenteric ischemia" },
+    { "test": "ECG", "why": "Inferior myocardial infarction mimics epigastric pain; atrial fibrillation on the trace raises mesenteric embolism among the differentials" },
+    { "test": "Abdominal ultrasound", "why": "First-line: free fluid (perforation, rupture, ectopic), gallstones with a thick-walled gallbladder (cholecystitis), aortic diameter (aneurysm), and hydronephrosis (ureteric colic)" },
+    { "test": "CT abdomen with contrast", "why": "Second-line — if the diagnosis is still unclear after X-ray and ultrasound: defines obstruction level and cause, confirms mesenteric ischemia, and finds contained aneurysm leak" }
+  ],
+  "differentials": [
+    { "dx": "Perforated peptic ulcer", "icd10": "K27.5", "supports": ["Sudden epigastric pain becoming generalized", "NSAID use or known ulcer/dyspepsia", "Rigid abdomen, loss of liver dullness", "Free air on erect chest X-ray"] },
+    { "dx": "Acute appendicitis", "icd10": "K35.80", "supports": ["Periumbilical pain migrating to the right iliac fossa", "Low-grade fever with anorexia", "McBurney's tenderness with Rovsing's sign"] },
+    { "dx": "Acute cholecystitis", "icd10": "K81.0", "supports": ["Constant right upper pain after fatty food, radiating to the shoulder", "Known gallstones or previous biliary colic", "Positive Murphy's sign with fever"] },
+    { "dx": "Acute pancreatitis", "icd10": "K85.90", "supports": ["Constant epigastric pain boring through to the back", "Gallstones or alcohol history", "Markedly raised amylase/lipase"] },
+    { "dx": "Intestinal obstruction", "icd10": "K56.60", "supports": ["Colicky central pain with repeated bilious or feculent vomiting", "Absolute constipation with distension", "High-pitched tinkling bowel sounds; air-fluid levels on X-ray", "Previous abdominal surgery or an irreducible hernia"] },
+    { "dx": "Acute mesenteric ischemia", "icd10": "K55.0", "supports": ["Severe pain out of proportion to a soft abdomen", "Atrial fibrillation or vascular disease", "Bloody stool late in the course"] },
+    { "dx": "Ruptured abdominal aortic aneurysm", "icd10": "I71.3", "supports": ["Sudden abdominal or back pain with collapse in a patient over 60", "Expansile pulsatile mass", "Hypotension with falling hemoglobin"] },
+    { "dx": "Ureteric colic", "icd10": "N20.1", "supports": ["Colicky loin-to-groin pain, patient writhing", "Hematuria on urinalysis", "Hydronephrosis on ultrasound"] }
+  ]
+}

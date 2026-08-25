@@ -1,0 +1,59 @@
+{
+  "id": "constipation",
+  "specialty": "internal_medicine",
+  "complaint": "Constipation",
+  "icd10_symptom": "K59.0",
+  "history": [
+    { "ask": "Duration & onset", "options": ["Lifelong / many years", "Recent change (< 6 months)"] },
+    { "ask": "Blood with stool", "options": ["Bright red on paper or stool surface", "Dark blood mixed with stool", "None"] },
+    { "ask": "Pain on defecation", "options": ["Severe sharp anal pain during/after passage", "Crampy abdominal pain relieved by defecation", "None"] },
+    { "ask": "Stool form", "options": ["Progressively narrower / pencil-like", "Hard pellets", "Normal caliber, just infrequent"] },
+    { "ask": "Weight loss or loss of appetite", "options": ["Yes", "No"] },
+    { "ask": "Constipating drugs", "options": ["Opioids / tramadol", "Iron or calcium supplements / antacids", "Calcium-channel blockers", "Anticholinergics / tricyclic antidepressants", "None"] },
+    { "ask": "Cold intolerance, weight gain, fatigue", "options": ["Yes", "No"] },
+    { "ask": "Diabetes", "options": ["Long-standing diabetes", "Recently diagnosed", "No"] },
+    { "ask": "Bloating with stress-related pattern, relief after defecation", "options": ["Yes", "No"] },
+    { "ask": "Polyuria, kidney stones, or bone pain", "options": ["Yes", "No"] },
+    { "ask": "Fluid intake, dietary fiber, physical activity", "options": ["Low fluid/fiber, sedentary or bed-bound", "Adequate intake and activity"] },
+    { "ask": "Vomiting or inability to pass gas", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Absolute constipation (no stool, no flatus) with vomiting and distension",
+    "New-onset constipation after age 50",
+    "Rectal bleeding or melena",
+    "Unintentional weight loss",
+    "Progressive narrowing of stool caliber",
+    "Family history of colorectal cancer with any new bowel symptom"
+  ],
+  "exam": [
+    "Palpate the abdomen for masses and fecal loading along the colon",
+    "Look for distension and auscultate bowel sounds",
+    "Inspect the anus before inserting a finger — fissure, hemorrhoids, skin tags",
+    "Digital rectal examination: mass, stool impaction, sphincter tone, blood on glove",
+    "Check conjunctivae and palms for pallor",
+    "Look for hypothyroid signs: bradycardia, dry coarse skin, delayed ankle-reflex relaxation",
+    "Test distal sensation and ankle reflexes in diabetics — peripheral neuropathy accompanies enteric neuropathy",
+    "Record weight and compare with previous visits",
+    "Examine hernial orifices if obstruction is suspected"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Iron-deficiency anemia with new constipation points to colorectal carcinoma until excluded" },
+    { "test": "TSH", "why": "Raised TSH rules hypothyroidism in as the cause of new constipation with cold intolerance or weight gain" },
+    { "test": "Serum calcium & electrolytes", "why": "Rules hypercalcemia (and hypokalemia) in or out — reversible metabolic causes behind polyuria, stones, or bone pain" },
+    { "test": "Random glucose / HbA1c", "why": "Confirms poorly controlled diabetes when autonomic enteric neuropathy is suspected" },
+    { "test": "Urea & creatinine", "why": "Baseline renal function — chronic hypercalcemia and dehydration from poor intake both injure the kidney and change the picture" },
+    { "test": "Plain abdominal X-ray", "why": "Shows fecal impaction or air–fluid levels when obstruction or severe loading with vomiting is the question" },
+    { "test": "Colonoscopy", "why": "Second-line — if any alarm feature (age > 50 new onset, bleeding, weight loss, narrowing caliber, iron-deficiency anemia): rules colorectal carcinoma in or out" }
+  ],
+  "differentials": [
+    { "dx": "Chronic functional constipation", "icd10": "K59.04", "supports": ["Lifelong pattern of hard, infrequent stool", "Low fluid/fiber intake or immobility", "Normal examination apart from fecal loading"] },
+    { "dx": "Irritable bowel syndrome with constipation", "icd10": "K58.1", "supports": ["Bloating and crampy pain relieved by defecation", "Stress-related pattern over years", "No blood, no weight loss, normal exam"] },
+    { "dx": "Colorectal carcinoma", "icd10": "C18.9", "supports": ["Recent change after age 50", "Dark blood mixed with stool or narrowing caliber", "Weight loss, rectal mass, or pallor"] },
+    { "dx": "Drug-induced constipation", "icd10": "K59.03", "supports": ["Onset after starting opioids, iron, calcium-channel blockers, or anticholinergics", "No alarm features", "Normal examination"] },
+    { "dx": "Hypothyroidism", "icd10": "E03.9", "supports": ["Cold intolerance, weight gain, fatigue", "Bradycardia, dry skin, delayed ankle reflexes"] },
+    { "dx": "Hypercalcemia", "icd10": "E83.52", "supports": ["Polyuria and thirst", "Kidney stones or bone pain", "Constipation resistant to dietary change"] },
+    { "dx": "Anal fissure with withholding", "icd10": "K60.2", "supports": ["Severe sharp pain on defecation", "Bright red blood on paper", "Fissure visible on anal inspection"] },
+    { "dx": "Diabetic autonomic enteropathy", "icd10": "E11.43", "supports": ["Long-standing diabetes", "Bloating with erratic bowel habit", "Distal sensory loss and absent ankle reflexes"] },
+    { "dx": "Intestinal obstruction", "icd10": "K56.6", "supports": ["No stool or flatus with vomiting", "Distension with abnormal bowel sounds", "Hernia or abdominal mass on exam"] }
+  ]
+}

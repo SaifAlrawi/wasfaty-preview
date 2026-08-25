@@ -1,0 +1,59 @@
+{
+  "id": "flank_pain_renal_colic",
+  "specialty": "general_surgery",
+  "complaint": "Flank pain / renal colic",
+  "icd10_symptom": "N23",
+  "history": [
+    { "ask": "Character and radiation", "options": ["Colicky loin-to-groin, patient writhing", "Constant dull loin ache", "Band-like, worse with movement or bending", "Sudden severe with collapse"] },
+    { "ask": "Blood in urine", "options": ["Visible blood with the pain", "Painless visible blood on previous occasions", "None noticed"] },
+    { "ask": "Fever or rigors", "options": ["High fever with rigors", "Low-grade fever", "None"] },
+    { "ask": "Urinary symptoms", "options": ["Burning and frequency", "Poor stream or dribbling", "Passing gravel or stones before", "None"] },
+    { "ask": "Previous stones or family history of stones", "options": ["Personal history of stones", "Family history", "Neither"] },
+    { "ask": "Relation to movement and posture", "options": ["Worse on bending or twisting, eased by rest", "No relation — pain comes in waves regardless of position", "Worse lying still"] },
+    { "ask": "Age and vascular risk", "options": ["Over 60 with smoking, hypertension, or known aneurysm", "Under 60, no vascular risk"] },
+    { "ask": "Weight loss or persistent loin mass symptoms", "options": ["Unintentional weight loss", "Long-standing dull ache with fatigue", "Neither"] },
+    { "ask": "Burning skin pain or rash over the flank", "options": ["Burning/tingling in a band before any rash", "Blistering rash appeared", "No skin symptoms"] },
+    { "ask": "Relation to fatty meals (right-sided pain)", "options": ["Attacks after fatty food", "No relation", "Left-sided pain"] },
+    { "ask": "Urine output", "options": ["Normal", "Markedly reduced or none since pain began", "Single functioning kidney known"] }
+  ],
+  "red_flags": [
+    "Fever with rigors on top of colic — infected obstructed kidney (pus under pressure); urgent surgical referral",
+    "First-ever 'renal colic' over 60 with hypotension or a pulsatile mass — ruptured aortic aneurysm until proven otherwise; urgent surgical referral",
+    "Anuria, or colic in a solitary or transplanted kidney — obstruction is losing the only kidney",
+    "Painless visible hematuria with weight loss — urinary tract malignancy until excluded",
+    "Severe unremitting pain with vomiting and rising creatinine"
+  ],
+  "exam": [
+    "Record temperature, BP, and pulse — fever with tachycardia flags the obstructed infected kidney",
+    "Press over the renal angle for tenderness",
+    "Palpate the abdomen deliberately for an expansile pulsatile mass — mandatory in every first presentation over 60",
+    "Feel femoral pulses on both sides",
+    "Palpate for a ballotable loin mass — renal tumor or gross hydronephrosis",
+    "Percuss for a distended bladder — outflow obstruction with retention",
+    "Examine the spine: palpate vertebrae and test flexion/extension — reproduction of pain on movement supports a musculoskeletal cause",
+    "Inspect the flank skin in good light for vesicular rash in a dermatomal band",
+    "Examine the external genitalia — referred testicular pain is common, and a torted testis can present as groin/loin pain",
+    "Elicit Murphy's sign for right-sided pain — biliary colic mimics renal colic"
+  ],
+  "investigations": [
+    { "test": "Urinalysis", "why": "Microscopic hematuria supports stone disease; nitrites and pyuria support pyelonephritis; a completely normal dipstick weakens both and pushes toward musculoskeletal, biliary, or vascular causes" },
+    { "test": "CBC", "why": "Leukocytosis supports pyelonephritis or an infected obstructed system; anemia raises renal tumor or a bleeding aneurysm" },
+    { "test": "RFT / electrolytes", "why": "Creatinine defines whether obstruction is threatening renal function — critical in a single kidney — and is needed before any contrast study" },
+    { "test": "Ultrasound KUB (kidneys, ureters, bladder)", "why": "First-line: hydronephrosis rules in obstruction, a renal mass rules in tumor, and the same scan screens the aorta in older patients" },
+    { "test": "Plain KUB X-ray", "why": "Shows the majority of urinary stones (radio-opaque) and gives a baseline to follow the stone; radiolucent stones will be missed, so a negative film does not exclude" },
+    { "test": "CRP", "why": "Markedly raised supports pyelonephritis or infected obstruction over uncomplicated stone colic" },
+    { "test": "Urine culture", "why": "Confirms and types urinary infection when dipstick is positive — separates pyelonephritis from sterile stone hematuria" },
+    { "test": "Urine pregnancy test (women of childbearing age)", "why": "Ectopic pregnancy can mimic ureteric colic, and the result gates any X-ray or CT" },
+    { "test": "Non-contrast CT KUB", "why": "Second-line — if ultrasound and KUB are inconclusive but the story is typical: the definitive stone study, and it simultaneously shows the aorta and other mimics" }
+  ],
+  "differentials": [
+    { "dx": "Ureteric stone (ureteric colic)", "icd10": "N20.1", "supports": ["Colicky loin-to-groin pain with writhing", "Hematuria on dipstick", "Hydronephrosis on ultrasound or stone on KUB", "Previous stone episodes"] },
+    { "dx": "Renal stone", "icd10": "N20.0", "supports": ["Dull loin ache with microscopic hematuria", "Family or personal stone history", "Opacity over the renal shadow on KUB"] },
+    { "dx": "Acute pyelonephritis", "icd10": "N10", "supports": ["Fever with rigors and loin ache", "Burning and frequency with pyuria/nitrites", "Marked renal angle tenderness"] },
+    { "dx": "Ruptured or symptomatic aortic aneurysm", "icd10": "I71.3", "supports": ["First 'colic' over 60 with vascular risk", "Pulsatile expansile mass or hypotension", "Aneurysm seen on the same ultrasound"] },
+    { "dx": "Musculoskeletal back pain", "icd10": "M54.50", "supports": ["Pain reproduced by spinal movement and palpation", "Normal urinalysis", "No fever, normal ultrasound"] },
+    { "dx": "Renal cell carcinoma", "icd10": "C64.9", "supports": ["Painless visible hematuria episodes", "Ballotable loin mass with weight loss", "Solid renal mass on ultrasound"] },
+    { "dx": "Herpes zoster (pre-eruptive or eruptive)", "icd10": "B02.9", "supports": ["Burning dermatomal pain preceding rash", "Vesicles in a band on inspection", "Normal urine and imaging"] },
+    { "dx": "Biliary colic (right-sided mimic)", "icd10": "K80.20", "supports": ["Attacks after fatty meals", "Murphy's sign or RUQ tenderness", "Gallstones on the same ultrasound"] }
+  ]
+}

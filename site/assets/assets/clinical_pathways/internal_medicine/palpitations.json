@@ -1,0 +1,140 @@
+{
+  "id": "palpitations",
+  "specialty": "internal_medicine",
+  "complaint": "Palpitations",
+  "icd10_symptom": "R00.2",
+  "history": [
+    {
+      "ask": "What the beat feels like (ask patient to tap it out)",
+      "options": ["Fast and completely irregular", "Fast and regular", "Single skipped or extra thumps", "Gradual pounding that builds and settles"]
+    },
+    {
+      "ask": "Onset and offset",
+      "options": ["Abrupt start AND abrupt stop", "Gradual build-up and fade", "Continuous awareness all day"]
+    },
+    {
+      "ask": "Duration of episodes",
+      "options": ["Seconds", "Minutes", "Hours", "Days or ongoing now"]
+    },
+    {
+      "ask": "Termination manoeuvres",
+      "options": ["Stops with breath-holding / straining / cold water", "Stops only by itself", "Never tried"]
+    },
+    {
+      "ask": "Symptoms during an episode",
+      "options": ["Syncope or near-syncope", "Chest pain", "Breathlessness", "Fear, tingling, choking sensation", "None besides the palpitations"]
+    },
+    {
+      "ask": "Triggers",
+      "options": ["Exertion", "Coffee, tea, energy drinks, or smoking", "Emotional stress or panic situations", "Standing up or after rest", "No clear trigger"]
+    },
+    {
+      "ask": "Thyroid screen",
+      "options": ["Weight loss with good appetite", "Heat intolerance and sweating", "Tremor or irritability", "None of these"]
+    },
+    {
+      "ask": "Anaemia / blood-loss screen",
+      "options": ["Fatigue and exertional breathlessness", "Heavy menstrual bleeding or black stools", "None"]
+    },
+    {
+      "ask": "Stimulants and drugs",
+      "options": ["Decongestants / asthma inhaler overuse", "Weight-loss or energy supplements", "Thyroxine use", "Recreational stimulants or alcohol withdrawal", "None"]
+    },
+    {
+      "ask": "Cardiac background",
+      "options": ["Known ischaemic or structural heart disease", "Family history of sudden death < 40 years", "Previous documented arrhythmia", "None"]
+    }
+  ],
+  "red_flags": [
+    "Palpitations with syncope or near-syncope",
+    "Palpitations during exertion",
+    "Associated chest pain or severe dyspnoea",
+    "Family history of sudden cardiac death under 40",
+    "Known structural heart disease or prior myocardial infarction with new sustained palpitations",
+    "Heart rate > 150/min with hypotension at presentation"
+  ],
+  "exam": [
+    "Palpate the radial pulse for a full minute — rate and whether irregularly irregular",
+    "Confirm apex–radial deficit by auscultating the apex while palpating the pulse (atrial fibrillation)",
+    "Measure BP and repeat after 3 minutes standing if episodes occur on standing",
+    "Auscultate the heart for murmurs — mitral disease predisposes to AF; ejection murmur raises structural disease",
+    "Look for thyroid signs: fine tremor of outstretched hands, sweaty palms, lid lag",
+    "Palpate the neck for goitre and listen for a thyroid bruit",
+    "Inspect conjunctivae and palmar creases for pallor",
+    "Auscultate lung bases for crackles — rapid AF with pulmonary congestion changes urgency",
+    "Estimate JVP and look for pedal oedema (heart failure from sustained arrhythmia)",
+    "Observe breathing pattern and reproduce symptoms with voluntary hyperventilation if panic is suspected"
+  ],
+  "investigations": [
+    {
+      "test": "12-lead ECG at presentation",
+      "why": "Captures the rhythm if symptoms are ongoing — rules AF or SVT in on the spot; between episodes it screens for pre-excitation (WPW), long QT, and old infarction that mark a dangerous substrate"
+    },
+    {
+      "test": "TSH (add free T4 if TSH suppressed)",
+      "why": "Directly rules thyrotoxicosis in or out — a suppressed TSH explains sinus tachycardia and new AF; normal TSH removes it from the list"
+    },
+    {
+      "test": "CBC",
+      "why": "Low haemoglobin rules in anaemia as the driver of compensatory sinus tachycardia; normal CBC pushes toward primary arrhythmia or panic"
+    },
+    {
+      "test": "Electrolytes and renal function (K, Mg where available, Ca)",
+      "why": "Hypokalaemia and hypomagnesaemia provoke ectopy and sustained arrhythmia — correctable findings that explain the symptom"
+    },
+    {
+      "test": "Random blood glucose",
+      "why": "Hypoglycaemic episodes present with tremor and pounding heart — a low value during symptoms rules this in, especially in diabetics on treatment"
+    },
+    {
+      "test": "Ambulatory ECG (Holter 24–48 h) or event recording",
+      "why": "When the resting ECG is normal and episodes are recurrent — correlates the felt symptom with the actual rhythm, separating ectopics and paroxysmal AF/SVT from sinus rhythm during panic"
+    },
+    {
+      "test": "Echocardiography",
+      "why": "If murmur, abnormal ECG, or documented sustained arrhythmia — rules structural disease (mitral valve disease, cardiomyopathy) in or out, which decides how seriously ectopy is taken"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Atrial fibrillation",
+      "icd10": "I48.91",
+      "supports": ["Fast, completely irregular beat felt by the patient", "Irregularly irregular pulse with apex–radial deficit", "Mitral murmur, thyrotoxicosis signs, or alcohol history", "Irregular rhythm without P waves on ECG"]
+    },
+    {
+      "dx": "Paroxysmal supraventricular tachycardia",
+      "icd10": "I47.1",
+      "supports": ["Abrupt-onset, abrupt-offset regular racing lasting minutes to hours", "Terminates with vagal manoeuvres (straining, cold water)", "Pre-excitation (short PR, delta wave) on resting ECG"]
+    },
+    {
+      "dx": "Premature ectopic beats (atrial or ventricular)",
+      "icd10": "I49.40",
+      "supports": ["Isolated skipped or extra thumps, seconds long, at rest", "Worse with coffee, smoking, or stress", "Ectopics captured on ECG or Holter with structurally normal heart"]
+    },
+    {
+      "dx": "Ventricular tachycardia",
+      "icd10": "I47.20",
+      "supports": ["Sustained regular palpitations with syncope, exertional onset, or chest pain", "Known ischaemic or structural heart disease", "Family history of sudden death under 40"]
+    },
+    {
+      "dx": "Thyrotoxicosis",
+      "icd10": "E05.90",
+      "supports": ["Weight loss with good appetite, heat intolerance, tremor", "Goitre, lid lag, or thyroid bruit on exam", "Suppressed TSH with raised free T4"]
+    },
+    {
+      "dx": "Anaemia with compensatory tachycardia",
+      "icd10": "D64.9",
+      "supports": ["Gradual pounding with fatigue and exertional dyspnoea", "Pallor of conjunctivae and palmar creases", "Menorrhagia or black stools", "Low haemoglobin on CBC"]
+    },
+    {
+      "dx": "Panic disorder",
+      "icd10": "F41.0",
+      "supports": ["Episodes with fear, choking sensation, and tingling, triggered by stress", "Gradual build and fade, at rest, never with syncope", "Normal ECG during a captured symptomatic episode"]
+    },
+    {
+      "dx": "Stimulant- or drug-induced tachycardia",
+      "icd10": "R00.0",
+      "supports": ["Clear temporal link to caffeine, decongestants, inhaler overuse, or supplements", "Regular gradual-onset tachycardia that settles with abstinence", "Normal TSH, CBC, and resting ECG"]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "dizziness_vertigo",
+  "specialty": "internal_medicine",
+  "complaint": "Dizziness / vertigo",
+  "icd10_symptom": "R42",
+  "history": [
+    {
+      "ask": "What the patient means by dizzy",
+      "options": ["Room spinning (true vertigo)", "Light-headed, about to faint", "Unsteady on the feet without spinning", "Vague heavy-headedness"]
+    },
+    {
+      "ask": "Duration of each episode",
+      "options": ["Seconds (under a minute)", "Minutes to hours", "Days, continuous", "Constant for weeks"]
+    },
+    {
+      "ask": "Positional trigger",
+      "options": ["Turning over in bed or looking up sets it off", "On standing up from sitting/lying", "No positional relation"]
+    },
+    {
+      "ask": "Hearing symptoms",
+      "options": ["One-sided hearing loss or fullness during attacks", "Tinnitus (ringing) with attacks", "No hearing change"]
+    },
+    {
+      "ask": "Preceding illness",
+      "options": ["Viral illness in the past 2 weeks", "New or changed BP medication", "Recent vomiting/diarrhoea or poor intake", "None"]
+    },
+    {
+      "ask": "Neurological company",
+      "options": ["Double vision, slurred speech, swallowing difficulty, or limb clumsiness", "Severe imbalance — cannot stand unaided", "New headache or neck pain with the vertigo", "None of these"]
+    },
+    {
+      "ask": "Headache history",
+      "options": ["Known migraine, attacks with light/sound sensitivity", "Headache with some dizzy episodes", "No headache association"]
+    },
+    {
+      "ask": "Cardiac symptoms with episodes",
+      "options": ["Palpitations before or during", "Episodes near-faint on exertion", "Chest pain", "None"]
+    },
+    {
+      "ask": "Vascular risk factors",
+      "options": ["Age > 60 with hypertension/diabetes/smoking", "Atrial fibrillation or prior stroke/TIA", "None"]
+    },
+    {
+      "ask": "Anaemia / bleeding screen",
+      "options": ["Fatigue with exertional breathlessness", "Heavy menstrual bleeding or black stools", "None"]
+    }
+  ],
+  "red_flags": [
+    "Vertigo with double vision, slurred speech, dysphagia, limb weakness, or clumsiness",
+    "Inability to stand or walk unaided (severe truncal ataxia)",
+    "Acute vertigo with new severe headache or neck pain",
+    "Vertigo with acute deafness (beyond typical Meniere pattern)",
+    "Vertigo in a patient > 60 with vascular risk factors or atrial fibrillation — assume posterior circulation stroke until examined",
+    "Dizziness with syncope, exertional presyncope, or palpitations and an abnormal pulse"
+  ],
+  "exam": [
+    "Measure lying then standing BP at 1 and 3 minutes — a drop ≥ 20/10 mmHg rules in orthostatic hypotension",
+    "Palpate the pulse for a full minute — irregularly irregular rhythm (AF) raises both arrhythmic presyncope and cardioembolic stroke",
+    "Perform the Dix-Hallpike manoeuvre — brief torsional up-beating nystagmus after a latency confirms posterior-canal BPPV",
+    "Perform the head impulse test in continuous vertigo — a corrective saccade indicates peripheral (vestibular neuritis); a NORMAL head impulse with continuous vertigo is a stroke signal",
+    "Observe nystagmus direction in different gaze positions — direction-changing or vertical nystagmus indicates a central cause",
+    "Test of skew: alternate cover — vertical corrective movement indicates a central cause (completes HINTS)",
+    "Test cerebellar function: finger–nose, rapid alternating movements, heel–shin",
+    "Assess gait and Romberg — mild sway is peripheral; inability to stand unaided is central until proven otherwise",
+    "Screen cranial nerves: eye movements, facial symmetry, speech, swallow",
+    "Perform otoscopy — vesicles (zoster), middle-ear disease as vertigo sources",
+    "Whisper test or tuning fork for one-sided hearing loss (Meniere, labyrinthitis)",
+    "Inspect conjunctivae for pallor (anaemia as light-headedness driver)"
+  ],
+  "investigations": [
+    {
+      "test": "ECG",
+      "why": "Rules in arrhythmia (AF, AV block, long QT) when the story is light-headed presyncope with palpitations; AF also raises cardioembolic posterior-circulation stroke risk"
+    },
+    {
+      "test": "CBC",
+      "why": "Low haemoglobin rules in anaemia as the cause of non-vertiginous light-headedness — pairs with the bleeding-screen question and pallor on exam"
+    },
+    {
+      "test": "Random blood glucose",
+      "why": "Hypoglycaemia mimics presyncopal dizziness in treated diabetics — a low value during symptoms settles it"
+    },
+    {
+      "test": "Renal function and electrolytes",
+      "why": "Dehydration (raised urea) supports orthostatic hypotension after vomiting/diarrhoea; sodium and potassium abnormalities cause both light-headedness and arrhythmia"
+    },
+    {
+      "test": "Postural BP measurement recorded as a test",
+      "why": "The formal lying/standing readings are themselves the diagnostic test for orthostatic hypotension — documenting the drop rules it in and spares imaging"
+    },
+    {
+      "test": "Audiometry (where available)",
+      "why": "Documented low-frequency sensorineural loss on the affected side rules in Meniere disease against BPPV and vestibular neuritis, which spare hearing"
+    },
+    {
+      "test": "Brain MRI with diffusion (or CT if MRI unavailable)",
+      "why": "Second-line — mandatory when HINTS is central, ataxia is severe, or focal signs exist: rules posterior-circulation stroke in or out; note early CT is often normal in posterior fossa stroke, so a normal CT does not close the question"
+    },
+    {
+      "test": "Holter / ambulatory ECG",
+      "why": "For recurrent unexplained presyncopal episodes with normal resting ECG — captures paroxysmal arrhythmia as the cause"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Benign paroxysmal positional vertigo",
+      "icd10": "H81.10",
+      "supports": ["Seconds-long spinning triggered by turning in bed or looking up", "No hearing loss or neurological company", "Positive Dix-Hallpike with latency and fatigable torsional nystagmus"]
+    },
+    {
+      "dx": "Vestibular neuritis / labyrinthitis",
+      "icd10": "H81.20",
+      "supports": ["Continuous severe vertigo for days after a viral illness", "Abnormal head impulse test with unidirectional horizontal nystagmus", "Can still stand with support; no dysarthria or diplopia", "Hearing loss present only in labyrinthitis"]
+    },
+    {
+      "dx": "Meniere disease",
+      "icd10": "H81.09",
+      "supports": ["Spontaneous vertigo attacks lasting 20 minutes to hours", "One-sided fluctuating hearing loss, tinnitus, and aural fullness", "Low-frequency sensorineural loss on audiometry"]
+    },
+    {
+      "dx": "Posterior circulation stroke / TIA",
+      "icd10": "I63.9",
+      "supports": ["Acute vertigo with diplopia, dysarthria, dysphagia, or limb ataxia", "Normal head impulse, direction-changing or vertical nystagmus, or skew deviation", "Cannot stand unaided", "Age > 60 with vascular risk factors or AF"]
+    },
+    {
+      "dx": "Vestibular migraine",
+      "icd10": "G43.9",
+      "supports": ["Recurrent vertigo minutes to hours in a known migraineur", "Light/sound sensitivity or headache with some attacks", "Normal hearing and normal exam between attacks"]
+    },
+    {
+      "dx": "Orthostatic hypotension",
+      "icd10": "I95.1",
+      "supports": ["Light-headedness on standing, not spinning", "New/changed BP medication or volume loss (vomiting, diarrhoea)", "Documented postural drop ≥ 20/10 mmHg"]
+    },
+    {
+      "dx": "Cardiac arrhythmia with presyncope",
+      "icd10": "I49.9",
+      "supports": ["Light-headed episodes with palpitations or on exertion", "Irregular pulse or abnormal resting ECG", "Arrhythmia captured on Holter during a symptomatic episode"]
+    },
+    {
+      "dx": "Anaemia",
+      "icd10": "D64.9",
+      "supports": ["Constant light-headedness with fatigue and exertional dyspnoea", "Conjunctival pallor; menorrhagia or black stools on history", "Low haemoglobin on CBC"]
+    }
+  ]
+}

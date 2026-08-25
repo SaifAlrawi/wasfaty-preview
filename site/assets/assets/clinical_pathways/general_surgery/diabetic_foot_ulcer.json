@@ -1,0 +1,60 @@
+{
+  "id": "diabetic_foot_ulcer",
+  "specialty": "general_surgery",
+  "complaint": "Diabetic foot / leg ulcer",
+  "icd10_symptom": "L97.9",
+  "history": [
+    { "ask": "Diabetes status and control", "options": ["Known diabetic, poorly controlled", "Known diabetic, controlled", "Not known diabetic"] },
+    { "ask": "Site of the ulcer", "options": ["Sole over pressure points (heel, metatarsal heads)", "Toes, tips, or foot margins", "Inner lower leg above the ankle (gaiter area)", "Over a bony deformity"] },
+    { "ask": "Pain in the ulcer and the limb", "options": ["Painless ulcer — patient walked on it unaware", "Pain at rest, worse elevating the leg, relieved hanging it down", "Aching worse standing, relieved by elevation", "Painful only when infected"] },
+    { "ask": "Walking distance before calf pain (claudication)", "options": ["Pain after a fixed short distance, relieved by rest", "No claudication", "Cannot walk enough to say"] },
+    { "ask": "Numbness, burning, or tingling in the feet", "options": ["Yes — glove-and-stocking numbness or burning at night", "No"] },
+    { "ask": "Trigger", "options": ["New or tight shoes", "Barefoot injury or unnoticed trauma", "Heat exposure (hot water, heater)", "No known trigger"] },
+    { "ask": "Previous ulcers or amputation", "options": ["Previous ulcer, healed", "Previous toe or limb amputation", "First ulcer"] },
+    { "ask": "Fever or spreading redness now", "options": ["Fever with spreading redness", "Local redness only", "Neither"] },
+    { "ask": "A red hot swollen foot without a wound", "options": ["Yes — swollen warm foot, little pain", "No"] },
+    { "ask": "Change in a long-standing ulcer", "options": ["Edge became raised, heaped, or bleeds easily after years", "No change / not long-standing"] },
+    { "ask": "Smoking", "options": ["Current smoker", "Ex-smoker", "Never"] }
+  ],
+  "red_flags": [
+    "Spreading sepsis with crepitus, blistering, or wet gangrene — limb- and life-threatening; urgent surgical referral",
+    "Rest pain with a cold, pulseless, pale foot — critical limb ischemia; urgent surgical referral",
+    "Systemic toxicity (fever, rigors, confusion) from a foot ulcer",
+    "Probe reaching bone in an ulcer with fever — deep sepsis with likely bone involvement",
+    "A red, hot, swollen, minimally painful foot in a neuropathic patient without a wound — acute Charcot foot, easily mislabeled as cellulitis"
+  ],
+  "exam": [
+    "Describe the ulcer precisely: site, size, depth, edge (punched-out, sloping, raised/everted), base, and discharge",
+    "Probe the ulcer gently with a sterile probe — reaching bone strongly supports osteomyelitis",
+    "Palpate dorsalis pedis, posterior tibial, popliteal, and femoral pulses on both sides",
+    "Compare foot temperature and capillary refill between sides",
+    "Test protective sensation with a 10 g monofilament at standard plantar points, plus vibration sense",
+    "Inspect for deformity — claw toes, prominent metatarsal heads, rocker-bottom collapse of the arch",
+    "Look between the toes and under callus for hidden breakdown; inspect the footwear the patient came in",
+    "Feel for crepitus, fluctuance, and tracking pus around the ulcer",
+    "Look for venous skin change — varicosities, hemosiderin staining, lipodermatosclerosis around a gaiter-area ulcer",
+    "Record temperature and vitals when infection is suspected",
+    "Measure ankle-brachial pressure with a hand Doppler if available — interpret cautiously, calcified diabetic vessels read falsely high"
+  ],
+  "investigations": [
+    { "test": "Blood glucose + HbA1c", "why": "Confirms and grades the diabetes driving neuropathic ulceration and poor healing; may diagnose diabetes for the first time in an 'unknown' ulcer" },
+    { "test": "CBC", "why": "Leukocytosis supports spreading infection or deep sepsis over an uninfected neuropathic or venous ulcer" },
+    { "test": "ESR / CRP", "why": "A persistently high ESR under an ulcer supports osteomyelitis; CRP tracks acute soft-tissue infection" },
+    { "test": "RFT / electrolytes", "why": "Diabetic nephropathy travels with the foot disease and must be known before any contrast imaging" },
+    { "test": "Deep wound / tissue culture", "why": "Identifies the organisms in an infected ulcer — deep tissue, not a surface swab, reflects the true flora" },
+    { "test": "Plain foot X-ray", "why": "First-line for bone: destruction supports osteomyelitis, gas in soft tissue supports necrotizing infection, and joint fragmentation supports Charcot foot" },
+    { "test": "Arterial Doppler / duplex of the limb", "why": "Separates the ischemic ulcer (needing vascular referral) from the purely neuropathic one — the single most management-defining split in this pathway" },
+    { "test": "Edge biopsy of a chronic non-healing ulcer", "why": "Rules in Marjolin's (squamous cell) transformation when the edge has become raised or friable after years" },
+    { "test": "MRI foot", "why": "Second-line — if X-ray is normal but osteomyelitis or deep abscess is still suspected: shows the earliest bone marrow change and maps deep collections" }
+  ],
+  "differentials": [
+    { "dx": "Diabetic neuropathic ulcer", "icd10": "E11.62", "supports": ["Painless punched-out ulcer over plantar pressure points", "Lost monofilament sensation with intact warm pulses", "Callus rim, deformity, footwear trigger"] },
+    { "dx": "Ischemic (arterial) ulcer", "icd10": "I70.2", "supports": ["Ulcer at toes or margins with rest pain relieved by dependency", "Absent pulses, cold pale foot, claudication, smoker", "Low ankle-brachial index / abnormal arterial Doppler"] },
+    { "dx": "Venous (stasis) ulcer", "icd10": "I83.0", "supports": ["Sloping-edged ulcer in the gaiter area", "Aching relieved by elevation; varicosities with hemosiderin staining", "Palpable pulses with preserved sensation"] },
+    { "dx": "Osteomyelitis under the ulcer", "icd10": "M86.9", "supports": ["Probe reaches bone", "Persistently high ESR; sausage-shaped swollen toe", "Bone destruction on X-ray or early change on MRI"] },
+    { "dx": "Charcot neuro-arthropathy", "icd10": "E11.61", "supports": ["Red hot swollen foot with surprisingly little pain and no wound", "Dense neuropathy; rocker-bottom or collapsing arch", "Joint fragmentation on X-ray with normal infection markers"] },
+    { "dx": "Diabetic foot infection / cellulitis", "icd10": "L03.11", "supports": ["Spreading redness and discharge around the ulcer with fever", "Leukocytosis and raised CRP", "Crepitus or fluctuance flags deep extension"] },
+    { "dx": "Gangrene", "icd10": "I96", "supports": ["Black mummified toe (dry) or moist foul-smelling breakdown (wet)", "Absent pulses or overwhelming sepsis", "Demarcation line on inspection"] },
+    { "dx": "Marjolin's ulcer (squamous cell carcinoma in a chronic ulcer)", "icd10": "C44.72", "supports": ["Years-old ulcer whose edge became raised, everted, or friable", "Grows despite everything that previously helped", "Confirmed on edge biopsy"] }
+  ]
+}

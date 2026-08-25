@@ -1,0 +1,62 @@
+{
+  "id": "nausea_vomiting",
+  "specialty": "internal_medicine",
+  "complaint": "Nausea & vomiting",
+  "icd10_symptom": "R11.2",
+  "history": [
+    { "ask": "Onset & duration", "options": ["Acute (< 48 h)", "Days to 2 weeks", "Chronic / recurrent (> 2 weeks)"] },
+    { "ask": "Timing relative to meals", "options": ["Shortly after eating", "Hours after eating / undigested food", "Early morning before breakfast", "No relation"] },
+    { "ask": "Content of vomitus", "options": ["Food / gastric contents", "Bilious (green)", "Blood or coffee-ground", "Feculent (foul, brown)"] },
+    { "ask": "Associated diarrhea or fever", "options": ["Diarrhea", "Fever", "Both", "Neither"] },
+    { "ask": "Abdominal pain — site & character", "options": ["Epigastric burning", "Colicky central pain with distension", "Right upper quadrant ache", "No significant pain"] },
+    { "ask": "Diabetes / osmotic symptoms", "options": ["Known diabetic", "New thirst and polyuria", "Neither"] },
+    { "ask": "Headache, vertigo, or visual symptoms", "options": ["Vertigo worse on head movement", "New severe headache", "Visual disturbance", "None"] },
+    { "ask": "Last menstrual period (women of childbearing age)", "options": ["Missed / late period", "Recent normal period", "Postmenopausal / not applicable"] },
+    { "ask": "Drugs & substances", "options": ["NSAIDs / aspirin", "Recently started medication (e.g. metformin, antibiotics)", "Opioids / tramadol", "Regular alcohol", "None"] },
+    { "ask": "Jaundice or dark urine", "options": ["Yes", "No"] },
+    { "ask": "Known kidney disease or falling urine output", "options": ["Known CKD", "Urine output reduced", "Neither"] },
+    { "ask": "Chest pain or sweating with the vomiting", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Hematemesis or coffee-ground vomitus",
+    "Feculent or persistent bilious vomiting with distension and absolute constipation",
+    "Signs of severe dehydration or shock — hypotension, tachycardia, confusion",
+    "Vomiting accompanied by chest pain and diaphoresis",
+    "New severe headache, neck stiffness, or effortless early-morning vomiting",
+    "Drowsiness with deep sighing (Kussmaul) breathing in a diabetic"
+  ],
+  "exam": [
+    "Vital signs including postural blood pressure — quantify dehydration",
+    "Assess hydration: mucous membranes, skin turgor, capillary refill",
+    "Smell the breath for ketones",
+    "Inspect sclerae for icterus and conjunctivae for pallor",
+    "Inspect the abdomen for distension and visible peristalsis",
+    "Palpate for epigastric or right-upper-quadrant tenderness, guarding, masses",
+    "Auscultate bowel sounds — tinkling or absent suggests obstruction",
+    "Examine the hernial orifices",
+    "Elicit a succussion splash if gastric outlet obstruction is suspected",
+    "Bedside neurological screen if headache or vertigo: nystagmus, gait, fundoscopy"
+  ],
+  "investigations": [
+    { "test": "Random blood glucose", "why": "Immediately rules diabetic ketoacidosis in or out in any vomiting diabetic or newly polyuric patient" },
+    { "test": "Urinalysis + urine pregnancy test (childbearing age)", "why": "Ketonuria supports DKA; heavy specific gravity confirms dehydration; a positive pregnancy test explains the vomiting and redirects the whole workup" },
+    { "test": "Urea, creatinine & electrolytes", "why": "Rules uremia in or out as the cause, and quantifies hypokalemia/alkalosis produced by the vomiting itself" },
+    { "test": "CBC", "why": "Leukocytosis supports gastroenteritis or obstruction with ischemia; unexplained anemia raises a bleeding peptic ulcer" },
+    { "test": "LFT", "why": "Raised transaminases with bilirubin rule in acute hepatitis behind RUQ ache, jaundice, or dark urine" },
+    { "test": "Serum amylase / lipase", "why": "Excludes pancreatitis mimicking simple gastritis when epigastric pain accompanies the vomiting" },
+    { "test": "ECG", "why": "Inferior myocardial infarction can present as vomiting alone — mandatory when chest pain, diaphoresis, or risk factors are present" },
+    { "test": "Erect abdominal X-ray", "why": "Air–fluid levels rule intestinal obstruction in when vomitus is bilious/feculent with distension" },
+    { "test": "Upper GI endoscopy", "why": "Second-line — if hematemesis, refractory epigastric symptoms, or unexplained vomiting > 2 weeks: confirms peptic ulcer/gastritis or gastric outlet obstruction" }
+  ],
+  "differentials": [
+    { "dx": "Acute gastroenteritis", "icd10": "A09", "supports": ["Acute onset < 48 h with diarrhea and/or fever", "Similar illness in household or a suspicious meal", "No alarm findings on abdominal exam"] },
+    { "dx": "Gastritis / peptic ulcer disease", "icd10": "K27.9", "supports": ["Epigastric burning related to meals", "NSAID, aspirin, or alcohol use", "Epigastric tenderness without peritonism"] },
+    { "dx": "Intestinal obstruction", "icd10": "K56.6", "supports": ["Bilious or feculent vomitus with colicky pain and distension", "Tinkling or absent bowel sounds", "Hernia or previous abdominal surgery"] },
+    { "dx": "Diabetic ketoacidosis", "icd10": "E11.1", "supports": ["Known diabetes or new thirst and polyuria", "Ketotic breath, Kussmaul breathing, dehydration", "Drowsiness out of proportion to vomiting"] },
+    { "dx": "Acute viral hepatitis", "icd10": "B19.9", "supports": ["Jaundice or dark urine reported", "Right-upper-quadrant ache and tenderness", "Scleral icterus on exam"] },
+    { "dx": "Uremia (advanced CKD)", "icd10": "N18.9", "supports": ["Known kidney disease or falling urine output", "Chronic early-morning nausea", "Pallor on examination"] },
+    { "dx": "Vestibular neuronitis / labyrinthitis", "icd10": "H81.2", "supports": ["Vertigo worse on head movement", "Nystagmus on bedside exam", "Normal abdominal examination"] },
+    { "dx": "Vomiting of early pregnancy", "icd10": "O21.9", "supports": ["Missed period in a woman of childbearing age", "Early-morning pattern", "No fever and a normal abdomen"] },
+    { "dx": "Acute myocardial infarction (inferior)", "icd10": "I21.9", "supports": ["Vomiting with chest pain or diaphoresis", "Minimal abdominal tenderness despite marked symptoms"] }
+  ]
+}

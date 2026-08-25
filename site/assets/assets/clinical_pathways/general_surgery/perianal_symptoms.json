@@ -1,0 +1,56 @@
+{
+  "id": "perianal_symptoms",
+  "specialty": "general_surgery",
+  "complaint": "Perianal pain / lump / discharge",
+  "icd10_symptom": "R10.2",
+  "history": [
+    { "ask": "Pain pattern", "options": ["Severe tearing pain during defecation, burning for hours after", "Constant throbbing, worse sitting, keeping patient awake", "Sudden painful lump at the anal verge", "Ache only, mainly a lump or discharge"] },
+    { "ask": "Bleeding", "options": ["Bright red on the paper or dripping after stool", "Blood mixed with stool", "Blood with pus", "None"] },
+    { "ask": "Discharge", "options": ["Recurrent pus staining the underwear", "Discharge from the natal cleft above the anus", "Mucus", "None"] },
+    { "ask": "A lump", "options": ["Comes down with stool and goes back / pushed back", "Permanent lump at the margin", "Sudden tense blue-purple lump", "No lump"] },
+    { "ask": "Fever", "options": ["Fever or feeling unwell", "None"] },
+    { "ask": "Bowel habit and straining", "options": ["Chronic constipation and straining", "Chronic diarrhea", "Normal"] },
+    { "ask": "Weight loss, mouth ulcers, or abdominal pain", "options": ["Yes — one or more", "No"] },
+    { "ask": "Diabetes or immunosuppression", "options": ["Diabetic", "On steroids / immunosuppressed", "Neither"] },
+    { "ask": "Previous perianal abscess or anal surgery", "options": ["Drained abscess that never fully healed", "Previous anal operation", "Neither"] },
+    { "ask": "Anoreceptive intercourse or known HPV/warts", "options": ["Yes", "No", "Declined"] }
+  ],
+  "red_flags": [
+    "Spreading perineal erythema, crepitus, or systemic toxicity — necrotizing perineal infection; urgent surgical referral",
+    "Throbbing anal pain with fever and inability to sit — perianal or ischiorectal abscess; urgent surgical referral",
+    "Hard, ulcerated, or non-healing lesion — especially a 'fissure' off the midline — anal carcinoma until biopsied",
+    "Perianal sepsis in a diabetic or immunosuppressed patient — deteriorates fast",
+    "Urinary retention with perianal pain — deep pelvic sepsis"
+  ],
+  "exam": [
+    "Position the patient and inspect the anal margin in good light — skin tags, external fistula opening, warts, ulcer, or a blue-purple tender lump",
+    "Part the buttocks gently — a posterior midline tear with a sentinel tag is a fissure; note if the tear is lateral (atypical — think carcinoma or Crohn's)",
+    "Palpate around the margin for induration, warmth, and fluctuance — an abscess may show only deep tenderness",
+    "Feel for a cord-like tract running from an external opening toward the anus — fistula",
+    "Perform a digital rectal exam if tolerated — defer it in an obvious acute fissure and record why",
+    "On rectal exam: assess sphincter tone, feel for induration, an internal fistula opening, or a hard mass",
+    "Proctoscopy where tolerated — internal hemorrhoids and their degree",
+    "Inspect the natal cleft for midline pits and a discharging sinus — pilonidal disease, not anal disease",
+    "Palpate inguinal lymph nodes — anal carcinoma drains to the groin",
+    "Record temperature and examine the abdomen — tenderness or a mass supports Crohn's disease"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Leukocytosis supports abscess; anemia supports Crohn's disease or an occult carcinoma over hemorrhoids and fissure" },
+    { "test": "Blood glucose / HbA1c", "why": "Recurrent or severe perianal sepsis is often the first presentation of diabetes" },
+    { "test": "CRP / ESR", "why": "Raised values support active sepsis or Crohn's disease; normal values fit fissure, hemorrhoids, and warts" },
+    { "test": "Proctoscopy (clinic)", "why": "Confirms internal hemorrhoids as the bleeding source and excludes a low rectal lesion the finger missed" },
+    { "test": "Biopsy of any atypical ulcer, lateral fissure, or mass", "why": "The only way to separate anal carcinoma from chronic fissure, Crohn's ulceration, and viral lesions" },
+    { "test": "MRI pelvis", "why": "Second-line — if a fistula is recurrent or complex, or perianal Crohn's is suspected: maps the tracts and any hidden collection before referral" }
+  ],
+  "differentials": [
+    { "dx": "Anal fissure", "icd10": "K60.2", "supports": ["Tearing pain during defecation with bright blood on the paper", "Posterior midline tear with sentinel tag", "Constipation and straining history"] },
+    { "dx": "Perianal abscess", "icd10": "K61.0", "supports": ["Constant throbbing pain, cannot sit", "Fever with a hot fluctuant or indurated area", "Diabetes or immunosuppression"] },
+    { "dx": "Thrombosed external hemorrhoid", "icd10": "K64.5", "supports": ["Sudden painful lump at the verge after straining", "Tense blue-purple swelling on inspection", "Bleeding if it ulcerates"] },
+    { "dx": "Internal hemorrhoids", "icd10": "K64.9", "supports": ["Painless bright bleeding after stool", "Lump prolapsing with defecation, reducible", "Confirmed on proctoscopy"] },
+    { "dx": "Fistula-in-ano", "icd10": "K60.3", "supports": ["Recurrent pus discharge with skin irritation", "External opening with a palpable cord to the anus", "Previous drained abscess that never healed"] },
+    { "dx": "Pilonidal sinus / abscess", "icd10": "L05", "supports": ["Discharge or swelling in the natal cleft above the anus, not from the anus", "Midline pits with hair", "Young hirsute adult"] },
+    { "dx": "Anal carcinoma", "icd10": "C21.0", "supports": ["Hard ulcerated margin lesion or non-healing lateral 'fissure'", "Bleeding with induration on rectal exam", "Inguinal lymphadenopathy", "HPV/wart history"] },
+    { "dx": "Perianal Crohn's disease", "icd10": "K50.90", "supports": ["Multiple or recurrent fistulas and large fleshy tags", "Diarrhea, mouth ulcers, weight loss, abdominal pain", "Raised CRP with anemia"] },
+    { "dx": "Anal warts (condyloma acuminata)", "icd10": "A63.0", "supports": ["Painless papilliferous lumps around the margin", "Relevant sexual history", "Itch and moisture rather than pain"] }
+  ]
+}

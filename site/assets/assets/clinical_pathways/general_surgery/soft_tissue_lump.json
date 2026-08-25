@@ -1,0 +1,55 @@
+{
+  "id": "soft_tissue_lump",
+  "specialty": "general_surgery",
+  "complaint": "Skin & soft-tissue lump",
+  "icd10_symptom": "R22.9",
+  "history": [
+    { "ask": "Duration and growth rate", "options": ["Years, unchanged", "Slowly growing over months", "Rapidly growing over weeks", "Appeared over days, painful"] },
+    { "ask": "Pain", "options": ["Painless", "Throbbing pain with redness", "Tingling or electric shocks on touching it", "Aches after use (near a joint)"] },
+    { "ask": "Size and depth as the patient perceives it", "options": ["Small and just under the skin", "Larger than 5 cm", "Feels deep, under the muscle"] },
+    { "ask": "Discharge or a central punctum", "options": ["Cheesy foul material from a central point", "Pus", "Nothing"] },
+    { "ask": "Fluctuation in size", "options": ["Gets bigger and smaller (near the wrist/joint)", "Steadily one-way", "Static"] },
+    { "ask": "Fever or feeling unwell", "options": ["Yes", "No"] },
+    { "ask": "Multiple similar lumps or family history of the same", "options": ["Several soft lumps for years", "Multiple skin nodules with skin patches since childhood", "Only this one"] },
+    { "ask": "Trauma or insect bite at the site", "options": ["Yes, before it appeared", "No"] },
+    { "ask": "Previous removal of a lump at the same site", "options": ["Yes — it has come back", "No"] },
+    { "ask": "Any recent unexplained weight loss", "options": ["Yes", "No"] }
+  ],
+  "red_flags": [
+    "Any lump larger than 5 cm, deep to the fascia, hard, fixed, or rapidly growing — soft-tissue sarcoma until proven otherwise; urgent surgical referral",
+    "Recurrence at the site of a previously excised lump",
+    "Rapidly spreading redness with fever and severe pain around a lump — deep infection",
+    "A 'lipoma' that has become painful and started growing",
+    "Enlarging lump with unexplained weight loss"
+  ],
+  "exam": [
+    "Measure the lump and record the exact site — a diagram or measurement makes growth objective at review",
+    "Assess consistency: soft (lipoma), firm and rubbery (node), tense cystic (cyst/ganglion), stony hard (malignancy)",
+    "Test attachment to skin — a cyst is attached to skin, often with a visible punctum; a lipoma is free beneath it",
+    "Test the slip sign — edges slipping away from the finger support lipoma",
+    "Contract the underlying muscle — a lump that becomes fixed or disappears is deep to fascia (raises sarcoma stakes)",
+    "Test fluctuation and transillumination — cystic lesions fluctuate; a ganglion transilluminates weakly, a lipoma may glow softly",
+    "Percuss or tap the lump for paresthesia along a nerve — supports neurofibroma/nerve-sheath origin",
+    "Look for redness, warmth, and pointing — abscess",
+    "Palpate the regional lymph nodes draining the site",
+    "Survey the rest of the skin — multiple lipomas, café-au-lait patches and axillary freckling (neurofibromatosis), or a pigmented dimpling nodule (dermatofibroma)"
+  ],
+  "investigations": [
+    { "test": "Soft-tissue ultrasound", "why": "First-line: tells cystic (ganglion, abscess) from solid (lipoma, node, sarcoma), measures true size, and shows the critical fact of depth relative to fascia" },
+    { "test": "CBC + CRP", "why": "Leukocytosis and raised CRP support abscess or infected cyst over the sterile lumps" },
+    { "test": "Blood glucose / HbA1c", "why": "Recurrent skin abscesses or carbuncles are often the presentation of undiagnosed diabetes" },
+    { "test": "FNAC of a suspected lymph node", "why": "Separates reactive node from tuberculous and neoplastic nodes when the 'soft-tissue lump' turns out to be nodal" },
+    { "test": "Plain X-ray of the region", "why": "Shows calcification, a bony origin, or pressure changes — separates a bony swelling from a soft-tissue one near joints" },
+    { "test": "MRI of the region", "why": "Second-line — mandatory before any biopsy if the lump is >5 cm, deep, or suspicious on ultrasound: characterizes and stages a possible sarcoma for the referral center" }
+  ],
+  "differentials": [
+    { "dx": "Lipoma", "icd10": "D17.9", "supports": ["Soft painless lump present for years", "Positive slip sign, free from skin", "Superficial to fascia on exam and ultrasound"] },
+    { "dx": "Epidermoid (sebaceous) cyst", "icd10": "L72.0", "supports": ["Tense lump attached to skin with a central punctum", "Cheesy discharge history", "Common on scalp, face, back"] },
+    { "dx": "Ganglion", "icd10": "M67.40", "supports": ["Tense cystic lump near the wrist or a joint/tendon", "Size fluctuates with activity", "Cystic on ultrasound"] },
+    { "dx": "Cutaneous abscess", "icd10": "L02.91", "supports": ["Painful hot red lump over days with fever", "Fluctuant, may point", "Leukocytosis with raised CRP; diabetic or recurrent boils"] },
+    { "dx": "Enlarged lymph node", "icd10": "I88.9", "supports": ["Firm rubbery lump at a known node station", "Draining-site infection, or constitutional symptoms if sinister", "Nodal architecture on ultrasound; FNAC decides"] },
+    { "dx": "Soft-tissue sarcoma", "icd10": "C49.9", "supports": ["Rapid growth, size >5 cm, or deep to fascia", "Hard, fixed, or recurrent after excision", "Suspicious solid deep mass on ultrasound/MRI"] },
+    { "dx": "Neurofibroma", "icd10": "D36.10", "supports": ["Tingling or shocks on pressure along a nerve line", "Multiple nodules with café-au-lait patches", "Fusiform nerve-related lesion on ultrasound"] },
+    { "dx": "Dermatofibroma", "icd10": "D23.9", "supports": ["Small firm pigmented nodule, often on a limb", "Dimples on pinching the skin", "Stable over long periods, often after an insect bite"] }
+  ]
+}

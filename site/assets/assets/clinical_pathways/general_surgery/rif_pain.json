@@ -1,0 +1,57 @@
+{
+  "id": "rif_pain",
+  "specialty": "general_surgery",
+  "complaint": "Right iliac fossa pain",
+  "icd10_symptom": "R10.31",
+  "history": [
+    { "ask": "Migration of pain", "options": ["Started around the umbilicus then settled in the right iliac fossa", "Right iliac fossa from the start", "Loin moving down to groin", "Suprapubic spreading to the right"] },
+    { "ask": "Anorexia and nausea", "options": ["Lost appetite since pain began", "Nausea or vomiting", "Eating normally"] },
+    { "ask": "Last menstrual period and any vaginal bleeding (women)", "options": ["Missed or late period", "Abnormal spotting or bleeding", "Normal recent period", "Not applicable"] },
+    { "ask": "Vaginal discharge or pelvic pain history (women)", "options": ["New offensive discharge", "Chronic pelvic pain or previous PID", "None", "Not applicable"] },
+    { "ask": "Urinary symptoms", "options": ["Burning or frequency", "Visible blood in urine", "None"] },
+    { "ask": "Fever", "options": ["None", "Low-grade", "High with rigors"] },
+    { "ask": "Bowel habit and weight", "options": ["Chronic diarrhea with weight loss", "Recent change in habit at age over 45", "Constipation only", "Normal"] },
+    { "ask": "Timing of onset in the cycle (women)", "options": ["Sudden onset mid-cycle", "With the period", "No relation", "Not applicable"] },
+    { "ask": "Recent sore throat or viral illness", "options": ["Yes, in the last 2 weeks", "No"] },
+    { "ask": "Groin lump noticed", "options": ["Yes — new or long-standing lump", "No"] }
+  ],
+  "red_flags": [
+    "Collapse, shoulder-tip pain, or a positive pregnancy test with iliac fossa pain — ruptured ectopic pregnancy; urgent surgical referral",
+    "Generalized rigidity and rebound — perforated appendix with peritonitis; urgent surgical referral",
+    "Sudden severe pain with vomiting in a woman with a known ovarian cyst — ovarian torsion",
+    "Tender irreducible groin lump with the pain — obstructed hernia; urgent surgical referral",
+    "High fever with hypotension or confusion — abdominal sepsis"
+  ],
+  "exam": [
+    "Record temperature, BP, and pulse",
+    "Palpate McBurney's point for tenderness, guarding, and rebound",
+    "Test Rovsing's sign — left-sided pressure producing right iliac fossa pain",
+    "Perform psoas and obturator maneuvers — pain suggests a retrocecal or pelvic appendix",
+    "Palpate for a right iliac fossa mass — appendicular mass, cecal tumor, or Crohn's thickening",
+    "Examine both hernial orifices for a lump or cough impulse",
+    "Press over the renal angle — tenderness shifts suspicion to urinary causes",
+    "Perform a rectal examination — right-sided pelvic tenderness or a mass",
+    "Arrange bimanual pelvic assessment where appropriate — adnexal mass or cervical motion tenderness",
+    "Examine the throat and cervical lymph nodes — recent viral illness supports mesenteric adenitis"
+  ],
+  "investigations": [
+    { "test": "Urine pregnancy test (all women of childbearing age)", "why": "Positive makes ectopic pregnancy the leading diagnosis and reframes every other finding; a normal appendix pathway must not start before this result" },
+    { "test": "CBC", "why": "Leukocytosis supports appendicitis, PID, or diverticulitis; unexplained anemia in an older patient supports cecal carcinoma" },
+    { "test": "CRP", "why": "Raised values support appendicitis and other inflammatory causes over ureteric colic and functional pain; normal CBC and CRP together make appendicitis less likely" },
+    { "test": "Urinalysis", "why": "Hematuria supports ureteric stone; marked pyuria supports urinary infection — but mild pyuria can occur with an inflamed appendix lying on the ureter" },
+    { "test": "Abdominal and pelvic ultrasound", "why": "First-line: non-compressible appendix or appendicular mass, free fluid, adnexal cyst or torsion, tubo-ovarian abscess, and hydronephrosis are each decisive for their differential" },
+    { "test": "High vaginal swab (where PID suspected)", "why": "Supports pelvic inflammatory disease against appendicitis when discharge and cervical motion tenderness are present" },
+    { "test": "CT abdomen/pelvis", "why": "Second-line — if the diagnosis remains unclear, especially over 45: distinguishes appendicitis from cecal diverticulitis, Crohn's ileitis, and a cecal mass" }
+  ],
+  "differentials": [
+    { "dx": "Acute appendicitis", "icd10": "K35.80", "supports": ["Migration from umbilicus to right iliac fossa", "Anorexia with low-grade fever", "McBurney's tenderness, Rovsing's sign, raised CRP"] },
+    { "dx": "Ectopic pregnancy", "icd10": "O00.90", "supports": ["Missed period with spotting", "Positive urine pregnancy test", "Free fluid or adnexal mass on ultrasound"] },
+    { "dx": "Ovarian cyst rupture or torsion", "icd10": "N83.20", "supports": ["Sudden mid-cycle onset in a woman", "Adnexal mass or free fluid on ultrasound", "Severe pain with vomiting suggests torsion"] },
+    { "dx": "Pelvic inflammatory disease", "icd10": "N73.9", "supports": ["Offensive vaginal discharge", "Cervical motion tenderness on bimanual exam", "Bilateral lower abdominal tenderness with fever"] },
+    { "dx": "Ureteric colic", "icd10": "N20.1", "supports": ["Loin-to-groin colicky pain", "Hematuria on urinalysis", "Hydronephrosis on ultrasound"] },
+    { "dx": "Mesenteric adenitis", "icd10": "I88.0", "supports": ["Recent sore throat or viral illness", "High fever with shifting mild tenderness and no guarding", "Cervical lymphadenopathy"] },
+    { "dx": "Crohn's terminal ileitis", "icd10": "K50.00", "supports": ["Chronic diarrhea with weight loss", "Right iliac fossa thickened mass", "Raised CRP with anemia"] },
+    { "dx": "Cecal / right-sided diverticulitis", "icd10": "K57.32", "supports": ["Older patient with localized tenderness and fever", "No migration story", "Confirmed on second-line CT"] },
+    { "dx": "Cecal carcinoma", "icd10": "C18.0", "supports": ["Age over 45 with altered bowel habit or weight loss", "Non-tender or minimally tender mass", "Unexplained iron-deficiency anemia"] }
+  ]
+}

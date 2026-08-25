@@ -1,0 +1,58 @@
+{
+  "id": "dysphagia",
+  "specialty": "general_surgery",
+  "complaint": "Dysphagia",
+  "icd10_symptom": "R13.10",
+  "history": [
+    { "ask": "Solids, liquids, or both", "options": ["Solids first, then liquids (progressive)", "Solids and liquids equally from the start", "Intermittent, unpredictable, any texture", "Sensation of a lump but food actually passes"] },
+    { "ask": "Course and duration", "options": ["Steadily progressive over weeks to months", "Slowly progressive over years", "Intermittent, static", "Sudden — food stuck now"] },
+    { "ask": "Weight loss", "options": ["Marked and unintentional", "Mild", "None"] },
+    { "ask": "Heartburn history", "options": ["Years of reflux/heartburn", "Recent heartburn only", "None"] },
+    { "ask": "Regurgitation", "options": ["Undigested food hours later, night cough, gurgling", "Immediate regurgitation", "Acid taste only", "None"] },
+    { "ask": "Pain on swallowing (odynophagia) or chest pain", "options": ["Gripping chest pain with swallows", "Burning pain on swallowing", "Painless"] },
+    { "ask": "Level where food sticks", "options": ["Throat / neck", "Behind the sternum", "Lower chest / epigastrium", "Cannot localize"] },
+    { "ask": "Neck lump or pressure symptoms", "options": ["Visible or felt neck swelling", "Tightness worse lying flat", "Neither"] },
+    { "ask": "Anemia symptoms", "options": ["Fatigue, spoon nails, sore tongue", "None"] },
+    { "ask": "Smoking and alcohol", "options": ["Smoker", "Regular alcohol", "Both", "Neither"] },
+    { "ask": "Halitosis or recurrent chest infections", "options": ["Bad breath with food regurgitation", "Repeated chest infections", "Neither"] }
+  ],
+  "red_flags": [
+    "Progressive dysphagia with weight loss at age over 40 — esophageal carcinoma until proven otherwise; urgent surgical referral",
+    "Complete obstruction — unable to swallow even saliva",
+    "Dysphagia with anemia or overt GI bleeding",
+    "Hoarseness accompanying dysphagia — recurrent laryngeal nerve involvement",
+    "Recurrent aspiration pneumonia — the swallow is unsafe"
+  ],
+  "exam": [
+    "Weigh the patient and assess muscle wasting and hydration",
+    "Watch the patient swallow a sip of water — coughing, wet voice, or repeated attempts localize an oropharyngeal problem",
+    "Palpate the neck for a goiter and check whether it moves on swallowing",
+    "Feel for a soft gurgling neck swelling that empties on pressure — pharyngeal pouch",
+    "Palpate the supraclavicular fossae — a hard left node (Virchow) supports advanced carcinoma",
+    "Inspect the mouth, tongue, and pharynx — glossitis and angular stomatitis support iron deficiency",
+    "Inspect nails for koilonychia and conjunctiva for pallor",
+    "Auscultate the chest — basal crackles of aspiration",
+    "Palpate the epigastrium for a mass and the liver for irregular enlargement",
+    "Assess the voice — hoarseness alongside the swallowing complaint"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Iron-deficiency anemia supports esophageal web (Plummer-Vinson) or a bleeding carcinoma; normal blood count fits achalasia, spasm, and globus" },
+    { "test": "Serum ferritin / iron studies", "why": "Confirms the iron deficiency behind a suspected web and grades the anemia of malignancy" },
+    { "test": "Barium swallow", "why": "First-line and widely available: bird-beak taper rules in achalasia, an irregular shouldered stricture points to carcinoma, a smooth taper to peptic stricture, a posterior pouch to Zenker's — and it is the safer first test when a pouch is suspected before any scope" },
+    { "test": "Chest X-ray", "why": "Widened mediastinum or an air-fluid level behind the heart supports megaesophagus of achalasia; aspiration changes support an unsafe swallow; a retrosternal goiter shadow supports extrinsic compression" },
+    { "test": "TSH + thyroid ultrasound (if neck swelling found)", "why": "Characterizes a goiter causing extrinsic compression and its functional status" },
+    { "test": "Upper GI endoscopy with biopsy", "why": "Second-line in sequence but OBLIGATORY — regardless of what barium shows — if any alarm feature is present: progressive dysphagia over 40, weight loss, anemia or GI bleeding, or any stricture, mass, or mucosal lesion on barium. Biopsy is the only way to prove or exclude carcinoma and to separate peptic from malignant stricture; a 'benign-looking' barium never closes the question" },
+    { "test": "Esophageal manometry", "why": "Second-line — if endoscopy and barium are non-diagnostic and a motility disorder is suspected: confirms achalasia and diffuse spasm" }
+  ],
+  "differentials": [
+    { "dx": "Esophageal carcinoma", "icd10": "C15.9", "supports": ["Progressive solids-then-liquids dysphagia over weeks", "Marked weight loss; smoker/alcohol", "Irregular stricture on barium; hard supraclavicular node"] },
+    { "dx": "Peptic stricture", "icd10": "K22.2", "supports": ["Years of heartburn preceding slowly progressive solid dysphagia", "Little or no weight loss", "Smooth tapered narrowing on barium"] },
+    { "dx": "Achalasia", "icd10": "K22.0", "supports": ["Solids and liquids equally from the start", "Regurgitation of undigested food, night cough", "Bird-beak on barium swallow; air-fluid level on chest X-ray"] },
+    { "dx": "Reflux esophagitis", "icd10": "K21.0", "supports": ["Burning odynophagia with heartburn", "Intermittent symptoms, no true progression", "Normal barium or mild changes only"] },
+    { "dx": "Esophageal web (Plummer-Vinson)", "icd10": "D50.1", "supports": ["Intermittent solid dysphagia at the throat level in a woman", "Koilonychia, glossitis, iron-deficiency anemia", "Web on barium swallow"] },
+    { "dx": "Pharyngeal pouch (Zenker's diverticulum)", "icd10": "K22.5", "supports": ["Elderly patient with regurgitation of old food and halitosis", "Gurgling compressible neck swelling", "Posterior pouch on barium — found before any endoscopy"] },
+    { "dx": "Diffuse esophageal spasm", "icd10": "K22.4", "supports": ["Intermittent dysphagia with gripping chest pain", "Both textures affected, no weight loss", "Corkscrew pattern on barium; confirmed on manometry"] },
+    { "dx": "Retrosternal goiter compression", "icd10": "E04.9", "supports": ["Neck swelling moving on swallowing", "Tightness worse lying flat; tracheal deviation", "Retrosternal shadow on chest X-ray"] },
+    { "dx": "Globus sensation", "icd10": "F45.8", "supports": ["Lump feeling between meals, food and drink actually pass normally", "No weight loss, normal exam", "Normal barium and endoscopy"] }
+  ]
+}

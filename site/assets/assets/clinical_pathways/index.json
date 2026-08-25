@@ -1,0 +1,181 @@
+{
+  "internal_medicine": [
+    {
+      "id": "abdominal_pain_medical",
+      "complaint": "Abdominal pain (medical assessment)",
+      "file": "internal_medicine/abdominal_pain_medical.json"
+    },
+    {
+      "id": "chest_pain",
+      "complaint": "Chest pain",
+      "file": "internal_medicine/chest_pain.json"
+    },
+    {
+      "id": "constipation",
+      "complaint": "Constipation",
+      "file": "internal_medicine/constipation.json"
+    },
+    {
+      "id": "cough",
+      "complaint": "Cough",
+      "file": "internal_medicine/cough.json"
+    },
+    {
+      "id": "diarrhea",
+      "complaint": "Diarrhea",
+      "file": "internal_medicine/diarrhea.json"
+    },
+    {
+      "id": "dizziness_vertigo",
+      "complaint": "Dizziness / vertigo",
+      "file": "internal_medicine/dizziness_vertigo.json"
+    },
+    {
+      "id": "dyspepsia",
+      "complaint": "Dyspepsia / epigastric pain",
+      "file": "internal_medicine/dyspepsia.json"
+    },
+    {
+      "id": "dyspnea",
+      "complaint": "Shortness of breath",
+      "file": "internal_medicine/dyspnea.json"
+    },
+    {
+      "id": "dysuria",
+      "complaint": "Dysuria / urinary frequency",
+      "file": "internal_medicine/dysuria.json"
+    },
+    {
+      "id": "fatigue_pallor",
+      "complaint": "Fatigue / pallor (suspected anemia)",
+      "file": "internal_medicine/fatigue_pallor.json"
+    },
+    {
+      "id": "fever",
+      "complaint": "Fever",
+      "file": "internal_medicine/fever.json"
+    },
+    {
+      "id": "headache",
+      "complaint": "Headache",
+      "file": "internal_medicine/headache.json"
+    },
+    {
+      "id": "jaundice",
+      "complaint": "Jaundice",
+      "file": "internal_medicine/jaundice.json"
+    },
+    {
+      "id": "joint_pain",
+      "complaint": "Joint pain",
+      "file": "internal_medicine/joint_pain.json"
+    },
+    {
+      "id": "leg_swelling",
+      "complaint": "Bilateral leg swelling / edema",
+      "file": "internal_medicine/leg_swelling.json"
+    },
+    {
+      "id": "low_back_pain",
+      "complaint": "Low back pain",
+      "file": "internal_medicine/low_back_pain.json"
+    },
+    {
+      "id": "nausea_vomiting",
+      "complaint": "Nausea & vomiting",
+      "file": "internal_medicine/nausea_vomiting.json"
+    },
+    {
+      "id": "palpitations",
+      "complaint": "Palpitations",
+      "file": "internal_medicine/palpitations.json"
+    },
+    {
+      "id": "syncope",
+      "complaint": "Syncope / fainting",
+      "file": "internal_medicine/syncope.json"
+    },
+    {
+      "id": "weight_loss",
+      "complaint": "Unintentional weight loss",
+      "file": "internal_medicine/weight_loss.json"
+    }
+  ],
+  "general_surgery": [
+    {
+      "id": "acute_abdomen",
+      "complaint": "Acute abdominal pain (surgical assessment)",
+      "file": "general_surgery/acute_abdomen.json"
+    },
+    {
+      "id": "breast_lump",
+      "complaint": "Breast lump / breast pain",
+      "file": "general_surgery/breast_lump.json"
+    },
+    {
+      "id": "cellulitis_abscess",
+      "complaint": "Cellulitis / abscess",
+      "file": "general_surgery/cellulitis_abscess.json"
+    },
+    {
+      "id": "diabetic_foot_ulcer",
+      "complaint": "Diabetic foot / leg ulcer",
+      "file": "general_surgery/diabetic_foot_ulcer.json"
+    },
+    {
+      "id": "dysphagia",
+      "complaint": "Dysphagia",
+      "file": "general_surgery/dysphagia.json"
+    },
+    {
+      "id": "flank_pain_renal_colic",
+      "complaint": "Flank pain / renal colic",
+      "file": "general_surgery/flank_pain_renal_colic.json"
+    },
+    {
+      "id": "groin_swelling_hernia",
+      "complaint": "Groin swelling / suspected hernia",
+      "file": "general_surgery/groin_swelling_hernia.json"
+    },
+    {
+      "id": "neck_thyroid_lump",
+      "complaint": "Neck / thyroid lump",
+      "file": "general_surgery/neck_thyroid_lump.json"
+    },
+    {
+      "id": "perianal_symptoms",
+      "complaint": "Perianal pain / lump / discharge",
+      "file": "general_surgery/perianal_symptoms.json"
+    },
+    {
+      "id": "rectal_bleeding",
+      "complaint": "Rectal bleeding",
+      "file": "general_surgery/rectal_bleeding.json"
+    },
+    {
+      "id": "rif_pain",
+      "complaint": "Right iliac fossa pain",
+      "file": "general_surgery/rif_pain.json"
+    },
+    {
+      "id": "ruq_pain_biliary",
+      "complaint": "Right upper quadrant pain",
+      "file": "general_surgery/ruq_pain_biliary.json"
+    },
+    {
+      "id": "scrotal_pain_swelling",
+      "complaint": "Scrotal pain / swelling",
+      "file": "general_surgery/scrotal_pain_swelling.json"
+    },
+    {
+      "id": "soft_tissue_lump",
+      "complaint": "Skin & soft-tissue lump",
+      "file": "general_surgery/soft_tissue_lump.json"
+    },
+    {
+      "id": "wound_complication",
+      "complaint": "Post-operative wound complication",
+      "file": "general_surgery/wound_complication.json"
+    }
+  ]
+}

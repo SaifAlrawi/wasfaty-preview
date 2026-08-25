@@ -1,0 +1,534 @@
+{
+  "id": "fever",
+  "specialty": "internal_medicine",
+  "complaint": "Fever",
+  "icd10_symptom": "R50.9",
+  "history": [
+    {
+      "ask": "Duration and pattern",
+      "options": [
+        "< 5 days, continuous",
+        "Stepwise rise over the first week",
+        "Undulant — waves over weeks",
+        "Evening rise with drenching night sweats",
+        "> 2 weeks without a clear source"
+      ],
+      "weights": {
+        "< 5 days, continuous": {
+          "viral": 2
+        },
+        "Stepwise rise over the first week": {
+          "typhoid": 3
+        },
+        "Undulant — waves over weeks": {
+          "brucella": 4
+        },
+        "Evening rise with drenching night sweats": {
+          "tb": 3
+        },
+        "> 2 weeks without a clear source": {
+          "tb": 2,
+          "brucella": 2,
+          "endocarditis": 2
+        }
+      }
+    },
+    {
+      "ask": "Rigors",
+      "options": [
+        "True shaking chills",
+        "Chilly sensation only",
+        "None"
+      ],
+      "weights": {
+        "True shaking chills": {
+          "uti": 2,
+          "cap": 1,
+          "endocarditis": 1
+        },
+        "Chilly sensation only": {
+          "viral": 1
+        }
+      }
+    },
+    {
+      "ask": "Localising respiratory symptoms",
+      "options": [
+        "Productive cough or pleuritic pain",
+        "Dry cough > 3 weeks",
+        "Sore throat / coryza",
+        "None"
+      ],
+      "weights": {
+        "Productive cough or pleuritic pain": {
+          "cap": 3
+        },
+        "Dry cough > 3 weeks": {
+          "tb": 3
+        },
+        "Sore throat / coryza": {
+          "viral": 2
+        }
+      }
+    },
+    {
+      "ask": "Urinary symptoms",
+      "options": [
+        "Burning urination or frequency",
+        "Flank pain",
+        "None"
+      ],
+      "weights": {
+        "Burning urination or frequency": {
+          "uti": 3
+        },
+        "Flank pain": {
+          "uti": 3
+        }
+      }
+    },
+    {
+      "ask": "GI symptoms",
+      "options": [
+        "Diarrhoea or constipation with abdominal pain",
+        "Vomiting",
+        "Jaundice or dark urine",
+        "None"
+      ],
+      "weights": {
+        "Diarrhoea or constipation with abdominal pain": {
+          "typhoid": 2
+        },
+        "Vomiting": {
+          "viral": 1
+        }
+      }
+    },
+    {
+      "ask": "Animal, milk, and food exposure",
+      "options": [
+        "Raw milk or fresh soft cheese",
+        "Sheep/goat/cattle contact or home slaughtering",
+        "Tick bite or handling fresh animal hides/meat",
+        "None"
+      ],
+      "weights": {
+        "Raw milk or fresh soft cheese": {
+          "brucella": 4
+        },
+        "Sheep/goat/cattle contact or home slaughtering": {
+          "brucella": 3
+        },
+        "Tick bite or handling fresh animal hides/meat": {
+          "cchf": 4
+        }
+      }
+    },
+    {
+      "ask": "Musculoskeletal symptoms",
+      "options": [
+        "Low back or hip pain with the fever",
+        "Large-joint pain or swelling",
+        "Generalised body aches only",
+        "None"
+      ],
+      "weights": {
+        "Low back or hip pain with the fever": {
+          "brucella": 3
+        },
+        "Large-joint pain or swelling": {
+          "brucella": 2
+        },
+        "Generalised body aches only": {
+          "viral": 1
+        }
+      }
+    },
+    {
+      "ask": "Bleeding tendency",
+      "options": [
+        "Gum bleeding, nosebleeds, or easy bruising with the fever",
+        "Blood in vomit or stool",
+        "None"
+      ],
+      "weights": {
+        "Gum bleeding, nosebleeds, or easy bruising with the fever": {
+          "cchf": 4
+        },
+        "Blood in vomit or stool": {
+          "cchf": 3
+        }
+      }
+    },
+    {
+      "ask": "Weight loss and night sweats",
+      "options": [
+        "Weight loss with night sweats over weeks",
+        "Night sweats only",
+        "Neither"
+      ],
+      "weights": {
+        "Weight loss with night sweats over weeks": {
+          "tb": 3
+        },
+        "Night sweats only": {
+          "tb": 1,
+          "brucella": 1
+        }
+      }
+    },
+    {
+      "ask": "Cardiac risk for endocarditis",
+      "options": [
+        "Known valve disease or prosthetic valve",
+        "Recent dental procedure",
+        "IV drug use",
+        "None"
+      ],
+      "weights": {
+        "Known valve disease or prosthetic valve": {
+          "endocarditis": 4
+        },
+        "Recent dental procedure": {
+          "endocarditis": 2
+        },
+        "IV drug use": {
+          "endocarditis": 3
+        }
+      }
+    },
+    {
+      "ask": "TB contact and prior treatment",
+      "options": [
+        "Household TB contact",
+        "Previous TB treatment",
+        "None known"
+      ],
+      "weights": {
+        "Household TB contact": {
+          "tb": 3
+        },
+        "Previous TB treatment": {
+          "tb": 2
+        }
+      }
+    },
+    {
+      "ask": "Travel and residence",
+      "options": [
+        "Rural or farming area",
+        "Travel outside Iraq in the last month",
+        "Urban only, no travel"
+      ],
+      "weights": {
+        "Rural or farming area": {
+          "brucella": 2,
+          "cchf": 1
+        }
+      }
+    }
+  ],
+  "red_flags": [
+    "Fever with hypotension, mottling, or confusion (sepsis)",
+    "Fever with neck stiffness, photophobia, or new rash",
+    "Fever with bleeding (gums, nose, GI) after animal/tick contact — CCHF until proven otherwise: isolate and notify",
+    "Fever with severe localised bone or spine pain and inability to walk",
+    "Fever > 2 weeks with weight loss and night sweats",
+    "Fever in a patient with a prosthetic valve or new murmur",
+    "Neutropenia risk: fever on chemotherapy or known low white count"
+  ],
+  "exam": [
+    "Record full vitals: temperature, BP, pulse, respiratory rate, SpO2 — relative bradycardia with high fever suggests typhoid",
+    "Assess mentation and neck stiffness; test Kernig's sign if meningitis is possible",
+    "Inspect skin fully: rose spots on trunk (typhoid), petechiae or ecchymoses (CCHF, meningococcaemia), splinter haemorrhages (endocarditis)",
+    "Auscultate the heart for a new or changed murmur (endocarditis)",
+    "Auscultate lungs for focal crackles or bronchial breathing (pneumonia)",
+    "Palpate the abdomen for splenomegaly (typhoid, brucellosis, endocarditis) and hepatomegaly",
+    "Percuss the renal angles for tenderness (pyelonephritis)",
+    "Press over the lumbar spine and sacroiliac joints — focal tenderness raises brucellar spondylitis",
+    "Palpate all lymph node regions for enlarged nodes (TB, viral syndromes)",
+    "Examine large joints for swelling or effusion (brucellar arthritis)",
+    "Inspect the throat and ears to close out simple upper respiratory sources"
+  ],
+  "investigations": [
+    {
+      "test": "CBC with differential",
+      "why": "Neutrophilia supports pyogenic infection (pneumonia, pyelonephritis); leukopenia with relative lymphocytosis supports typhoid or viral illness; thrombocytopenia + leukopenia after animal exposure raises CCHF; pancytopenia raises visceral leishmaniasis or marrow disease"
+    },
+    {
+      "test": "Blood culture (two sets, before any antibiotic)",
+      "why": "Rules in typhoid (first week), brucellosis (prolonged incubation — tell the lab), and endocarditis; the yield collapses after antibiotics start, so draw first"
+    },
+    {
+      "test": "Urinalysis and urine culture",
+      "why": "Pyuria and nitrites with a positive culture rule in urinary tract infection/pyelonephritis and close the search; a clean urine removes it from the list"
+    },
+    {
+      "test": "Brucella serology (standard agglutination test / Rose Bengal)",
+      "why": "Rules brucellosis in or out in undulant fever with raw-milk or livestock exposure, back pain, or arthritis — a leading cause of prolonged fever in Iraq"
+    },
+    {
+      "test": "CRP and ESR",
+      "why": "Tracks inflammatory burden; very high ESR supports endocarditis, TB, or deep abscess over simple viral illness; near-normal values argue against serious bacterial disease"
+    },
+    {
+      "test": "Chest X-ray",
+      "why": "Rules in pneumonia and screens for TB (upper-zone disease, cavitation, hilar nodes) when the fever has no source on exam"
+    },
+    {
+      "test": "Malaria film / rapid test AND typhoid-directed serology only if culture unavailable",
+      "why": "Blood film if travel to an endemic area (rare within Iraq); Widal is unreliable alone — interpret only with the clinical picture when culture is not possible"
+    },
+    {
+      "test": "Abdominal ultrasound",
+      "why": "Confirms splenomegaly/hepatomegaly (typhoid, brucellosis, leishmaniasis), finds liver abscess or renal obstruction with pyelonephritis when fever stays unexplained"
+    },
+    {
+      "test": "Echocardiography",
+      "why": "If new murmur, positive blood cultures, or persistent unexplained fever with valve risk — vegetations rule endocarditis in"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Viral febrile illness (influenza-like)",
+      "icd10": "B34.9",
+      "supports": [
+        "Fever < 5 days with coryza, sore throat, generalised aches",
+        "No localising signs on full exam",
+        "Normal or lymphocytic CBC with low CRP"
+      ],
+      "key": "viral",
+      "first_line": [
+        "CBC with differential"
+      ],
+      "medications": [
+        {
+          "generic": "Paracetamol",
+          "note": "antipyretic, fluids"
+        }
+      ]
+    },
+    {
+      "dx": "Typhoid (enteric) fever",
+      "icd10": "A01.00",
+      "supports": [
+        "Stepwise fever over the first week with abdominal pain and constipation or diarrhoea",
+        "Relative bradycardia, rose spots, splenomegaly",
+        "Leukopenia on CBC",
+        "Salmonella Typhi on blood culture"
+      ],
+      "key": "typhoid",
+      "first_line": [
+        "Blood culture (two sets, before any antibiotic)",
+        "CBC with differential"
+      ],
+      "medications": [
+        {
+          "generic": "Azithromycin",
+          "note": "uncomplicated outpatient"
+        },
+        {
+          "generic": "Ceftriaxone",
+          "note": "severe / admitted"
+        }
+      ]
+    },
+    {
+      "dx": "Brucellosis",
+      "icd10": "A23.9",
+      "supports": [
+        "Undulant fever with drenching sweats after raw milk or livestock contact",
+        "Low back/sacroiliac tenderness or large-joint arthritis",
+        "Splenomegaly on palpation or ultrasound",
+        "Positive Brucella agglutination titre"
+      ],
+      "key": "brucella",
+      "first_line": [
+        "Brucella serology (standard agglutination test / Rose Bengal)",
+        "Blood culture (two sets, before any antibiotic)"
+      ],
+      "medications": [
+        {
+          "generic": "Doxycycline",
+          "note": "6-week backbone"
+        },
+        {
+          "generic": "Rifampicin",
+          "note": "combination partner"
+        }
+      ]
+    },
+    {
+      "dx": "Pyelonephritis / urinary tract infection",
+      "icd10": "N10",
+      "supports": [
+        "Burning urination, frequency, flank pain with rigors",
+        "Renal angle tenderness",
+        "Pyuria on urinalysis with positive culture"
+      ],
+      "key": "uti",
+      "first_line": [
+        "Urinalysis and urine culture"
+      ],
+      "medications": [
+        {
+          "generic": "Ciprofloxacin",
+          "note": "upper tract / pyelonephritis"
+        },
+        {
+          "generic": "Nitrofurantoin",
+          "note": "lower tract only"
+        }
+      ]
+    },
+    {
+      "dx": "Community-acquired pneumonia",
+      "icd10": "J18.9",
+      "supports": [
+        "Fever with productive cough or pleuritic pain",
+        "Focal crackles or bronchial breathing",
+        "Consolidation on chest X-ray with neutrophilia"
+      ],
+      "key": "cap",
+      "first_line": [
+        "Chest X-ray",
+        "CBC with differential"
+      ],
+      "medications": [
+        {
+          "generic": "Amoxicillin/Clavulanate",
+          "note": "first-line outpatient CAP"
+        },
+        {
+          "generic": "Azithromycin",
+          "note": "atypical cover or penicillin allergy"
+        }
+      ]
+    },
+    {
+      "dx": "Tuberculosis (pulmonary or extrapulmonary)",
+      "icd10": "A15.9",
+      "supports": [
+        "Fever > 2 weeks with night sweats and weight loss",
+        "TB contact or previous treatment",
+        "Lymphadenopathy or suggestive chest X-ray",
+        "High ESR with normochromic anaemia"
+      ],
+      "key": "tb",
+      "first_line": [
+        "Chest X-ray",
+        "CRP and ESR"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Infective endocarditis",
+      "icd10": "I33.0",
+      "supports": [
+        "Persistent fever with a new or changed murmur",
+        "Valve disease, recent dental work, or IV drug use",
+        "Splinter haemorrhages and splenomegaly",
+        "Positive blood cultures with vegetation on echo"
+      ],
+      "key": "endocarditis",
+      "first_line": [
+        "Blood culture (two sets, before any antibiotic)",
+        "Echocardiography"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Crimean-Congo haemorrhagic fever",
+      "icd10": "A98.0",
+      "supports": [
+        "Abrupt fever after tick bite, slaughtering, or fresh hide/meat handling",
+        "Gum bleeding, petechiae, or ecchymoses",
+        "Thrombocytopenia with leukopenia on CBC"
+      ],
+      "key": "cchf",
+      "first_line": [
+        "CBC with differential"
+      ],
+      "medications": []
+    }
+  ],
+  "priors": {
+    "viral": 4,
+    "typhoid": 2,
+    "uti": 2,
+    "cap": 2,
+    "brucella": 2,
+    "tb": 1,
+    "endocarditis": 1,
+    "cchf": 1
+  },
+  "exam_weights": {
+    "Inspect skin fully: rose spots on trunk (typhoid), petechiae or ecchymoses (CCHF, meningococcaemia), splinter haemorrhages (endocarditis)": {
+      "typhoid": 2,
+      "cchf": 3
+    },
+    "Auscultate the heart for a new or changed murmur (endocarditis)": {
+      "endocarditis": 4
+    },
+    "Auscultate lungs for focal crackles or bronchial breathing (pneumonia)": {
+      "cap": 3
+    },
+    "Palpate the abdomen for splenomegaly (typhoid, brucellosis, endocarditis) and hepatomegaly": {
+      "typhoid": 2,
+      "brucella": 2,
+      "endocarditis": 1
+    },
+    "Percuss the renal angles for tenderness (pyelonephritis)": {
+      "uti": 3
+    },
+    "Press over the lumbar spine and sacroiliac joints — focal tenderness raises brucellar spondylitis": {
+      "brucella": 3
+    },
+    "Palpate all lymph node regions for enlarged nodes (TB, viral syndromes)": {
+      "tb": 2,
+      "viral": 1
+    },
+    "Examine large joints for swelling or effusion (brucellar arthritis)": {
+      "brucella": 2
+    }
+  },
+  "pmh_modifiers": [
+    {
+      "label": "Valve disease or prosthesis",
+      "icd10_prefixes": [
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I34",
+        "I35",
+        "I36",
+        "I37",
+        "I39"
+      ],
+      "name_contains": [
+        "valve",
+        "صمام"
+      ],
+      "weights": {
+        "endocarditis": 3
+      }
+    },
+    {
+      "label": "Diabetes",
+      "icd10_prefixes": [
+        "E10",
+        "E11"
+      ],
+      "name_contains": [
+        "diabet",
+        "سكري"
+      ],
+      "weights": {
+        "uti": 1,
+        "tb": 1
+      }
+    }
+  ],
+  "demographic_modifiers": []
+}

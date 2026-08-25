@@ -1,0 +1,64 @@
+{
+  "id": "fatigue_pallor",
+  "specialty": "internal_medicine",
+  "complaint": "Fatigue / pallor (suspected anemia)",
+  "icd10_symptom": "R53.83",
+  "history": [
+    { "ask": "Duration & progression", "options": ["Weeks", "Months", "Years / lifelong"] },
+    { "ask": "Menstrual & obstetric history (women)", "options": ["Heavy or prolonged periods", "Closely spaced pregnancies / currently breastfeeding", "Normal periods", "Postmenopausal"] },
+    { "ask": "Diet & cravings", "options": ["Little or no red meat", "Craving ice, clay, or dirt (pica)", "Tea with every meal", "Balanced diet"] },
+    { "ask": "Gastrointestinal blood loss", "options": ["Black tarry stool", "Vomiting blood", "Bleeding hemorrhoids", "None"] },
+    { "ask": "NSAID or aspirin use", "options": ["Regular", "Occasional", "None"] },
+    { "ask": "Change in bowel habit or unintentional weight loss", "options": ["Yes", "No"] },
+    { "ask": "Family history", "options": ["Thalassemia / chronic anemia in the family", "Relative with splenectomy", "Consanguineous parents", "None"] },
+    { "ask": "Neurological symptoms", "options": ["Numbness or tingling in the feet", "Unsteady walking in the dark", "Sore red tongue", "None"] },
+    { "ask": "Episodes of jaundice or dark urine", "options": ["Yes", "No"] },
+    { "ask": "Known chronic disease", "options": ["Rheumatoid or other chronic inflammation", "TB or chronic infection", "Kidney disease", "None"] },
+    { "ask": "Cold intolerance, constipation, weight gain", "options": ["Yes", "No"] },
+    { "ask": "Mood, interest, and sleep", "options": ["Low mood with loss of interest and poor sleep", "Normal"] }
+  ],
+  "red_flags": [
+    "Melena, hematemesis, or any overt bleeding",
+    "Dyspnea at rest, chest pain, or syncope with pallor — decompensating anemia",
+    "Pallor with fever, bruising, or petechiae — marrow failure until excluded",
+    "Unintentional weight loss with age > 50",
+    "Severe pallor in pregnancy"
+  ],
+  "exam": [
+    "Inspect conjunctivae and palmar creases for pallor",
+    "Check sclerae for icterus (hemolysis)",
+    "Examine nails and mouth: koilonychia, angular stomatitis, smooth red tongue",
+    "Palpate for splenomegaly",
+    "Palpate all lymph node stations",
+    "Search the skin for petechiae and bruising",
+    "Auscultate: resting tachycardia, apical flow murmur",
+    "Posterior-column screen: vibration sense at the ankles, Romberg, gait",
+    "Feel the thyroid and test ankle-reflex relaxation",
+    "Digital rectal examination when GI blood loss is suspected",
+    "Record weight and compare with previous visits"
+  ],
+  "investigations": [
+    { "test": "CBC with red-cell indices", "why": "The branch point: microcytic (iron deficiency / thalassemia), macrocytic (B12 deficiency), or normocytic (chronic disease, CKD, hemolysis, marrow failure) — and confirms whether anemia exists at all" },
+    { "test": "Peripheral blood film", "why": "Target cells support thalassemia; spherocytes or fragments support hemolysis; hypersegmented neutrophils support B12 deficiency; blasts or pancytopenia flag marrow disease" },
+    { "test": "Serum ferritin", "why": "Low ferritin rules iron deficiency in; normal or high ferritin in a microcytic patient pushes toward thalassemia trait or anemia of chronic disease" },
+    { "test": "Reticulocyte count with indirect bilirubin & LDH", "why": "High reticulocytes with raised indirect bilirubin/LDH rule hemolysis (or active bleeding) in; low reticulocytes mean underproduction" },
+    { "test": "Hemoglobin electrophoresis", "why": "Confirms thalassemia when microcytosis persists with normal ferritin — essential in Iraq's carrier-prevalent population and for family counseling" },
+    { "test": "Urea & creatinine", "why": "Raised creatinine rules anemia of chronic kidney disease in" },
+    { "test": "TSH", "why": "Raised TSH rules hypothyroidism in as the cause of fatigue with or without mild anemia" },
+    { "test": "Stool exam + occult blood", "why": "Hookworm ova explain iron deficiency; positive occult blood points to a GI source — ulcer or tumor" },
+    { "test": "Serum vitamin B12", "why": "Confirms deficiency when macrocytosis, glossitis, or posterior-column signs are present" },
+    { "test": "GI endoscopy / colonoscopy", "why": "Second-line — iron deficiency in a man or postmenopausal woman is a GI lesion until proven otherwise: rules ulcer and colorectal or gastric malignancy in or out" }
+  ],
+  "differentials": [
+    { "dx": "Iron-deficiency anemia", "icd10": "D50.9", "supports": ["Heavy periods, poor diet, or pica", "Koilonychia and angular stomatitis", "Regular NSAID use or bleeding hemorrhoids"] },
+    { "dx": "Thalassemia trait / disease", "icd10": "D56.9", "supports": ["Lifelong mild pallor", "Family history of anemia or consanguinity", "Splenomegaly"] },
+    { "dx": "Vitamin B12 deficiency", "icd10": "D51.9", "supports": ["Numbness, unsteady gait in the dark, sore tongue", "Impaired vibration sense with positive Romberg", "Pallor with mild icterus"] },
+    { "dx": "Anemia of chronic disease", "icd10": "D63.8", "supports": ["Known chronic inflammation, TB, or chronic infection", "Fatigue tracking disease activity", "No bleeding source"] },
+    { "dx": "Anemia of chronic kidney disease", "icd10": "D63.1", "supports": ["Known kidney disease", "Long-standing diabetes or hypertension history", "Pallor without jaundice or bleeding"] },
+    { "dx": "Hemolytic anemia", "icd10": "D59.9", "supports": ["Episodes of jaundice or dark urine", "Splenomegaly", "Scleral icterus with pallor"] },
+    { "dx": "Occult gastrointestinal blood loss (ulcer or malignancy)", "icd10": "K92.2", "supports": ["Black stool or positive DRE finding", "Change in bowel habit or weight loss after age 50", "Regular NSAID/aspirin use"] },
+    { "dx": "Hypothyroidism", "icd10": "E03.9", "supports": ["Cold intolerance, constipation, weight gain", "Delayed ankle-reflex relaxation", "Fatigue disproportionate to pallor"] },
+    { "dx": "Depression", "icd10": "F32.9", "supports": ["Low mood, loss of interest, poor sleep", "No pallor and a normal examination"] },
+    { "dx": "Aplastic anemia / marrow failure", "icd10": "D61.9", "supports": ["Pallor with petechiae or bruising", "Recurrent fever", "No splenomegaly"] }
+  ]
+}

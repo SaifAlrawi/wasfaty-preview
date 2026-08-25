@@ -1,0 +1,57 @@
+{
+  "id": "wound_complication",
+  "specialty": "general_surgery",
+  "complaint": "Post-operative wound complication",
+  "icd10_symptom": "T81.9",
+  "history": [
+    { "ask": "Operation and days since surgery", "options": ["0–2 days", "3–5 days", "5–10 days", "More than 10 days"] },
+    { "ask": "What is the wound doing?", "options": ["Red, hot, and increasingly painful", "Discharging pus", "Discharging clear or pink fluid", "Swelling under the wound", "Edges opening / something bulging"] },
+    { "ask": "Fever pattern", "options": ["High fever within 48 hours of surgery", "Fever starting day 4–7", "Swinging fever", "No fever"] },
+    { "ask": "Pain trajectory", "options": ["Improving daily as expected", "Improving then worsening again", "Severe and escalating from the first day"] },
+    { "ask": "A 'giving way' event", "options": ["Felt a pop or gush of fluid after coughing/straining", "No such event"] },
+    { "ask": "Coughing, vomiting, or straining since surgery", "options": ["Persistent cough", "Repeated vomiting", "Straining with constipation", "None"] },
+    { "ask": "Healing risk factors", "options": ["Diabetes", "Steroids or immunosuppression", "Smoker", "Malnourished / significant weight loss", "None"] },
+    { "ask": "Type of operation", "options": ["Clean (e.g. hernia, thyroid)", "Contaminated (bowel, perforation, abscess)", "Emergency laparotomy", "Cesarean or gynecological"] },
+    { "ask": "Abdominal symptoms (after abdominal surgery)", "options": ["Distension with vomiting", "Not passing stool or flatus", "None"] },
+    { "ask": "Speed of any redness spreading", "options": ["Spreading within hours", "Slowly over days", "Not spreading"] }
+  ],
+  "red_flags": [
+    "Sudden profuse serosanguinous ('salmon-colored') discharge or a visible bulge of bowel — abdominal wound dehiscence / burst abdomen; urgent surgical referral",
+    "Severe wound pain with rapidly spreading dusky skin, crepitus, or bullae in the first 48 hours — necrotizing surgical site infection; urgent surgical referral",
+    "High fever with hypotension or confusion — sepsis from the wound or a deep collection",
+    "A tense, rapidly expanding wound swelling with a falling blood pressure — active bleeding into the wound",
+    "Fever, unexplained tachycardia, distension, or ileus after bowel surgery with an innocent-looking wound — anastomotic leak or organ/space infection hiding under a normal incision; urgent surgical referral"
+  ],
+  "exam": [
+    "Expose and inspect the entire wound in good light, comparing against expected healing for the post-operative day",
+    "Mark the limit of any erythema and time it — spread on review separates progressing infection from resolving inflammation",
+    "Palpate along the wound for fluctuance (collection), a tense swelling (hematoma), or a soft fluid wave (seroma)",
+    "Note the discharge on the dressing: pus, blood, serous fluid, or salmon-colored peritoneal fluid",
+    "Feel deliberately for crepitus and look for dusky or blistering skin around the incision",
+    "With a sterile glove, gently assess an open segment for fascial integrity — whether the deep layer is intact decides superficial separation vs true dehiscence",
+    "Ask the patient to cough while you watch and palpate the wound — a bulge or impulse reveals a fascial defect",
+    "Record temperature, BP, and pulse — quantify the systemic response",
+    "Examine the abdomen for distension, tenderness away from the wound, and bowel sounds — an organ/space collection declares itself here, not at the skin",
+    "Screen the other fever sources of the post-operative patient: chest auscultation, calf tenderness, urine appearance, IV cannula and drain sites"
+  ],
+  "investigations": [
+    { "test": "CBC", "why": "Rising leukocytosis supports surgical site infection or a deep collection; a falling hemoglobin supports hematoma or ongoing bleeding" },
+    { "test": "CRP (serial)", "why": "CRP should fall after post-operative day 2–3 — a secondary rise is the earliest objective sign of infection or collection and separates it from normal healing" },
+    { "test": "Wound swab / pus culture", "why": "Types the organism in an infected wound and distinguishes true infection from colonization of an open wound" },
+    { "test": "Blood culture (if febrile)", "why": "Confirms bacteremia when deep or organ/space infection is suspected over a simple superficial one" },
+    { "test": "Blood glucose / HbA1c", "why": "Poor glycemic control underlies infection and dehiscence — and this may be the moment diabetes is first found" },
+    { "test": "RFT / electrolytes", "why": "Deranged renal function and electrolytes accompany sepsis and ileus from a deep collection; near-normal values fit seroma and superficial infection" },
+    { "test": "Ultrasound of the wound / abdomen", "why": "Separates hematoma from seroma from abscess under the incision, and looks for free fluid or a deep collection after abdominal surgery" },
+    { "test": "CT abdomen/pelvis with contrast", "why": "Second-line — if organ/space infection is suspected (fever + ileus with an unimpressive wound) or ultrasound is inconclusive: localizes the collection before referral" }
+  ],
+  "differentials": [
+    { "dx": "Superficial incisional surgical site infection", "icd10": "T81.41", "supports": ["Redness, warmth, and purulent discharge from day 4–7", "Pain worsening after initial improvement", "Intact deep fascia on gentle assessment", "Fever with rising CRP after day 3"] },
+    { "dx": "Deep incisional surgical site infection", "icd10": "T81.42", "supports": ["Deep wound pain and induration out of proportion to surface signs", "Pus from the depth of the wound or a collection deep to the fascia on ultrasound", "Swinging fever"] },
+    { "dx": "Organ/space infection (deep collection)", "icd10": "T81.43", "supports": ["Fever and ileus with a relatively innocent wound after abdominal surgery", "Tenderness away from the incision, distension", "Collection on ultrasound or second-line CT"] },
+    { "dx": "Wound dehiscence / burst abdomen", "icd10": "T81.3", "supports": ["Salmon-colored fluid gush around day 5–10, often after coughing or straining", "Palpable fascial defect or visible bowel", "Cough, vomiting, or straining plus poor-healing risk factors"] },
+    { "dx": "Wound hematoma", "icd10": "T81.0", "supports": ["Tense, bruised, painful swelling in the first 48 hours", "Dark blood discharge; falling hemoglobin if significant", "Echogenic collection on ultrasound, afebrile early"] },
+    { "dx": "Seroma", "icd10": "L76.34", "supports": ["Painless fluctuant swelling with clear straw-colored fluid, typically after mastectomy, hernia repair, or wide dissection", "No fever, normal CRP trend", "Simple anechoic fluid on ultrasound"] },
+    { "dx": "Stitch abscess / suture granuloma", "icd10": "T81.89", "supports": ["Small localized pustule or nodule centered on a suture point", "Wound otherwise healed; little or no systemic response", "Discharges and settles once the suture material is out"] },
+    { "dx": "Necrotizing surgical site infection", "icd10": "M72.6", "supports": ["Severe escalating pain within 48 hours of surgery", "Rapidly spreading dusky skin, crepitus, bullae", "Systemic toxicity with deranged RFT — a first-day 'wound infection' is necrotizing until proven otherwise"] }
+  ]
+}

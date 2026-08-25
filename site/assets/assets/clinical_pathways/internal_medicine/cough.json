@@ -1,0 +1,149 @@
+{
+  "id": "cough",
+  "specialty": "internal_medicine",
+  "complaint": "Cough",
+  "icd10_symptom": "R05.9",
+  "history": [
+    {
+      "ask": "Duration",
+      "options": ["< 3 weeks (acute)", "3–8 weeks (subacute)", "> 8 weeks (chronic)"]
+    },
+    {
+      "ask": "Sputum",
+      "options": ["Dry", "Mucoid", "Purulent (yellow-green)", "Blood-streaked or frank haemoptysis"]
+    },
+    {
+      "ask": "Timing pattern",
+      "options": ["Worse at night or early morning", "Worse after meals or on lying down", "Constant through the day", "Only during/after an URTI that is settling"]
+    },
+    {
+      "ask": "Fever and systemic features",
+      "options": ["Fever with rigors now", "Low-grade evening fever with night sweats", "No fever"]
+    },
+    {
+      "ask": "Weight and appetite",
+      "options": ["Unintentional weight loss", "Appetite loss without weight change yet", "Stable weight and appetite"]
+    },
+    {
+      "ask": "Wheeze or breathlessness",
+      "options": ["Episodic wheeze with triggers (dust, cold, exercise)", "Progressive breathlessness on exertion", "Breathless lying flat with ankle swelling", "None"]
+    },
+    {
+      "ask": "Smoking history",
+      "options": ["Current smoker (record pack-years)", "Ex-smoker", "Never smoked", "Shisha/waterpipe use"]
+    },
+    {
+      "ask": "Medication review",
+      "options": ["ACE inhibitor (captopril, enalapril, lisinopril...)", "Recently started any new drug", "None relevant"]
+    },
+    {
+      "ask": "Upper airway symptoms",
+      "options": ["Nasal blockage, postnasal drip, throat clearing", "Heartburn or acid regurgitation", "Neither"]
+    },
+    {
+      "ask": "TB contact and risk",
+      "options": ["Household or workplace TB contact", "Previous TB treatment", "Prison, camp, or crowded-housing exposure", "None known"]
+    },
+    {
+      "ask": "Occupational / environmental exposure",
+      "options": ["Dust, construction, or farming exposure", "Birds or animals at home", "Indoor smoke (kerosene/wood heating)", "None"]
+    }
+  ],
+  "red_flags": [
+    "Haemoptysis of any amount",
+    "Cough > 3 weeks with fever, night sweats, or weight loss (TB until excluded)",
+    "Cough with SpO2 < 92%, respiratory rate > 30, or confusion",
+    "Smoker > 40 years with new persistent cough or voice change",
+    "Cough with unilateral chest pain and breathlessness of sudden onset",
+    "Stridor or suspected inhaled foreign body"
+  ],
+  "exam": [
+    "Record temperature, respiratory rate, SpO2, and pulse together",
+    "Inspect for cachexia, pallor, and finger clubbing (clubbing → malignancy or chronic suppuration, not simple bronchitis)",
+    "Palpate cervical and supraclavicular lymph nodes — hard fixed nodes raise malignancy, matted nodes raise TB",
+    "Auscultate all lung zones: focal crackles or bronchial breathing (pneumonia), diffuse wheeze (asthma/COPD), fixed monophonic wheeze (obstructing lesion), basal crackles (heart failure)",
+    "Percuss comparing sides for focal dullness (consolidation, effusion)",
+    "Examine the nose and posterior pharynx for turbinate swelling and mucus streaming (postnasal drip)",
+    "Listen to the voice for hoarseness (recurrent laryngeal involvement by tumour)",
+    "Estimate JVP and check ankle oedema (cough of heart failure)",
+    "Ask the patient to cough and listen to its character — barking vs wet vs dry",
+    "Inspect sputum sample if produced (purulence, blood)"
+  ],
+  "investigations": [
+    {
+      "test": "Chest X-ray",
+      "why": "First-line for any cough beyond 3 weeks, any haemoptysis, or any focal signs — rules in pneumonia (consolidation), TB (upper-zone infiltrates/cavitation), mass lesion, effusion; a normal film shifts weight to asthma, postnasal drip, GERD, or ACE-inhibitor cough"
+    },
+    {
+      "test": "Sputum for acid-fast bacilli (2 samples) / GeneXpert where available",
+      "why": "Rules pulmonary TB in or out in any cough > 3 weeks with fever, night sweats, weight loss, or suggestive X-ray — the decisive test in the Iraqi setting"
+    },
+    {
+      "test": "CBC",
+      "why": "Neutrophilia supports bacterial pneumonia; eosinophilia supports asthma or parasitic bronchitis; normochromic anaemia accompanies TB and malignancy"
+    },
+    {
+      "test": "CRP or ESR",
+      "why": "High values support pneumonia or TB over asthma, GERD, postnasal drip, and drug-induced cough; ESR markedly raised in TB and malignancy"
+    },
+    {
+      "test": "Peak expiratory flow diary or spirometry with reversibility",
+      "why": "Diurnal variability or bronchodilator reversibility rules in asthma (including cough-variant asthma with a normal exam); fixed obstruction in a smoker supports COPD"
+    },
+    {
+      "test": "Trial of ACE-inhibitor withdrawal (documented, with physician)",
+      "why": "Diagnostic manoeuvre, not a lab: resolution of a dry cough within 1–4 weeks of stopping the drug rules in ACE-inhibitor cough and spares further testing"
+    },
+    {
+      "test": "Chest CT",
+      "why": "Second-line — if haemoptysis with a normal X-ray, a suspicious mass or nodule, or a smoker > 40 with persistent unexplained cough; characterises malignancy and bronchiectasis the plain film cannot"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Acute bronchitis / post-viral cough",
+      "icd10": "J20.9",
+      "supports": ["Cough < 3 weeks following an URTI", "No focal chest signs and normal SpO2", "Normal chest X-ray if taken"]
+    },
+    {
+      "dx": "Community-acquired pneumonia",
+      "icd10": "J18.9",
+      "supports": ["Purulent sputum with fever and rigors", "Focal crackles or bronchial breathing with dullness", "Consolidation on chest X-ray with neutrophilia"]
+    },
+    {
+      "dx": "Pulmonary tuberculosis",
+      "icd10": "A15.0",
+      "supports": ["Cough > 3 weeks with evening fever and night sweats", "Weight loss, TB contact, or crowded-housing exposure", "Upper-zone infiltrate or cavitation on X-ray", "Positive sputum AFB or GeneXpert"]
+    },
+    {
+      "dx": "Asthma (including cough-variant)",
+      "icd10": "J45.9",
+      "supports": ["Dry cough worse at night with episodic wheeze and triggers", "Eosinophilia on CBC", "Peak-flow variability or bronchodilator reversibility"]
+    },
+    {
+      "dx": "COPD / chronic bronchitis",
+      "icd10": "J44.9",
+      "supports": ["Chronic productive morning cough in a heavy smoker", "Progressive exertional breathlessness over years", "Fixed obstruction on spirometry with hyperinflated film"]
+    },
+    {
+      "dx": "Upper airway cough syndrome (postnasal drip)",
+      "icd10": "R09.82",
+      "supports": ["Throat clearing with nasal blockage and drip sensation", "Mucus streaming on posterior pharynx exam", "Normal chest exam and X-ray"]
+    },
+    {
+      "dx": "GERD-related cough",
+      "icd10": "K21.9",
+      "supports": ["Cough worse after meals and on lying down", "Heartburn or acid regurgitation on direct questioning", "Normal chest film and spirometry"]
+    },
+    {
+      "dx": "ACE-inhibitor–induced cough",
+      "icd10": "T46.4",
+      "supports": ["Dry tickling cough on an ACE inhibitor (any duration of use)", "No fever, weight loss, or abnormal chest findings", "Resolution within weeks of supervised drug withdrawal"]
+    },
+    {
+      "dx": "Lung malignancy",
+      "icd10": "C34.90",
+      "supports": ["Smoker > 40 with new persistent cough or haemoptysis", "Weight loss, clubbing, or hard supraclavicular node", "Mass or non-resolving shadow on chest X-ray"]
+    }
+  ]
+}

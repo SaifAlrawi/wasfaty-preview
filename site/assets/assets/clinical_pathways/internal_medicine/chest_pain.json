@@ -1,0 +1,743 @@
+{
+  "id": "chest_pain",
+  "specialty": "internal_medicine",
+  "complaint": "Chest pain",
+  "icd10_symptom": "R07.4",
+  "history": [
+    {
+      "ask": "Character of pain",
+      "options": [
+        "Crushing / pressure / heaviness",
+        "Tearing, maximal at onset",
+        "Sharp, worse on deep breath",
+        "Burning, rising from epigastrium",
+        "Aching, reproducible by movement"
+      ],
+      "weights": {
+        "Crushing / pressure / heaviness": {
+          "acs": 4,
+          "angina": 2
+        },
+        "Tearing, maximal at onset": {
+          "dissection": 5
+        },
+        "Sharp, worse on deep breath": {
+          "pe": 2,
+          "pericarditis": 2,
+          "ptx": 2,
+          "pneumonia": 1,
+          "msk": 1
+        },
+        "Burning, rising from epigastrium": {
+          "gerd": 4
+        },
+        "Aching, reproducible by movement": {
+          "msk": 4
+        }
+      },
+      "role": "character",
+      "phrases": {
+        "Crushing / pressure / heaviness": "crushing",
+        "Tearing, maximal at onset": "tearing",
+        "Sharp, worse on deep breath": "sharp pleuritic",
+        "Burning, rising from epigastrium": "burning retrosternal",
+        "Aching, reproducible by movement": "mechanical aching"
+      }
+    },
+    {
+      "ask": "Onset",
+      "options": [
+        "Sudden, maximal within seconds",
+        "Built up over minutes",
+        "Gradual over hours to days",
+        "Recurrent episodes over weeks"
+      ],
+      "weights": {
+        "Sudden, maximal within seconds": {
+          "dissection": 3,
+          "ptx": 3,
+          "pe": 2
+        },
+        "Built up over minutes": {
+          "acs": 2
+        },
+        "Gradual over hours to days": {
+          "pneumonia": 2,
+          "pericarditis": 1
+        },
+        "Recurrent episodes over weeks": {
+          "angina": 2,
+          "gerd": 1
+        }
+      },
+      "role": "onset",
+      "phrases": {
+        "Sudden, maximal within seconds": "sudden onset, maximal within seconds",
+        "Built up over minutes": "gradual onset over minutes",
+        "Gradual over hours to days": "gradual onset over hours to days",
+        "Recurrent episodes over weeks": "recurrent episodes over weeks"
+      }
+    },
+    {
+      "ask": "Duration of current episode",
+      "options": [
+        "< 15 min, resolved with rest",
+        "> 20 min, continuous",
+        "Hours to days, waxing and waning",
+        "Seconds only, stabbing"
+      ],
+      "weights": {
+        "< 15 min, resolved with rest": {
+          "angina": 3
+        },
+        "> 20 min, continuous": {
+          "acs": 3,
+          "dissection": 1
+        },
+        "Hours to days, waxing and waning": {
+          "pericarditis": 1,
+          "gerd": 1,
+          "msk": 1
+        },
+        "Seconds only, stabbing": {
+          "msk": 2,
+          "panic": 1
+        }
+      },
+      "role": "duration",
+      "phrases": {
+        "< 15 min, resolved with rest": "less than 15 minutes, resolved with rest",
+        "> 20 min, continuous": "more than 20 minutes, continuous",
+        "Hours to days, waxing and waning": "hours to days, waxing and waning",
+        "Seconds only, stabbing": "seconds at a time"
+      }
+    },
+    {
+      "ask": "Radiation",
+      "options": [
+        "Left arm / jaw / neck",
+        "Straight through to back, between scapulae",
+        "To epigastrium",
+        "None"
+      ],
+      "weights": {
+        "Left arm / jaw / neck": {
+          "acs": 3,
+          "angina": 2
+        },
+        "Straight through to back, between scapulae": {
+          "dissection": 4
+        },
+        "To epigastrium": {
+          "gerd": 1,
+          "acs": 1
+        }
+      },
+      "role": "radiation",
+      "negatable": true,
+      "phrases": {
+        "Left arm / jaw / neck": "the left arm, jaw or neck",
+        "Straight through to back, between scapulae": "the interscapular back",
+        "To epigastrium": "the epigastrium"
+      }
+    },
+    {
+      "ask": "Relation to exertion",
+      "options": [
+        "Brought on by exertion, relieved by rest",
+        "Occurs at rest or wakes from sleep",
+        "No relation to exertion"
+      ],
+      "weights": {
+        "Brought on by exertion, relieved by rest": {
+          "angina": 4,
+          "acs": 1
+        },
+        "Occurs at rest or wakes from sleep": {
+          "acs": 2,
+          "gerd": 1
+        },
+        "No relation to exertion": {
+          "msk": 1
+        }
+      },
+      "role": "trigger",
+      "phrases": {
+        "Brought on by exertion, relieved by rest": "with exertion and relieved by rest",
+        "Occurs at rest or wakes from sleep": "at rest or waking him from sleep",
+        "No relation to exertion": "independently of exertion"
+      }
+    },
+    {
+      "ask": "Positional / mechanical modifiers",
+      "options": [
+        "Worse lying flat, eased sitting forward",
+        "Worse on deep breath or cough",
+        "Reproduced by pressing the chest wall",
+        "Worse after meals or on lying down after eating",
+        "None"
+      ],
+      "weights": {
+        "Worse lying flat, eased sitting forward": {
+          "pericarditis": 4
+        },
+        "Worse on deep breath or cough": {
+          "pe": 2,
+          "pericarditis": 1,
+          "pneumonia": 1,
+          "msk": 1
+        },
+        "Reproduced by pressing the chest wall": {
+          "msk": 4
+        },
+        "Worse after meals or on lying down after eating": {
+          "gerd": 3
+        }
+      },
+      "role": "trigger",
+      "negatable": true,
+      "phrases": {
+        "Worse lying flat, eased sitting forward": "worse lying flat and eased sitting forward",
+        "Worse on deep breath or cough": "worse on deep breath or cough",
+        "Reproduced by pressing the chest wall": "on pressing the chest wall",
+        "Worse after meals or on lying down after eating": "after meals or on lying down"
+      }
+    },
+    {
+      "ask": "Associated symptoms",
+      "options": [
+        "Sweating, nausea or vomiting",
+        "Breathlessness",
+        "Syncope or presyncope",
+        "Haemoptysis",
+        "Palpitations, tingling fingers, sense of panic",
+        "None"
+      ],
+      "weights": {
+        "Sweating, nausea or vomiting": {
+          "acs": 3
+        },
+        "Breathlessness": {
+          "pe": 2,
+          "ptx": 2,
+          "acs": 1,
+          "pneumonia": 1
+        },
+        "Syncope or presyncope": {
+          "pe": 2,
+          "dissection": 2,
+          "acs": 1
+        },
+        "Haemoptysis": {
+          "pe": 3
+        },
+        "Palpitations, tingling fingers, sense of panic": {
+          "panic": 4
+        }
+      },
+      "role": "associated",
+      "negatable": true,
+      "phrases": {
+        "Sweating, nausea or vomiting": "sweating, nausea or vomiting",
+        "Breathlessness": "breathlessness",
+        "Syncope or presyncope": "syncope",
+        "Haemoptysis": "haemoptysis",
+        "Palpitations, tingling fingers, sense of panic": "palpitations and paraesthesiae"
+      }
+    },
+    {
+      "ask": "Cardiovascular risk factors",
+      "options": [
+        "Diabetes / hypertension / dyslipidaemia",
+        "Smoker",
+        "Family history of premature coronary disease",
+        "Known ischaemic heart disease",
+        "None"
+      ],
+      "weights": {
+        "Diabetes / hypertension / dyslipidaemia": {
+          "acs": 2,
+          "angina": 1
+        },
+        "Smoker": {
+          "acs": 1,
+          "angina": 1
+        },
+        "Family history of premature coronary disease": {
+          "acs": 2
+        },
+        "Known ischaemic heart disease": {
+          "acs": 2,
+          "angina": 2
+        }
+      },
+      "role": "risk",
+      "negatable": true,
+      "phrases": {
+        "Diabetes / hypertension / dyslipidaemia": "diabetes, hypertension or dyslipidaemia",
+        "Smoker": "smoking",
+        "Family history of premature coronary disease": "family history of premature coronary disease",
+        "Known ischaemic heart disease": "known ischaemic heart disease"
+      }
+    },
+    {
+      "ask": "Venous thromboembolism risk",
+      "options": [
+        "Recent surgery or immobilisation",
+        "Long travel > 4 hours",
+        "Active cancer or previous DVT/PE",
+        "Unilateral leg swelling or pain",
+        "None"
+      ],
+      "weights": {
+        "Recent surgery or immobilisation": {
+          "pe": 3
+        },
+        "Long travel > 4 hours": {
+          "pe": 2
+        },
+        "Active cancer or previous DVT/PE": {
+          "pe": 3
+        },
+        "Unilateral leg swelling or pain": {
+          "pe": 3
+        }
+      },
+      "role": "risk",
+      "negatable": true,
+      "phrases": {
+        "Recent surgery or immobilisation": "recent surgery or immobilisation",
+        "Long travel > 4 hours": "long travel",
+        "Active cancer or previous DVT/PE": "active cancer or previous VTE",
+        "Unilateral leg swelling or pain": "unilateral leg swelling"
+      }
+    },
+    {
+      "ask": "Recent febrile or viral illness",
+      "options": [
+        "Yes, within the last 2 weeks",
+        "Yes, with productive cough / fever now",
+        "No"
+      ],
+      "weights": {
+        "Yes, within the last 2 weeks": {
+          "pericarditis": 2
+        },
+        "Yes, with productive cough / fever now": {
+          "pneumonia": 3
+        }
+      },
+      "role": "risk",
+      "negatable": true,
+      "phrases": {
+        "Yes, within the last 2 weeks": "a recent viral illness",
+        "Yes, with productive cough / fever now": "current fever and productive cough"
+      }
+    },
+    {
+      "ask": "Heartburn / acid pattern",
+      "options": [
+        "Acid regurgitation or sour taste",
+        "Pain related to meals, relieved by antacids",
+        "History of NSAID use",
+        "None"
+      ],
+      "weights": {
+        "Acid regurgitation or sour taste": {
+          "gerd": 3
+        },
+        "Pain related to meals, relieved by antacids": {
+          "gerd": 3
+        },
+        "History of NSAID use": {
+          "gerd": 1
+        }
+      },
+      "role": "risk",
+      "negatable": true,
+      "phrases": {
+        "Acid regurgitation or sour taste": "acid regurgitation",
+        "Pain related to meals, relieved by antacids": "meal-related pain relieved by antacids",
+        "History of NSAID use": "NSAID use"
+      }
+    }
+  ],
+  "red_flags": [
+    "Chest pain with diaphoresis, nausea or vomiting",
+    "Sudden tearing pain radiating to the interscapular back",
+    "Chest pain with syncope or near-syncope",
+    "Hypotension (SBP < 90 mmHg) or clinical shock",
+    "New severe dyspnoea or SpO2 < 92% with the pain",
+    "Pleuritic pain with unilateral leg swelling or haemoptysis"
+  ],
+  "exam": [
+    "Measure blood pressure in BOTH arms — a difference > 20 mmHg supports dissection",
+    "Palpate radial pulses together for radio-radial delay or deficit",
+    "Count respiratory rate and record SpO2 on room air",
+    "Auscultate the heart for a new early diastolic murmur (aortic regurgitation of dissection), pericardial rub, or muffled sounds",
+    "Auscultate both lungs for focal crackles, bronchial breathing, absent breath sounds, or pleural rub",
+    "Inspect and estimate JVP — raised in tamponade, right-heart strain of PE, heart failure",
+    "Press on the costochondral junctions and chest wall — full reproduction of the pain points away from visceral causes",
+    "Examine both calves for unilateral swelling, tenderness, or oedema (DVT as PE source)",
+    "Palpate the epigastrium for tenderness suggesting an upper-GI source",
+    "Inspect the chest wall skin for a vesicular dermatomal rash (early zoster mimicking cardiac pain)"
+  ],
+  "investigations": [
+    {
+      "test": "ECG (repeat if pain persists)",
+      "why": "First-line for ACS — ST elevation/depression or new T-wave inversion rules it in; diffuse saddle-shaped ST elevation with PR depression supports pericarditis; S1Q3T3 or new RBBB with sinus tachycardia supports PE; a normal serial ECG makes ACS less likely but does not exclude it"
+    },
+    {
+      "test": "Troponin (at presentation and repeat per lab assay window)",
+      "why": "Separates ACS with myocardial injury from stable angina, GERD, musculoskeletal and panic causes; a negative serial troponin with a normal ECG effectively rules out infarction; mildly raised values also occur in PE and myopericarditis — interpret with the ECG"
+    },
+    {
+      "test": "Chest X-ray",
+      "why": "Rules in pneumonia (consolidation) and pneumothorax; a widened mediastinum raises dissection; a normal film supports ACS, GERD, musculoskeletal or panic causes over pleuro-pulmonary ones"
+    },
+    {
+      "test": "CBC",
+      "why": "Leukocytosis supports pneumonia or pericarditis over ACS; significant anaemia can precipitate angina and changes the weight given to ischaemic pain"
+    },
+    {
+      "test": "CRP or ESR",
+      "why": "Raised in pericarditis and pneumonia; typically normal in stable angina, GERD, and musculoskeletal pain — helps arbitrate when ECG is equivocal"
+    },
+    {
+      "test": "D-dimer",
+      "why": "Only when PE pre-test probability is LOW — a negative result then rules out PE; do not send when probability is high (a positive adds nothing and a negative cannot exclude)"
+    },
+    {
+      "test": "Renal function and electrolytes",
+      "why": "Potassium and renal status alter ECG interpretation (mimics of ischaemic change) and are needed before any contrast imaging for dissection or PE"
+    },
+    {
+      "test": "CT pulmonary angiography / CT aortography",
+      "why": "Second-line — only if PE probability is high or D-dimer positive (CTPA), or if both-arm BP difference, tearing pain, or widened mediastinum raise dissection (CT aortogram); confirms or excludes these two lethal diagnoses"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Acute coronary syndrome",
+      "icd10": "I21.9",
+      "supports": [
+        "Crushing central pain > 20 min at rest",
+        "Radiation to left arm / jaw with diaphoresis and vomiting",
+        "Diabetes, smoking, or known ischaemic heart disease",
+        "Ischaemic ECG changes or positive troponin"
+      ],
+      "key": "acs",
+      "first_line": [
+        "ECG (repeat if pain persists)",
+        "Troponin (at presentation and repeat per lab assay window)",
+        "Chest X-ray"
+      ],
+      "medications": [
+        {
+          "generic": "Aspirin (low dose)",
+          "note": "antiplatelet loading while arranging urgent referral"
+        }
+      ]
+    },
+    {
+      "dx": "Stable angina pectoris",
+      "icd10": "I20.9",
+      "supports": [
+        "Exertional pressure relieved within 15 min of rest",
+        "Recurrent stereotyped episodes over weeks",
+        "Cardiovascular risk factors with normal troponin"
+      ],
+      "key": "angina",
+      "first_line": [
+        "ECG (repeat if pain persists)",
+        "Troponin (at presentation and repeat per lab assay window)"
+      ],
+      "medications": [
+        {
+          "generic": "Aspirin (low dose)",
+          "note": "secondary prevention"
+        }
+      ]
+    },
+    {
+      "dx": "Aortic dissection",
+      "icd10": "I71.00",
+      "supports": [
+        "Sudden tearing pain maximal at onset, radiating between scapulae",
+        "BP differential > 20 mmHg between arms or radio-radial deficit",
+        "New early diastolic murmur",
+        "Widened mediastinum on chest X-ray"
+      ],
+      "key": "dissection",
+      "first_line": [
+        "Chest X-ray",
+        "CT pulmonary angiography / CT aortography"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Pulmonary embolism",
+      "icd10": "I26.99",
+      "supports": [
+        "Pleuritic pain with sudden dyspnoea or haemoptysis",
+        "Recent surgery, immobilisation, travel, or active cancer",
+        "Unilateral calf swelling on leg exam",
+        "Sinus tachycardia with hypoxia and a clear chest film"
+      ],
+      "key": "pe",
+      "first_line": [
+        "D-dimer",
+        "CT pulmonary angiography / CT aortography"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Acute pericarditis",
+      "icd10": "I30.9",
+      "supports": [
+        "Sharp pain worse lying flat, eased sitting forward",
+        "Recent viral illness",
+        "Pericardial rub on auscultation",
+        "Diffuse ST elevation with PR depression"
+      ],
+      "key": "pericarditis",
+      "first_line": [
+        "ECG (repeat if pain persists)",
+        "CRP or ESR",
+        "Chest X-ray"
+      ],
+      "medications": [
+        {
+          "generic": "Ibuprofen",
+          "note": "first-line anti-inflammatory"
+        },
+        {
+          "generic": "Colchicine",
+          "note": "adjunct, reduces recurrence"
+        }
+      ]
+    },
+    {
+      "dx": "Pneumonia with pleurisy",
+      "icd10": "J18.9",
+      "supports": [
+        "Pleuritic pain with fever and productive cough",
+        "Focal crackles or bronchial breathing",
+        "Consolidation on chest X-ray with leukocytosis"
+      ],
+      "key": "pneumonia",
+      "first_line": [
+        "Chest X-ray",
+        "CBC",
+        "CRP or ESR"
+      ],
+      "medications": [
+        {
+          "generic": "Amoxicillin/Clavulanate",
+          "note": "first-line outpatient CAP"
+        },
+        {
+          "generic": "Azithromycin",
+          "note": "atypical cover or penicillin allergy"
+        }
+      ]
+    },
+    {
+      "dx": "Spontaneous pneumothorax",
+      "icd10": "J93.11",
+      "supports": [
+        "Sudden one-sided pleuritic pain with breathlessness",
+        "Absent breath sounds over one lung field",
+        "Visible lung edge with absent peripheral markings on chest X-ray"
+      ],
+      "key": "ptx",
+      "first_line": [
+        "Chest X-ray"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Gastro-oesophageal reflux disease",
+      "icd10": "K21.9",
+      "supports": [
+        "Burning retrosternal pain rising from the epigastrium",
+        "Worse after meals or on lying down, relieved by antacids",
+        "Acid regurgitation or sour taste",
+        "Normal ECG and troponin"
+      ],
+      "key": "gerd",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Omeprazole",
+          "note": "PPI trial"
+        }
+      ]
+    },
+    {
+      "dx": "Musculoskeletal chest pain / costochondritis",
+      "icd10": "M94.0",
+      "supports": [
+        "Pain fully reproduced by chest wall palpation",
+        "Worse with movement or deep breath, no exertional pattern",
+        "Normal ECG, troponin, and chest X-ray"
+      ],
+      "key": "msk",
+      "first_line": [],
+      "medications": [
+        {
+          "generic": "Ibuprofen",
+          "note": "short NSAID course"
+        },
+        {
+          "generic": "Paracetamol",
+          "note": "analgesia"
+        }
+      ]
+    },
+    {
+      "dx": "Panic attack",
+      "icd10": "F41.0",
+      "supports": [
+        "Abrupt fear with palpitations and finger tingling",
+        "Episodes at rest, seconds to minutes, unrelated to exertion",
+        "Normal cardiorespiratory exam and normal first-line tests"
+      ],
+      "key": "panic",
+      "first_line": [],
+      "medications": []
+    }
+  ],
+  "priors": {
+    "gerd": 3,
+    "msk": 3,
+    "panic": 2,
+    "acs": 2,
+    "angina": 2,
+    "pneumonia": 1,
+    "pericarditis": 1,
+    "pe": 1,
+    "ptx": 1,
+    "dissection": 1
+  },
+  "exam_weights": {
+    "Measure blood pressure in BOTH arms — a difference > 20 mmHg supports dissection": {
+      "dissection": 3
+    },
+    "Palpate radial pulses together for radio-radial delay or deficit": {
+      "dissection": 3
+    },
+    "Auscultate the heart for a new early diastolic murmur (aortic regurgitation of dissection), pericardial rub, or muffled sounds": {
+      "dissection": 2
+    },
+    "Auscultate both lungs for focal crackles, bronchial breathing, absent breath sounds, or pleural rub": {
+      "pneumonia": 2
+    },
+    "Inspect and estimate JVP — raised in tamponade, right-heart strain of PE, heart failure": {
+      "pe": 1,
+      "pericarditis": 1
+    },
+    "Press on the costochondral junctions and chest wall — full reproduction of the pain points away from visceral causes": {
+      "msk": 4
+    },
+    "Examine both calves for unilateral swelling, tenderness, or oedema (DVT as PE source)": {
+      "pe": 3
+    },
+    "Palpate the epigastrium for tenderness suggesting an upper-GI source": {
+      "gerd": 2
+    }
+  },
+  "pmh_modifiers": [
+    {
+      "label": "Diabetes",
+      "icd10_prefixes": [
+        "E10",
+        "E11"
+      ],
+      "name_contains": [
+        "diabet",
+        "سكري",
+        "شەکرە"
+      ],
+      "weights": {
+        "acs": 2,
+        "angina": 1
+      }
+    },
+    {
+      "label": "Hypertension",
+      "icd10_prefixes": [
+        "I10",
+        "I11"
+      ],
+      "name_contains": [
+        "hypertens",
+        "ضغط"
+      ],
+      "weights": {
+        "acs": 1,
+        "dissection": 2
+      }
+    },
+    {
+      "label": "Known ischaemic heart disease",
+      "icd10_prefixes": [
+        "I20",
+        "I21",
+        "I22",
+        "I24",
+        "I25"
+      ],
+      "name_contains": [
+        "ischaemic",
+        "ischemic",
+        "قلبية",
+        "شريان"
+      ],
+      "weights": {
+        "acs": 2,
+        "angina": 2
+      }
+    },
+    {
+      "label": "Active cancer",
+      "icd10_prefixes": [
+        "C"
+      ],
+      "name_contains": [
+        "cancer",
+        "malign",
+        "سرطان",
+        "ورم خبيث"
+      ],
+      "weights": {
+        "pe": 2
+      }
+    }
+  ],
+  "demographic_modifiers": [
+    {
+      "label": "Age 50+",
+      "min_age": 50,
+      "weights": {
+        "acs": 2,
+        "angina": 1
+      }
+    },
+    {
+      "label": "Under 40",
+      "max_age": 39,
+      "weights": {
+        "panic": 1,
+        "msk": 1
+      }
+    },
+    {
+      "label": "Male",
+      "sex": "male",
+      "weights": {
+        "acs": 1
+      }
+    }
+  ]
+}

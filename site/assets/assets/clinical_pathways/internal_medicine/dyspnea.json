@@ -1,0 +1,584 @@
+{
+  "id": "dyspnea",
+  "specialty": "internal_medicine",
+  "complaint": "Shortness of breath",
+  "icd10_symptom": "R06.00",
+  "history": [
+    {
+      "ask": "Speed of onset",
+      "options": [
+        "Sudden, over minutes",
+        "Over hours to days",
+        "Progressive over weeks to months",
+        "Episodic attacks with normal breathing between"
+      ],
+      "weights": {
+        "Sudden, over minutes": {
+          "pe": 3,
+          "ptx": 3
+        },
+        "Over hours to days": {
+          "cap": 2,
+          "hf": 1
+        },
+        "Progressive over weeks to months": {
+          "hf": 2,
+          "anaemia": 2,
+          "copd": 2,
+          "effusion": 1
+        },
+        "Episodic attacks with normal breathing between": {
+          "asthma": 3,
+          "panic": 1
+        }
+      }
+    },
+    {
+      "ask": "Relation to position",
+      "options": [
+        "Worse lying flat (orthopnoea)",
+        "Wakes at night gasping (PND)",
+        "No positional pattern"
+      ],
+      "weights": {
+        "Worse lying flat (orthopnoea)": {
+          "hf": 3
+        },
+        "Wakes at night gasping (PND)": {
+          "hf": 3
+        }
+      }
+    },
+    {
+      "ask": "Cough and sputum",
+      "options": [
+        "Dry cough",
+        "Purulent sputum",
+        "Frothy pink sputum",
+        "Haemoptysis",
+        "No cough"
+      ],
+      "weights": {
+        "Dry cough": {
+          "asthma": 1
+        },
+        "Purulent sputum": {
+          "cap": 3,
+          "copd": 2
+        },
+        "Frothy pink sputum": {
+          "hf": 4
+        },
+        "Haemoptysis": {
+          "pe": 3
+        }
+      }
+    },
+    {
+      "ask": "Wheeze pattern",
+      "options": [
+        "Episodic wheeze, worse at night or with triggers (dust, cold, exercise)",
+        "Chronic wheeze in a long-term smoker",
+        "No wheeze"
+      ],
+      "weights": {
+        "Episodic wheeze, worse at night or with triggers (dust, cold, exercise)": {
+          "asthma": 4
+        },
+        "Chronic wheeze in a long-term smoker": {
+          "copd": 4
+        }
+      }
+    },
+    {
+      "ask": "Chest pain with the breathlessness",
+      "options": [
+        "Pleuritic, one-sided",
+        "Central pressure / tightness",
+        "None"
+      ],
+      "weights": {
+        "Pleuritic, one-sided": {
+          "pe": 2,
+          "ptx": 2,
+          "cap": 1,
+          "effusion": 1
+        },
+        "Central pressure / tightness": {
+          "hf": 1
+        }
+      }
+    },
+    {
+      "ask": "Fever or recent respiratory infection",
+      "options": [
+        "Fever with productive cough now",
+        "Recent URTI, now resolving",
+        "No fever"
+      ],
+      "weights": {
+        "Fever with productive cough now": {
+          "cap": 3
+        },
+        "Recent URTI, now resolving": {
+          "asthma": 1
+        }
+      }
+    },
+    {
+      "ask": "Leg swelling",
+      "options": [
+        "Both legs, gradually increasing",
+        "One leg, painful or swollen",
+        "None"
+      ],
+      "weights": {
+        "Both legs, gradually increasing": {
+          "hf": 3
+        },
+        "One leg, painful or swollen": {
+          "pe": 3
+        }
+      }
+    },
+    {
+      "ask": "Venous thromboembolism risk",
+      "options": [
+        "Recent surgery, immobilisation, or long travel",
+        "Active cancer or previous DVT/PE",
+        "Pregnancy or postpartum",
+        "None"
+      ],
+      "weights": {
+        "Recent surgery, immobilisation, or long travel": {
+          "pe": 3
+        },
+        "Active cancer or previous DVT/PE": {
+          "pe": 3
+        },
+        "Pregnancy or postpartum": {
+          "pe": 2
+        }
+      }
+    },
+    {
+      "ask": "Smoking history",
+      "options": [
+        "Current smoker > 10 pack-years",
+        "Ex-smoker",
+        "Never smoked"
+      ],
+      "weights": {
+        "Current smoker > 10 pack-years": {
+          "copd": 3,
+          "cap": 1
+        },
+        "Ex-smoker": {
+          "copd": 1
+        }
+      }
+    },
+    {
+      "ask": "Cardiac history and risk",
+      "options": [
+        "Known heart failure, ischaemic heart disease, or hypertension",
+        "Known valve disease",
+        "None known"
+      ],
+      "weights": {
+        "Known heart failure, ischaemic heart disease, or hypertension": {
+          "hf": 3
+        },
+        "Known valve disease": {
+          "hf": 2
+        }
+      }
+    },
+    {
+      "ask": "Blood-loss / anaemia screen",
+      "options": [
+        "Heavy menstrual bleeding",
+        "Black stools or overt GI bleeding",
+        "Dietary restriction or known anaemia",
+        "None"
+      ],
+      "weights": {
+        "Heavy menstrual bleeding": {
+          "anaemia": 3
+        },
+        "Black stools or overt GI bleeding": {
+          "anaemia": 3
+        },
+        "Dietary restriction or known anaemia": {
+          "anaemia": 2
+        }
+      }
+    },
+    {
+      "ask": "Symptom pattern with anxiety",
+      "options": [
+        "Attacks with fear, tingling around mouth/fingers, at rest",
+        "Breathlessness only on exertion",
+        "Constant regardless of activity or emotion"
+      ],
+      "weights": {
+        "Attacks with fear, tingling around mouth/fingers, at rest": {
+          "panic": 4
+        },
+        "Breathlessness only on exertion": {
+          "hf": 1,
+          "anaemia": 1,
+          "copd": 1
+        }
+      }
+    }
+  ],
+  "red_flags": [
+    "SpO2 < 92% on room air or central cyanosis",
+    "Respiratory rate > 30/min, inability to speak in full sentences, or use of accessory muscles",
+    "Sudden dyspnoea with pleuritic pain, haemoptysis, or unilateral leg swelling",
+    "Silent chest in a wheezy patient (exhaustion — impending arrest)",
+    "Dyspnoea with hypotension, chest pain, or new confusion",
+    "Stridor or suspected upper airway obstruction"
+  ],
+  "exam": [
+    "Record respiratory rate, SpO2 on room air, pulse, BP, and temperature together",
+    "Watch the patient speak — count words per breath and look for accessory muscle use",
+    "Inspect for central cyanosis and finger clubbing",
+    "Estimate JVP — raised in heart failure and massive PE, flat in pure airway disease",
+    "Auscultate lungs: bilateral basal crackles (pulmonary oedema), focal crackles or bronchial breathing (pneumonia), diffuse wheeze (asthma/COPD), absent sounds with stony dullness (effusion), absent sounds with hyper-resonance (pneumothorax)",
+    "Percuss both lung fields comparing sides — dullness vs hyper-resonance localises effusion vs pneumothorax",
+    "Auscultate the heart for gallop rhythm (S3 of failure) and murmurs (valve disease driving failure)",
+    "Press for pitting oedema over both shins and check sacral oedema if bed-bound",
+    "Examine calves for unilateral swelling or tenderness (DVT as PE source)",
+    "Inspect conjunctivae and palmar creases for pallor (anaemia)",
+    "Check tracheal position — deviation suggests large effusion or tension pneumothorax"
+  ],
+  "investigations": [
+    {
+      "test": "Chest X-ray",
+      "why": "One film separates most of the list: pulmonary oedema and cardiomegaly (heart failure), consolidation (pneumonia), pleural effusion, pneumothorax, hyperinflation (COPD); usually normal in PE, anaemia, and anxiety"
+    },
+    {
+      "test": "ECG",
+      "why": "Atrial fibrillation or ischaemia points to a cardiac driver of failure; sinus tachycardia with S1Q3T3 or right-heart strain supports PE; normal ECG with normal film shifts weight to asthma, anaemia, or anxiety"
+    },
+    {
+      "test": "CBC",
+      "why": "Directly rules anaemia in or out as the cause; leukocytosis supports pneumonia; polycythaemia suggests chronic hypoxia of long-standing COPD"
+    },
+    {
+      "test": "Peak expiratory flow (pre/post bronchodilator) or spirometry if available",
+      "why": "Significant variability or reversibility rules in asthma; fixed obstruction in a smoker supports COPD; normal flow argues against airway disease as the explanation"
+    },
+    {
+      "test": "Blood glucose, renal function and electrolytes",
+      "why": "Renal function and potassium contextualise suspected heart failure and its severity; metabolic acidosis (e.g. uncontrolled diabetes) can present as unexplained tachypnoea mimicking a respiratory cause"
+    },
+    {
+      "test": "D-dimer",
+      "why": "Only when PE pre-test probability is LOW — negative then rules PE out; skip when probability is high and go to imaging"
+    },
+    {
+      "test": "Echocardiography (or NT-proBNP where the lab offers it)",
+      "why": "Confirms or excludes heart failure and valve disease when the film and exam are equivocal — reduced ejection fraction or significant valve lesion rules the cardiac limb in"
+    },
+    {
+      "test": "Chest ultrasound",
+      "why": "Confirms and quantifies pleural effusion before any diagnostic tap and distinguishes effusion from consolidation when the X-ray is ambiguous"
+    },
+    {
+      "test": "CT pulmonary angiography",
+      "why": "Second-line — if PE probability is high or D-dimer positive; definitive rule-in/rule-out for PE when first-line tests leave it standing"
+    }
+  ],
+  "differentials": [
+    {
+      "dx": "Acute decompensated heart failure",
+      "icd10": "I50.9",
+      "supports": [
+        "Orthopnoea and PND with bilateral leg swelling",
+        "Raised JVP, basal crackles, S3 gallop",
+        "Cardiomegaly with pulmonary congestion on chest X-ray",
+        "Known ischaemic heart disease or hypertension"
+      ],
+      "key": "hf",
+      "first_line": [
+        "Chest X-ray",
+        "ECG",
+        "Echocardiography (or NT-proBNP where the lab offers it)"
+      ],
+      "medications": [
+        {
+          "generic": "Furosemide",
+          "note": "decongestion"
+        }
+      ]
+    },
+    {
+      "dx": "Asthma exacerbation",
+      "icd10": "J45.9",
+      "supports": [
+        "Episodic wheeze with triggers, worse at night, normal between attacks",
+        "Diffuse expiratory wheeze on auscultation",
+        "Peak flow variability or bronchodilator reversibility"
+      ],
+      "key": "asthma",
+      "first_line": [
+        "Peak expiratory flow (pre/post bronchodilator) or spirometry if available"
+      ],
+      "medications": [
+        {
+          "generic": "Salbutamol",
+          "note": "reliever, spacer preferred"
+        },
+        {
+          "generic": "Prednisolone",
+          "note": "short course for exacerbation"
+        }
+      ]
+    },
+    {
+      "dx": "COPD exacerbation",
+      "icd10": "J44.1",
+      "supports": [
+        "Smoker > 10 pack-years with chronic progressive dyspnoea",
+        "Increased sputum volume or purulence",
+        "Hyperinflation on chest X-ray with fixed obstruction on spirometry"
+      ],
+      "key": "copd",
+      "first_line": [
+        "Chest X-ray",
+        "Peak expiratory flow (pre/post bronchodilator) or spirometry if available"
+      ],
+      "medications": [
+        {
+          "generic": "Salbutamol",
+          "note": "bronchodilation"
+        },
+        {
+          "generic": "Ipratropium",
+          "note": "add-on bronchodilator"
+        }
+      ]
+    },
+    {
+      "dx": "Community-acquired pneumonia",
+      "icd10": "J18.9",
+      "supports": [
+        "Fever with productive cough over hours to days",
+        "Focal crackles or bronchial breathing",
+        "Consolidation on chest X-ray with leukocytosis"
+      ],
+      "key": "cap",
+      "first_line": [
+        "Chest X-ray",
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Amoxicillin/Clavulanate",
+          "note": "first-line outpatient CAP"
+        },
+        {
+          "generic": "Azithromycin",
+          "note": "atypical cover or penicillin allergy"
+        }
+      ]
+    },
+    {
+      "dx": "Pulmonary embolism",
+      "icd10": "I26.99",
+      "supports": [
+        "Sudden dyspnoea with pleuritic pain or haemoptysis",
+        "Surgery, immobilisation, cancer, or unilateral calf swelling",
+        "Hypoxia with a clear chest X-ray and sinus tachycardia"
+      ],
+      "key": "pe",
+      "first_line": [
+        "D-dimer",
+        "CT pulmonary angiography"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Pleural effusion",
+      "icd10": "J90",
+      "supports": [
+        "Gradually progressive dyspnoea",
+        "Stony dullness with absent breath sounds on one side",
+        "Effusion on chest X-ray confirmed by ultrasound"
+      ],
+      "key": "effusion",
+      "first_line": [
+        "Chest X-ray",
+        "Chest ultrasound"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Spontaneous pneumothorax",
+      "icd10": "J93.11",
+      "supports": [
+        "Sudden one-sided pleuritic pain and dyspnoea",
+        "Hyper-resonance with absent breath sounds on the affected side",
+        "Visible lung edge on chest X-ray"
+      ],
+      "key": "ptx",
+      "first_line": [
+        "Chest X-ray"
+      ],
+      "medications": []
+    },
+    {
+      "dx": "Anaemia",
+      "icd10": "D64.9",
+      "supports": [
+        "Exertional dyspnoea over weeks with fatigue",
+        "Conjunctival and palmar pallor",
+        "Menorrhagia or black stools on history",
+        "Low haemoglobin on CBC with clear chest film"
+      ],
+      "key": "anaemia",
+      "first_line": [
+        "CBC"
+      ],
+      "medications": [
+        {
+          "generic": "Ferrous Sulfate",
+          "note": "after cause is pursued"
+        }
+      ]
+    },
+    {
+      "dx": "Hyperventilation / panic-related dyspnoea",
+      "icd10": "F41.0",
+      "supports": [
+        "Attacks at rest with fear and perioral or finger tingling",
+        "Normal SpO2, chest exam, X-ray, and ECG during evaluation",
+        "Breathlessness that does not worsen with graded exertion"
+      ],
+      "key": "panic",
+      "first_line": [],
+      "medications": []
+    }
+  ],
+  "priors": {
+    "asthma": 3,
+    "cap": 3,
+    "hf": 2,
+    "copd": 2,
+    "anaemia": 2,
+    "panic": 1,
+    "pe": 1,
+    "effusion": 1,
+    "ptx": 1
+  },
+  "exam_weights": {
+    "Estimate JVP — raised in heart failure and massive PE, flat in pure airway disease": {
+      "hf": 2
+    },
+    "Auscultate lungs: bilateral basal crackles (pulmonary oedema), focal crackles or bronchial breathing (pneumonia), diffuse wheeze (asthma/COPD), absent sounds with stony dullness (effusion), absent sounds with hyper-resonance (pneumothorax)": {
+      "hf": 2,
+      "cap": 1
+    },
+    "Percuss both lung fields comparing sides — dullness vs hyper-resonance localises effusion vs pneumothorax": {
+      "effusion": 2,
+      "ptx": 2
+    },
+    "Auscultate the heart for gallop rhythm (S3 of failure) and murmurs (valve disease driving failure)": {
+      "hf": 3
+    },
+    "Press for pitting oedema over both shins and check sacral oedema if bed-bound": {
+      "hf": 3
+    },
+    "Examine calves for unilateral swelling or tenderness (DVT as PE source)": {
+      "pe": 3
+    },
+    "Inspect conjunctivae and palmar creases for pallor (anaemia)": {
+      "anaemia": 3
+    },
+    "Check tracheal position — deviation suggests large effusion or tension pneumothorax": {
+      "ptx": 2,
+      "effusion": 2
+    }
+  },
+  "pmh_modifiers": [
+    {
+      "label": "Known heart disease",
+      "icd10_prefixes": [
+        "I50",
+        "I25",
+        "I11"
+      ],
+      "name_contains": [
+        "heart failure",
+        "ischaemic",
+        "قلب",
+        "فشل القلب"
+      ],
+      "weights": {
+        "hf": 2
+      }
+    },
+    {
+      "label": "Asthma history",
+      "icd10_prefixes": [
+        "J45"
+      ],
+      "name_contains": [
+        "asthma",
+        "ربو"
+      ],
+      "weights": {
+        "asthma": 3
+      }
+    },
+    {
+      "label": "COPD history",
+      "icd10_prefixes": [
+        "J44"
+      ],
+      "name_contains": [
+        "copd",
+        "انسداد رئوي"
+      ],
+      "weights": {
+        "copd": 3
+      }
+    },
+    {
+      "label": "Known anaemia",
+      "icd10_prefixes": [
+        "D50",
+        "D64"
+      ],
+      "name_contains": [
+        "anaemia",
+        "anemia",
+        "فقر الدم"
+      ],
+      "weights": {
+        "anaemia": 2
+      }
+    }
+  ],
+  "demographic_modifiers": [
+    {
+      "label": "Age 50+",
+      "min_age": 50,
+      "weights": {
+        "hf": 1,
+        "copd": 1
+      }
+    },
+    {
+      "label": "Woman under 50",
+      "max_age": 49,
+      "sex": "female",
+      "weights": {
+        "anaemia": 1
+      }
+    }
+  ]
+}
