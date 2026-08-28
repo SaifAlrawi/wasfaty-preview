@@ -34,6 +34,57 @@
 </head>
 <body>
   <!--
+    THE LOADING STATE. The owner's report measured 4–5 MB before the app
+    is interactive and 20–60 seconds of blank screen on clinic-grade 3G
+    in Iraq. A white page for that long reads as a broken app, and the
+    doctor reloads — which starts the download again. This says the app
+    is coming, in the product's own colours, with no framework loaded.
+    flutter_bootstrap.js removes it when the first frame is up.
+  -->
+  <style>
+    #wasfaty-splash {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 20px;
+      background: #F7F4EC;                 /* AppColors.cream */
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      transition: opacity .25s ease;
+    }
+    #wasfaty-splash.wasfaty-splash--done { opacity: 0; }
+    .wasfaty-splash__mark {
+      width: 64px; height: 64px; border-radius: 18px;
+      background: #14332A;                 /* AppColors.forest */
+      color: #F7F4EC;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px; font-weight: 700;
+    }
+    .wasfaty-splash__bar {
+      width: 168px; height: 4px; border-radius: 999px;
+      background: rgba(20, 51, 42, .14); overflow: hidden;
+    }
+    .wasfaty-splash__bar::after {
+      content: ""; display: block; height: 100%; width: 40%;
+      border-radius: 999px; background: #C9A961;   /* AppColors.gold */
+      animation: wasfaty-splash-slide 1.15s ease-in-out infinite;
+    }
+    @keyframes wasfaty-splash-slide {
+      0%   { transform: translateX(-100%); }
+      100% { transform: translateX(320%); }
+    }
+    /* A doctor who has asked not to see motion still gets the bar,
+       just still — the point is "something is happening", and that
+       survives without the animation. */
+    @media (prefers-reduced-motion: reduce) {
+      .wasfaty-splash__bar::after { animation: none; width: 100%; }
+    }
+  </style>
+  <div id="wasfaty-splash">
+    <div class="wasfaty-splash__mark">W</div>
+    <div class="wasfaty-splash__bar"></div>
+  </div>
+
+  <!--
     pdf.js (pdfjs-dist 4.6.82) — the engine pdfx 2.9.2 renders PDFs with.
     SELF-HOSTED on purpose: this is a health app. pdfx's installer wires
     these from a public content-delivery host, but loading pdf.js from a
@@ -44,6 +95,20 @@
     renderer web constants + install_web). cMaps are included so Arabic /
     CID-keyed fonts in real lab reports render. See web/pdfjs/README.md.
   -->
+  <script src="flutter_bootstrap.js" async></script>
+
+  <!--
+    ⚠️ pdf.js IS FETCHED AFTER THE APP BUNDLE, DELIBERATELY. It is 322 KB
+    for a feature that only runs when someone opens a PDF, and both these
+    tags and flutter_bootstrap.js are non-blocking — so the only thing
+    their ORDER decides is which one the browser pulls first on a slow
+    link. The app the doctor is waiting for goes first.
+
+    Loading it lazily on first use would save the 322 KB entirely, but
+    pdfx expects `pdfjsLib` on globalThis before it renders and that
+    change cannot be verified without opening a real PDF in a browser —
+    see docs/LATER.md rather than shipping it unproven.
+  -->
   <script src="pdfjs/pdf.min.mjs" type="module"></script>
   <script type="module">
     var { pdfjsLib } = globalThis;
@@ -53,6 +118,5 @@
       cMapPacked: true,
     };
   </script>
-  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
